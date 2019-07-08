@@ -1,9 +1,9 @@
 ********************
      #README
 ********************  
-#####Author: msfrigau@iastate.edu
-#####Institute: Iowa State University
-#####Lab: Dependable Networking and Computing
+Author: msfrigau@iastate.edu
+Institute: Iowa State University
+Lab: Dependable Networking and Computing
 
 # MAC scheduler pktR for oaisim
 
