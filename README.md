@@ -9,7 +9,7 @@ Lab: Dependable Networking and Computing
 
 pktR is a joint interference and power control MAC scheduler for cellular networks.  
 pktR objective is to guarantee per-packet reliability in the presence of co-channel interference.  
-It leverages the PRK (physical-ratio-K) interference model: [PRKS paper]{www.ece.iastate.edu/~hongwei/group/publications/PRKS-TWC.pdf}
+It leverages the PRK (physical-ratio-K) interference model: [PRKS paper]{www.ece.iastate.edu/~hongwei/group/publications/PRKS-TWC.pdf}  
 This version of the code has been implemented under OpenAirInterface5G v0.5.2 - oaisim - tag: large_scale_simulations.
 
 ## Getting Started
