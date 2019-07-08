@@ -1,0 +1,2 @@
+/usr/bin/ar cr libConnectionManager.a  CMakeFiles/ConnectionManager.dir/ConnectionManager.cpp.o CMakeFiles/ConnectionManager.dir/ConnectionCOM.cpp.o CMakeFiles/ConnectionManager.dir/lmsComms.cpp.o CMakeFiles/ConnectionManager.dir/ConnectionUSB.cpp.o
+/usr/bin/ranlib libConnectionManager.a

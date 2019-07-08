@@ -1,0 +1,536 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ASN1_MSG_INC	LTE_PHY/Makefile	/^ASN1_MSG_INC = $(OPENAIR2_DIR)\/RRC\/LITE\/MESSAGES$/;"	m
+AWGN	TOOLS/defs.h	/^  AWGN$/;"	e	enum:__anon6
+Acknowledgment	LTE_PHY/Abstraction/Training/bare_adv.tex	/^\\else$/;"	s
+Acknowledgment	LTE_PHY/Abstraction/Training/bare_jrnl.tex	/^Appendix two text goes here.$/;"	s
+Acknowledgment	LTE_PHY/Abstraction/Training/bare_jrnl_compsoc.tex	/^\\else$/;"	s
+Acknowledgments	LTE_PHY/Abstraction/Training/bare_adv.tex	/^\\ifCLASSOPTIONcompsoc$/;"	s
+Acknowledgments	LTE_PHY/Abstraction/Training/bare_jrnl_compsoc.tex	/^\\ifCLASSOPTIONcompsoc$/;"	s
+Am	TOOLS/ch_desc_proto.c	34;"	d	file:
+BCCH_alloc_pdu	LTE_PHY/framegen.c	/^uint8_t BCCH_alloc_pdu[8];$/;"	v
+BW	LTE_PHY/scansim.c	56;"	d	file:
+BW	LTE_PHY/syncsim.c	73;"	d	file:
+BW	LTE_PHY/test.c	38;"	d	file:
+BW	LTE_PHY/ulsim2.c	44;"	d	file:
+BYPASS_RX_BUFFER_SIZE	ETH_TRANSPORT/defs.h	72;"	d
+BYPASS_TX_BUFFER_SIZE	ETH_TRANSPORT/defs.h	73;"	d
+Bypass_phy_wr_cond	ETH_TRANSPORT/multicast_link.h	/^public_multicast_link(pthread_cond_t Bypass_phy_wr_cond);$/;"	v
+Bypass_phy_wr_mutex	ETH_TRANSPORT/multicast_link.h	/^public_multicast_link(pthread_mutex_t Bypass_phy_wr_mutex);$/;"	v
+CCCH_RB_ALLOC	LTE_PHY/dlsim.c	99;"	d	file:
+CCCH_RB_ALLOC	LTE_PHY/mbmssim.c	62;"	d	file:
+CCCH_RB_ALLOC	LTE_PHY/pdcchsim.c	56;"	d	file:
+COMMON_UTILS_DIR	LTE_PHY/Makefile	/^COMMON_UTILS_DIR = $(OPENAIR_DIR)\/common\/utils$/;"	m
+Conclusion	LTE_PHY/Abstraction/Training/bare_adv.tex	/^Subsubsection text here.$/;"	s
+Conclusion	LTE_PHY/Abstraction/Training/bare_jrnl.tex	/^Subsubsection text here.$/;"	s
+Conclusion	LTE_PHY/Abstraction/Training/bare_jrnl_compsoc.tex	/^Subsubsection text here.$/;"	s
+DCI_pdu	LTE_PHY/framegen.c	/^DCI_PDU DCI_pdu;$/;"	v
+DCI_pdu	LTE_PHY/pdcchsim.c	/^DCI_PDU DCI_pdu;$/;"	v
+DLSCH_RB_ALLOC	LTE_PHY/framegen.c	/^uint32_t DLSCH_RB_ALLOC = 0x1000;$/;"	v
+DLSCH_RB_ALLOC	LTE_PHY/pbchsim.c	58;"	d	file:
+DLSCH_RB_ALLOC	LTE_PHY/pdcchsim.c	57;"	d	file:
+DLSCH_RB_ALLOC	LTE_PHY/prachsim.c	51;"	d	file:
+DLSCH_RB_ALLOC	LTE_PHY/pucchsim.c	53;"	d	file:
+DLSCH_RB_ALLOC	LTE_PHY/scansim.c	62;"	d	file:
+DLSCH_RB_ALLOC	LTE_PHY/syncsim.c	79;"	d	file:
+DLSCH_alloc_pdu2_1E	LTE_PHY/dlsim.c	/^DCI1E_5MHz_2A_M10PRB_TDD_t  DLSCH_alloc_pdu2_1E[2];$/;"	v
+DLSCH_alloc_pdu2_1E	LTE_PHY/mbmssim.c	/^DCI1E_5MHz_2A_M10PRB_TDD_t  DLSCH_alloc_pdu2_1E[2];$/;"	v
+DLSCH_alloc_pdu_1	LTE_PHY/dlsim.c	/^uint64_t DLSCH_alloc_pdu_1[2];$/;"	v
+DLSCH_alloc_pdu_1	LTE_PHY/framegen.c	/^uint64_t DLSCH_alloc_pdu_1[2];$/;"	v
+DLSCH_pdu	LTE_PHY/framegen.c	/^uint8_t DLSCH_pdu[768*8];$/;"	v
+EMU_PROTO_H_	ETH_TRANSPORT/proto.h	41;"	d
+EMU_TRANSPORT_INFO_ENB	ETH_TRANSPORT/defs.h	/^  EMU_TRANSPORT_INFO_ENB,$/;"	e	enum:emu_transport_info_e
+EMU_TRANSPORT_INFO_ERROR	ETH_TRANSPORT/defs.h	/^  EMU_TRANSPORT_INFO_ERROR    = 0x0,$/;"	e	enum:emu_transport_info_e
+EMU_TRANSPORT_INFO_RELEASE	ETH_TRANSPORT/defs.h	/^  EMU_TRANSPORT_INFO_RELEASE$/;"	e	enum:emu_transport_info_e
+EMU_TRANSPORT_INFO_SYNC	ETH_TRANSPORT/defs.h	/^  EMU_TRANSPORT_INFO_SYNC,$/;"	e	enum:emu_transport_info_e
+EMU_TRANSPORT_INFO_UE	ETH_TRANSPORT/defs.h	/^  EMU_TRANSPORT_INFO_UE,$/;"	e	enum:emu_transport_info_e
+EMU_TRANSPORT_INFO_WAIT_PM	ETH_TRANSPORT/defs.h	/^  EMU_TRANSPORT_INFO_WAIT_PM,$/;"	e	enum:emu_transport_info_e
+EMU_TRANSPORT_INFO_WAIT_SM	ETH_TRANSPORT/defs.h	/^  EMU_TRANSPORT_INFO_WAIT_SM,$/;"	e	enum:emu_transport_info_e
+EMU_TRANSPORT_NACK	ETH_TRANSPORT/defs.h	/^  ,EMU_TRANSPORT_NACK$/;"	e	enum:emu_transport_info_e
+ENB_TRANSPORT	ETH_TRANSPORT/defs.h	59;"	d
+EPA	TOOLS/defs.h	/^  EPA,$/;"	e	enum:__anon6
+ETU	TOOLS/defs.h	/^  ETU,$/;"	e	enum:__anon6
+EVA	TOOLS/defs.h	/^  EVA,$/;"	e	enum:__anon6
+Emulation_status	ETH_TRANSPORT/vars.h	/^unsigned char Emulation_status;$/;"	v
+FRAME_LENGTH_BYTES	LTE_PHY/test.c	43;"	d	file:
+FRAME_LENGTH_COMPLEX_SAMPLES	LTE_PHY/test.c	42;"	d	file:
+GRAAL_NETLINK_ID	ETH_TRANSPORT/netlink_init.c	61;"	d	file:
+IFFT_FPGA	LTE_PHY/test.c	36;"	d	file:
+INPUT_dBm	RF/rf.c	242;"	d	file:
+Introduction	LTE_PHY/Abstraction/Training/bare_adv.tex	/^\\IEEEpeerreviewmaketitle$/;"	s
+Introduction	LTE_PHY/Abstraction/Training/bare_jrnl.tex	/^\\IEEEpeerreviewmaketitle$/;"	s
+Introduction	LTE_PHY/Abstraction/Training/bare_jrnl_compsoc.tex	/^\\IEEEpeerreviewmaketitle$/;"	s
+LFLAGS	LTE_PHY/Makefile	/^LFLAGS = -lm -lblas -lxml2 -lrt -lpthread $(LFDS_DIR)\/bin\/liblfds611.a$/;"	m
+MAX_NUM_DCI	ETH_TRANSPORT/defs.h	110;"	d
+MAX_TRANSPORT_BLOCKS_BUFFER_SIZE	ETH_TRANSPORT/defs.h	108;"	d
+MBSFN	TOOLS/defs.h	/^  MBSFN,$/;"	e	enum:__anon6
+MCL	TOOLS/ch_desc_proto.c	36;"	d	file:
+MCS_COUNT	TOOLS/ch_desc_proto.c	35;"	d	file:
+MULTICAST_LINK_C	ETH_TRANSPORT/multicast_link.c	59;"	d	file:
+MULTICAST_LINK_NUM_GROUPS	ETH_TRANSPORT/multicast_link.h	57;"	d
+Master_list_rx	ETH_TRANSPORT/bypass_session_layer.c	/^unsigned int Master_list_rx;$/;"	v
+Message_type	ETH_TRANSPORT/defs.h	/^  unsigned char  Message_type; \/*! \\brief control or data*\/$/;"	m	struct:bypass_msg_header_s
+NACK_TRANSPORT	ETH_TRANSPORT/defs.h	63;"	d
+NB_SAMPLES_CHANNEL_OFFSET	TOOLS/defs.h	48;"	d
+N_P	ETH_TRANSPORT/bypass_session_layer.c	/^int      N_P = 0, N_R = 0;$/;"	v
+N_R	ETH_TRANSPORT/bypass_session_layer.c	/^int      N_P = 0, N_R = 0;$/;"	v
+N_RB2channel_bandwidth	TOOLS/random_channel.c	/^double N_RB2channel_bandwidth(uint16_t N_RB)$/;"	f
+N_RB2sampling_rate	TOOLS/random_channel.c	/^double N_RB2sampling_rate(uint16_t N_RB)$/;"	f
+N_TRIALS	LTE_PHY/pdcchsim.c	50;"	d	file:
+N_TRIALS	LTE_PHY/test.c	40;"	d	file:
+N_TRIALS	LTE_PHY/ulsim2.c	46;"	d	file:
+Nhistbits	TOOLS/gauss.c	117;"	d	file:
+OBJ	LTE_PHY/Makefile	/^OBJ = $(PHY_OBJS) $(SIMULATION_OBJS) $(TOOLS_OBJS) $(SCHED_OBJS) $(LAYER2_OBJ) $(LOG_OBJS) $(ITTI_DIR)\/backtrace.o$/;"	m
+OBJS	RF/Makefile	/^OBJS = rf.o ..\/..\/PHY\/TOOLS\/file_output.o ..\/TOOLS\/rangen_double.o$/;"	m
+OPENAIR1_TOP	LTE_PHY/Makefile	/^OPENAIR1_TOP = $(OPENAIR1_DIR)$/;"	m
+OPENAIR2_TOP	LTE_PHY/Makefile	/^OPENAIR2_TOP = $(OPENAIR2_DIR)$/;"	m
+OPENAIR3	LTE_PHY/Makefile	/^OPENAIR3 = $(OPENAIR3_DIR)$/;"	m
+PERIOD	LTE_PHY/syncsim.c	444;"	d	file:
+PGM_LINK_H_	ETH_TRANSPORT/pgm_link.h	30;"	d
+PHY_vars_UE	LTE_PHY/dlsim.c	/^PHY_VARS_UE *PHY_vars_UE;$/;"	v
+PHY_vars_UE	LTE_PHY/mbmssim.c	/^PHY_VARS_UE *PHY_vars_UE;$/;"	v
+PHY_vars_UE	LTE_PHY/pbchsim.c	/^PHY_VARS_UE *PHY_vars_UE;$/;"	v
+PHY_vars_UE	LTE_PHY/pdcchsim.c	/^PHY_VARS_UE *PHY_vars_UE;$/;"	v
+PHY_vars_UE	LTE_PHY/prachsim.c	/^PHY_VARS_UE *PHY_vars_UE;$/;"	v
+PHY_vars_UE	LTE_PHY/pucchsim.c	/^PHY_VARS_UE *PHY_vars_UE;$/;"	v
+PHY_vars_UE	LTE_PHY/scansim.c	/^PHY_VARS_UE *PHY_vars_UE;$/;"	v
+PHY_vars_UE	LTE_PHY/syncsim.c	/^PHY_VARS_UE *PHY_vars_UE[2];$/;"	v
+PHY_vars_UE	LTE_PHY/ulsim.c	/^PHY_VARS_UE *PHY_vars_UE;$/;"	v
+PHY_vars_eNB	LTE_PHY/dlsim.c	/^PHY_VARS_eNB *PHY_vars_eNB;$/;"	v
+PHY_vars_eNB	LTE_PHY/mbmssim.c	/^PHY_VARS_eNB *PHY_vars_eNB;$/;"	v
+PHY_vars_eNB	LTE_PHY/pbchsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB	LTE_PHY/pdcchsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB	LTE_PHY/prachsim.c	/^PHY_VARS_eNB *PHY_vars_eNB;$/;"	v
+PHY_vars_eNB	LTE_PHY/pucchsim.c	/^PHY_VARS_eNB *PHY_vars_eNB;$/;"	v
+PHY_vars_eNB	LTE_PHY/scansim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB	LTE_PHY/syncsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB	LTE_PHY/ulsim.c	/^PHY_VARS_eNB *PHY_vars_eNB;$/;"	v
+PHY_vars_eNB1	LTE_PHY/pbchsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB1	LTE_PHY/pdcchsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB1	LTE_PHY/scansim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB1	LTE_PHY/syncsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB2	LTE_PHY/pbchsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB2	LTE_PHY/pdcchsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB2	LTE_PHY/scansim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB2	LTE_PHY/syncsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PI	TOOLS/ch_desc_proto.c	33;"	d	file:
+Proof of the First Zonklar Equation	LTE_PHY/Abstraction/Training/bare_adv.tex	/^\\appendices$/;"	s
+Proof of the First Zonklar Equation	LTE_PHY/Abstraction/Training/bare_jrnl.tex	/^\\appendices$/;"	s
+Proof of the First Zonklar Equation	LTE_PHY/Abstraction/Training/bare_jrnl_compsoc.tex	/^\\appendices$/;"	s
+QPSK	RF/rf.c	/^int QPSK[4]= {AMP_OVER_SQRT2|(AMP_OVER_SQRT2<<16),AMP_OVER_SQRT2|((65536-AMP_OVER_SQRT2)<<16),((65536-AMP_OVER_SQRT2)<<16)|AMP_OVER_SQRT2,((65536-AMP_OVER_SQRT2)<<16)|(65536-AMP_OVER_SQRT2)};$/;"	v
+QPSK2	RF/rf.c	/^int QPSK2[4]= {AMP_OVER_2|(AMP_OVER_2<<16),AMP_OVER_2|((65536-AMP_OVER_2)<<16),((65536-AMP_OVER_2)<<16)|AMP_OVER_2,((65536-AMP_OVER_2)<<16)|(65536-AMP_OVER_2)};$/;"	v
+R12_sqrt	TOOLS/scm_corrmat.h	/^double R12_sqrt[6][8] = {$/;"	v
+R21_sqrt	TOOLS/scm_corrmat.h	/^double R21_sqrt[6][8] = {$/;"	v
+R22_sqrt	TOOLS/scm_corrmat.h	/^double R22_sqrt[6][32] = {$/;"	v
+RELEASE_TRANSPORT	ETH_TRANSPORT/defs.h	61;"	d
+RF	LTE_PHY/test.c	35;"	d	file:
+R_sqrt	TOOLS/defs.h	/^  struct complex **R_sqrt;$/;"	m	struct:__anon2	typeref:struct:__anon2::complex
+R_sqrt_21_anticorr	TOOLS/random_channel.c	/^struct complex *R_sqrt_21_anticorr[1]     = {R_sqrt_21_anticorr_tap};$/;"	v	typeref:struct:complex
+R_sqrt_21_anticorr_tap	TOOLS/random_channel.c	/^struct complex R_sqrt_21_anticorr_tap[4]  = {{0.70711,0}, {-0.70711,0}, {-0.70711,0}, {0.70711,0}};$/;"	v	typeref:struct:complex
+R_sqrt_21_corr	TOOLS/random_channel.c	/^struct complex *R_sqrt_21_corr[1]      = {R_sqrt_21_corr_tap};$/;"	v	typeref:struct:complex
+R_sqrt_21_corr_tap	TOOLS/random_channel.c	/^struct complex R_sqrt_21_corr_tap[4]  = {{0.70711,0}, {0.70711,0}, {0.70711,0}, {0.70711,0}};$/;"	v	typeref:struct:complex
+R_sqrt_22_anticorr	TOOLS/random_channel.c	/^struct complex *R_sqrt_22_anticorr[1]     = {R_sqrt_22_anticorr_tap};$/;"	v	typeref:struct:complex
+R_sqrt_22_anticorr_tap	TOOLS/random_channel.c	/^struct complex R_sqrt_22_anticorr_tap[16] = {{0.70711,0}, {0.0, 0.0}, {-0.70711,0}, {0.0, 0.0},$/;"	v	typeref:struct:complex
+R_sqrt_22_corr	TOOLS/random_channel.c	/^struct complex *R_sqrt_22_corr[1]     = {R_sqrt_22_corr_tap};$/;"	v	typeref:struct:complex
+R_sqrt_22_corr_tap	TOOLS/random_channel.c	/^struct complex R_sqrt_22_corr_tap[16] = {{0.70711,0}, {0.0, 0.0}, {0.70711,0}, {0.0, 0.0},$/;"	v	typeref:struct:complex
+R_sqrt_ptr2	TOOLS/random_channel.c	/^struct complex **R_sqrt_ptr2;$/;"	v	typeref:struct:complex
+Rayleigh1	TOOLS/defs.h	/^  Rayleigh1,$/;"	e	enum:__anon6
+Rayleigh1_800	TOOLS/defs.h	/^  Rayleigh1_800,$/;"	e	enum:__anon6
+Rayleigh1_anticorr	TOOLS/defs.h	/^  Rayleigh1_anticorr,$/;"	e	enum:__anon6
+Rayleigh1_corr	TOOLS/defs.h	/^  Rayleigh1_corr,$/;"	e	enum:__anon6
+Rayleigh8	TOOLS/defs.h	/^  Rayleigh8,$/;"	e	enum:__anon6
+Rice1	TOOLS/defs.h	/^  Rice1,$/;"	e	enum:__anon6
+Rice1_anticorr	TOOLS/defs.h	/^  Rice1_anticorr,$/;"	e	enum:__anon6
+Rice1_corr	TOOLS/defs.h	/^  Rice1_corr,$/;"	e	enum:__anon6
+Rice8	TOOLS/defs.h	/^  Rice8,$/;"	e	enum:__anon6
+SCM_A	TOOLS/defs.h	/^  SCM_A,$/;"	e	enum:__anon6
+SCM_B	TOOLS/defs.h	/^  SCM_B,$/;"	e	enum:__anon6
+SCM_C	TOOLS/defs.h	/^  SCM_C,$/;"	e	enum:__anon6
+SCM_D	TOOLS/defs.h	/^  SCM_D,$/;"	e	enum:__anon6
+SCM_t	TOOLS/defs.h	/^} SCM_t;$/;"	t	typeref:enum:__anon6
+SEC1	TOOLS/ch_desc_proto.c	/^enum sector {SEC1, SEC2, SEC3};$/;"	e	enum:sector	file:
+SEC2	TOOLS/ch_desc_proto.c	/^enum sector {SEC1, SEC2, SEC3};$/;"	e	enum:sector	file:
+SEC3	TOOLS/ch_desc_proto.c	/^enum sector {SEC1, SEC2, SEC3};$/;"	e	enum:sector	file:
+SOCKET_C	ETH_TRANSPORT/socket.c	47;"	d	file:
+SYNCED_TRANSPORT	ETH_TRANSPORT/defs.h	67;"	d
+SYNC_TRANSPORT	ETH_TRANSPORT/defs.h	58;"	d
+Subsection Heading Here	LTE_PHY/Abstraction/Training/bare_adv.tex	/^\\hfill January 11, 2007$/;"	u
+Subsection Heading Here	LTE_PHY/Abstraction/Training/bare_jrnl.tex	/^\\hfill January 11, 2007$/;"	u
+Subsection Heading Here	LTE_PHY/Abstraction/Training/bare_jrnl_compsoc.tex	/^\\hfill January 11, 2007$/;"	u
+Subsubsection Heading Here	LTE_PHY/Abstraction/Training/bare_adv.tex	/^Subsection text here.$/;"	b
+Subsubsection Heading Here	LTE_PHY/Abstraction/Training/bare_jrnl.tex	/^Subsection text here.$/;"	b
+Subsubsection Heading Here	LTE_PHY/Abstraction/Training/bare_jrnl_compsoc.tex	/^Subsection text here.$/;"	b
+TOP_DIR	LTE_PHY/Makefile	/^TOP_DIR = $(OPENAIR1_DIR)$/;"	m
+Td	LTE_PHY/ulsim2.c	45;"	d	file:
+Td	TOOLS/defs.h	/^  double Td;$/;"	m	struct:__anon2
+Td	TOOLS/random_channel.c	1088;"	d	file:
+Tx_cond	ETH_TRANSPORT/vars.h	/^pthread_cond_t Tx_cond;$/;"	v
+Tx_mutex	ETH_TRANSPORT/vars.h	/^pthread_mutex_t Tx_mutex;$/;"	v
+Tx_mutex_var	ETH_TRANSPORT/vars.h	/^char Tx_mutex_var;$/;"	v
+UE2eNB	LTE_PHY/ulsim.c	/^channel_desc_t *UE2eNB[NUMBER_OF_UE_MAX][NUMBER_OF_eNB_MAX];$/;"	v
+UE_TRANSPORT	ETH_TRANSPORT/defs.h	60;"	d
+UE_cntl	ETH_TRANSPORT/defs.h	/^} UE_cntl;$/;"	t	typeref:struct:UE_cntl_s
+UE_cntl_s	ETH_TRANSPORT/defs.h	/^typedef struct UE_cntl_s {$/;"	s
+UE_transport_info	ETH_TRANSPORT/vars.h	/^UE_transport_info_t UE_transport_info[NUMBER_OF_UE_MAX][MAX_NUM_CCs];$/;"	v
+UE_transport_info_TB_index	ETH_TRANSPORT/vars.h	/^uint16_t UE_transport_info_TB_index[NUMBER_OF_UE_MAX][MAX_NUM_CCs];$/;"	v
+UE_transport_info_s	ETH_TRANSPORT/defs.h	/^typedef struct UE_transport_info_s {$/;"	s
+UE_transport_info_t	ETH_TRANSPORT/defs.h	/^} __attribute__((__packed__)) UE_transport_info_t ;$/;"	t	typeref:struct:UE_transport_info_s
+UL_RB_ALLOC	LTE_PHY/dlsim.c	98;"	d	file:
+UL_RB_ALLOC	LTE_PHY/mbmssim.c	61;"	d	file:
+UL_RB_ALLOC	LTE_PHY/pdcchsim.c	55;"	d	file:
+WAIT_PM_TRANSPORT	ETH_TRANSPORT/defs.h	56;"	d
+WAIT_SM_TRANSPORT	ETH_TRANSPORT/defs.h	57;"	d
+WAIT_SYNC_TRANSPORT	ETH_TRANSPORT/defs.h	66;"	d
+__BYPASS_SESSION_LAYER_DEFS_H__	ETH_TRANSPORT/defs.h	39;"	d
+__BYPASS_SESSION_LAYER_EXTERN_H__	ETH_TRANSPORT/extern.h	39;"	d
+__BYPASS_SESSION_LAYER_VARS_H__	ETH_TRANSPORT/vars.h	46;"	d
+__MULTICAST_LINK_H__	ETH_TRANSPORT/multicast_link.h	39;"	d
+__SIMULATION_TOOLS_DEFS_H__	TOOLS/defs.h	30;"	d
+__SOCKET_H__	ETH_TRANSPORT/socket.h	39;"	d
+a	TOOLS/defs.h	/^  struct complex **a;$/;"	m	struct:__anon2	typeref:struct:__anon2::complex
+a	TOOLS/rangen_double.c	46;"	d	file:
+a	TOOLS/rangen_double.c	78;"	d	file:
+adc	RF/adc.c	/^void adc(double **r_re,$/;"	f
+alpha_rad	TOOLS/defs.h	/^  double alpha_rad[3];$/;"	m	struct:__anon3
+amps	TOOLS/defs.h	/^  double *amps;$/;"	m	struct:__anon2
+analyzer	LTE_PHY/signalanalyzer.c	/^void analyzer(unsigned int gpib_card,unsigned int gpib_device,unsigned int freqband,LTE_DL_FRAME_PARMS *frame_parms,DCI_ALLOC_t *dci_alloc)$/;"	f
+ant_gain_dBi	TOOLS/defs.h	/^  double ant_gain_dBi;$/;"	m	struct:__anon3
+aoa	TOOLS/defs.h	/^  double aoa;$/;"	m	struct:__anon2
+b	TOOLS/taus.c	/^unsigned int s0, s1, s2, b;$/;"	v
+bandwidth	TOOLS/defs.h	/^  double bandwidth;$/;"	m	struct:__anon5
+bypass_init	ETH_TRANSPORT/bypass_session_layer.c	/^void bypass_init (tx_handler_t tx_handlerP, rx_handler_t rx_handlerP)$/;"	f
+bypass_msg_header_s	ETH_TRANSPORT/defs.h	/^typedef struct bypass_msg_header_s {$/;"	s
+bypass_msg_header_t	ETH_TRANSPORT/defs.h	/^} __attribute__((__packed__)) bypass_msg_header_t;$/;"	t	typeref:struct:bypass_msg_header_s
+bypass_proto2multicast_header_s	ETH_TRANSPORT/defs.h	/^typedef struct bypass_proto2multicast_header_s {$/;"	s
+bypass_proto2multicast_header_t	ETH_TRANSPORT/defs.h	/^} bypass_proto2multicast_header_t;$/;"	t	typeref:struct:bypass_proto2multicast_header_s
+bypass_rx_data	ETH_TRANSPORT/bypass_session_layer.c	/^int bypass_rx_data(unsigned int frame, unsigned int last_slot,$/;"	f
+bypass_tx_buffer	ETH_TRANSPORT/bypass_session_layer.c	/^char         bypass_tx_buffer[BYPASS_TX_BUFFER_SIZE];$/;"	v
+byte_tx_count	ETH_TRANSPORT/bypass_session_layer.c	/^static unsigned int byte_tx_count;$/;"	v	file:
+calibration	LTE_PHY/LTE_Configuration.c	/^void calibration(unsigned int gpib_card,unsigned int gpib_device,unsigned int freqband,LTE_DL_FRAME_PARMS *frame_parms,DCI_ALLOC_t *dci_alloc)$/;"	f
+carrier_frequency	TOOLS/defs.h	/^  double carrier_frequency;$/;"	m	struct:__anon5
+cfi	ETH_TRANSPORT/defs.h	/^  uint32_t cfi:2;$/;"	m	struct:eNB_cntl_s
+ch	TOOLS/defs.h	/^  struct complex **ch;$/;"	m	struct:__anon2	typeref:struct:__anon2::complex
+chF	TOOLS/defs.h	/^  struct complex **chF;$/;"	m	struct:__anon2	typeref:struct:__anon2::complex
+channel_bandwidth	TOOLS/defs.h	/^  double channel_bandwidth;$/;"	m	struct:__anon2
+channel_desc_t	TOOLS/defs.h	/^} channel_desc_t;$/;"	t	typeref:struct:__anon2
+channel_length	TOOLS/defs.h	/^  uint8_t channel_length;$/;"	m	struct:__anon2
+channel_offset	TOOLS/defs.h	/^  int32_t channel_offset;$/;"	m	struct:__anon2
+clear_UE_transport_info	ETH_TRANSPORT/emu_transport.c	/^void clear_UE_transport_info(uint8_t nb_UE)$/;"	f
+clear_eNB_transport_info	ETH_TRANSPORT/emu_transport.c	/^void clear_eNB_transport_info(uint8_t nb_eNB)$/;"	f
+cntl	ETH_TRANSPORT/defs.h	/^  UE_cntl cntl;$/;"	m	struct:UE_transport_info_s
+cntl	ETH_TRANSPORT/defs.h	/^  eNB_cntl cntl;$/;"	m	struct:eNB_transport_info_s
+compute_pbch_sinr	TOOLS/abstraction.c	/^double compute_pbch_sinr(channel_desc_t *desc,$/;"	f
+compute_sinr	TOOLS/abstraction.c	/^double compute_sinr(channel_desc_t *desc,$/;"	f
+convolution	TOOLS/defs.h	/^  time_stats_t convolution;$/;"	m	struct:__anon2
+cos_lut	TOOLS/abstraction.c	/^double **cos_lut=NULL,**sin_lut=NULL;$/;"	v
+current_dlsch_cqi	LTE_PHY/prachsim.c	/^int current_dlsch_cqi; \/\/FIXME!$/;"	v
+current_dlsch_cqi	LTE_PHY/pucchsim.c	/^int current_dlsch_cqi; \/\/FIXME!$/;"	v
+custom	TOOLS/defs.h	/^  custom=0,$/;"	e	enum:__anon6
+dac	RF/dac.c	/^void dac(double **s_re,$/;"	f
+dac_fixed_gain	RF/dac.c	/^double dac_fixed_gain(double **s_re,$/;"	f
+dci_alloc	ETH_TRANSPORT/defs.h	/^  DCI_ALLOC_t dci_alloc[MAX_NUM_DCI];$/;"	m	struct:eNB_transport_info_s
+default_amp_lin	TOOLS/random_channel.c	/^double default_amp_lin[] = {1};$/;"	v
+default_amps_lin	TOOLS/random_channel.c	/^double default_amps_lin[] = {0.3868472 , 0.3094778 , 0.1547389 , 0.0773694 , 0.0386847 , 0.0193424 , 0.0096712 , 0.0038685};$/;"	v
+delays	TOOLS/defs.h	/^  double *delays;$/;"	m	struct:__anon2
+delta_BLER	LTE_PHY/Abstraction/delta_BLER.m	/^function delta=delta_BLER(beta)$/;"	f
+delta_BLER_1	LTE_PHY/Abstraction/Training/delta_BLER_1.m	/^function delta=delta_BLER_1(beta)$/;"	f
+delta_BLER_1	LTE_PHY/Abstraction/delta_BLER_1.m	/^function delta=delta_BLER_1(beta)$/;"	f
+demap_q	LTE_PHY/Abstraction/demap_q.m	/^function [q] = demap_q(qq)$/;"	f
+direction_rad	TOOLS/defs.h	/^  double direction_rad;$/;"	m	struct:__anon3
+dlsch_LLR_quant	TOOLS/llr_quantization.c	/^void dlsch_LLR_quant(const short *llr, const unsigned int arraySize, const short Mlevel, short *llr_quant)$/;"	f
+dlsch_MRC_relay_LLR	TOOLS/llr_quantization.c	/^void dlsch_MRC_relay_LLR(const short *llr_quant, const unsigned int arraySize,  short *llr_quant_sum)$/;"	f
+dlsch_type	ETH_TRANSPORT/defs.h	/^  uint8_t dlsch_type[MAX_NUM_DCI];$/;"	m	struct:eNB_transport_info_s
+do_OFDM_mod	LTE_PHY/framegen.c	/^void do_OFDM_mod(mod_sym_t **txdataF, int32_t **txdata, uint16_t next_slot, LTE_DL_FRAME_PARMS *frame_parms)$/;"	f
+do_OFDM_mod_l	LTE_PHY/dlsim.c	/^void do_OFDM_mod_l(int32_t **txdataF, int32_t **txdata, uint16_t next_slot, LTE_DL_FRAME_PARMS *frame_parms)$/;"	f
+do_forms2	LTE_PHY/syncsim.c	/^void do_forms2(FD_lte_scope *form,$/;"	f
+dummy0	LTE_PHY/pbchsim.c	/^int32_t dummy0[2048*14];$/;"	v
+dummy0	LTE_PHY/scansim.c	/^mod_sym_t dummy0[2048*14];$/;"	v
+dummy1	LTE_PHY/pbchsim.c	/^int32_t dummy1[2048*14];$/;"	v
+dummy1	LTE_PHY/scansim.c	/^mod_sym_t dummy1[2048*14];$/;"	v
+dummy2	LTE_PHY/pbchsim.c	/^int32_t dummy2[2048*14];$/;"	v
+dummy2	LTE_PHY/scansim.c	/^mod_sym_t dummy2[2048*14];$/;"	v
+dummy3	LTE_PHY/pbchsim.c	/^int32_t dummy3[2048*14];$/;"	v
+dummy3	LTE_PHY/scansim.c	/^mod_sym_t dummy3[2048*14];$/;"	v
+dummybuf	LTE_PHY/pbchsim.c	/^int32_t *dummybuf[4];$/;"	v
+dummybuf	LTE_PHY/scansim.c	/^mod_sym_t *dummybuf[4];$/;"	v
+eNB2UE	LTE_PHY/ulsim.c	/^channel_desc_t *eNB2UE[NUMBER_OF_eNB_MAX][NUMBER_OF_UE_MAX];$/;"	v
+eNB_cntl	ETH_TRANSPORT/defs.h	/^} eNB_cntl;$/;"	t	typeref:struct:eNB_cntl_s
+eNB_cntl_s	ETH_TRANSPORT/defs.h	/^typedef struct eNB_cntl_s {$/;"	s
+eNB_id	ETH_TRANSPORT/defs.h	/^  uint8_t eNB_id[NUMBER_OF_CONNECTED_eNB_MAX];$/;"	m	struct:UE_transport_info_s
+eNB_scheduler	LTE_PHY/framegen.c	/^void eNB_scheduler(uint8_t Mod_id, uint8_t cooperation_flag, uint8_t frame, uint8_t subframe)$/;"	f
+eNB_transport_info	ETH_TRANSPORT/vars.h	/^eNB_transport_info_t eNB_transport_info[NUMBER_OF_eNB_MAX][MAX_NUM_CCs];$/;"	v
+eNB_transport_info_TB_index	ETH_TRANSPORT/vars.h	/^uint16_t eNB_transport_info_TB_index[NUMBER_OF_eNB_MAX][MAX_NUM_CCs];$/;"	v
+eNB_transport_info_s	ETH_TRANSPORT/defs.h	/^typedef struct eNB_transport_info_s {$/;"	s
+eNB_transport_info_t	ETH_TRANSPORT/defs.h	/^} __attribute__((__packed__)) eNB_transport_info_t ;$/;"	t	typeref:struct:eNB_transport_info_s
+emu_rx_status	ETH_TRANSPORT/vars.h	/^unsigned char emu_rx_status;$/;"	v
+emu_transport	ETH_TRANSPORT/emu_transport.c	/^void emu_transport(unsigned int frame, unsigned int last_slot,$/;"	f
+emu_transport_DL	ETH_TRANSPORT/emu_transport.c	/^void emu_transport_DL(unsigned int frame, unsigned int last_slot,$/;"	f
+emu_transport_UL	ETH_TRANSPORT/emu_transport.c	/^void emu_transport_UL(unsigned int frame, unsigned int last_slot,$/;"	f
+emu_transport_handle_enb_info	ETH_TRANSPORT/bypass_session_layer.c	/^int emu_transport_handle_enb_info(bypass_msg_header_t *messg,$/;"	f	file:
+emu_transport_handle_sync	ETH_TRANSPORT/bypass_session_layer.c	/^int emu_transport_handle_sync(bypass_msg_header_t *messg)$/;"	f
+emu_transport_handle_ue_info	ETH_TRANSPORT/bypass_session_layer.c	/^int emu_transport_handle_ue_info(bypass_msg_header_t *messg,$/;"	f	file:
+emu_transport_handle_wait_pm	ETH_TRANSPORT/bypass_session_layer.c	/^int emu_transport_handle_wait_pm(bypass_msg_header_t *messg)$/;"	f
+emu_transport_handle_wait_sm	ETH_TRANSPORT/bypass_session_layer.c	/^int emu_transport_handle_wait_sm(bypass_msg_header_t *messg)$/;"	f
+emu_transport_info_e	ETH_TRANSPORT/defs.h	/^typedef enum emu_transport_info_e {$/;"	g
+emu_transport_info_t	ETH_TRANSPORT/defs.h	/^} emu_transport_info_t;$/;"	t	typeref:enum:emu_transport_info_e
+emu_transport_release	ETH_TRANSPORT/emu_transport.c	/^void emu_transport_release(void)$/;"	f
+emu_transport_sync	ETH_TRANSPORT/emu_transport.c	/^void emu_transport_sync(void)$/;"	f
+emu_tx_status	ETH_TRANSPORT/vars.h	/^unsigned char emu_tx_status;$/;"	v
+emul_low_cond	ETH_TRANSPORT/vars.h	/^pthread_cond_t emul_low_cond;$/;"	v
+emul_low_mutex	ETH_TRANSPORT/vars.h	/^pthread_mutex_t emul_low_mutex;$/;"	v
+emul_low_mutex_var	ETH_TRANSPORT/vars.h	/^char emul_low_mutex_var;$/;"	v
+emul_rx_data	ETH_TRANSPORT/emu_transport.c	/^unsigned int emul_rx_data(void)$/;"	f
+emul_rx_handler	ETH_TRANSPORT/emu_transport.c	/^unsigned int emul_rx_handler(unsigned char Mode,char *rx_buffer,$/;"	f
+emul_tx_handler	ETH_TRANSPORT/emu_transport.c	/^unsigned int emul_tx_handler(unsigned char Mode,char *Tx_buffer,$/;"	f
+enb_data	LTE_PHY/ulsim.c	/^node_desc_t *enb_data[NUMBER_OF_eNB_MAX];$/;"	v
+epa_amps_dB	TOOLS/random_channel.c	/^double epa_amps_dB[] = {0.0,-1.0,-2.0,-3.0,-8.0,-17.2,-20.8};$/;"	v
+epa_delays	TOOLS/random_channel.c	/^double epa_delays[] = { 0,.03,.07,.09,.11,.19,.41};$/;"	v
+etu_amps_dB	TOOLS/random_channel.c	/^double etu_amps_dB[] = {-1.0,-1.0,-1.0,0.0,0.0,0.0,-3.0,-5.0,-7.0};$/;"	v
+etu_delays	TOOLS/random_channel.c	/^double etu_delays[] = { 0,.05,.12,.2,.23,.5,1.6,2.3,5.0};$/;"	v
+eva_amps_dB	TOOLS/random_channel.c	/^double eva_amps_dB[] = {0.0,-1.5,-1.4,-3.6,-0.6,-9.1,-7.0,-12.0,-16.9};$/;"	v
+eva_delays	TOOLS/random_channel.c	/^double eva_delays[] = { 0,.03,.15,.31,.37,.71,1.09,1.73,2.51};$/;"	v
+failing_master_id	ETH_TRANSPORT/defs.h	/^  unsigned int   failing_master_id;$/;"	m	struct:bypass_msg_header_s
+fill_channel_desc	TOOLS/random_channel.c	/^void fill_channel_desc(channel_desc_t *chan_desc,$/;"	f
+fill_phy_enb_vars	ETH_TRANSPORT/emu_transport.c	/^void fill_phy_enb_vars(unsigned int enb_id, uint8_t CC_id,unsigned int next_slot)$/;"	f
+fill_phy_ue_vars	ETH_TRANSPORT/emu_transport.c	/^void fill_phy_ue_vars(unsigned int ue_id, uint8_t CC_id,unsigned int last_slot)$/;"	f
+first_run	TOOLS/defs.h	/^  uint8_t first_run;$/;"	m	struct:__anon2
+forgetting_factor	TOOLS/defs.h	/^  double forgetting_factor;$/;"	m	struct:__anon2
+form_enb	LTE_PHY/ulsim.c	/^FD_lte_phy_scope_enb *form_enb;$/;"	v
+frame	ETH_TRANSPORT/defs.h	/^  unsigned int   frame;$/;"	m	struct:bypass_msg_header_s
+frand_a_b	TOOLS/multipath_tv_channel.c	/^double frand_a_b(double a, double b)$/;"	f
+freq_channel	TOOLS/abstraction.c	/^int freq_channel(channel_desc_t *desc,uint16_t nb_rb,int16_t n_samples)$/;"	f
+gauss	TOOLS/gauss.c	/^int gauss(unsigned int *gauss_LUT,$/;"	f
+gaussdouble	TOOLS/rangen_double.c	/^double gaussdouble(double mean, double variance)$/;"	f
+generate_gauss_LUT	TOOLS/gauss.c	/^unsigned int *generate_gauss_LUT(unsigned char Nbits,$/;"	f
+get_DLSCH_pdu	LTE_PHY/framegen.c	/^uint8_t *get_DLSCH_pdu(uint8_t Mod_id,uint16_t rnti,uint8_t abstraction_flag)$/;"	f
+get_chan_desc	TOOLS/ch_desc_proto.c	/^void get_chan_desc(node_desc_t* node_tx, node_desc_t* node_rx, channel_desc_t *ch_desc, scenario_desc_t* scenario)$/;"	f
+get_dci	LTE_PHY/framegen.c	/^DCI_PDU *get_dci(uint8_t Mod_id, uint8_t frame, uint8_t subframe)$/;"	f
+get_dci	LTE_PHY/pdcchsim.c	/^DCI_PDU *get_dci(LTE_DL_FRAME_PARMS *lte_frame_parms,uint8_t log2L, uint8_t log2Lcommon, DCI_format_t format_selector[MAX_NUM_DCI], uint8_t num_dci, uint32_t rnti)$/;"	f
+gpib_send	LTE_PHY/LTE_Configuration.c	/^void gpib_send(unsigned int gpib_board, unsigned int gpib_device, char *command_string )$/;"	f
+gpib_send	LTE_PHY/gpib_send.c	/^void gpib_send(unsigned int gpib_board, unsigned int gpib_device, char *command_string )$/;"	f
+gpib_send	LTE_PHY/pucchsignalgenerator.c	/^void gpib_send(unsigned int gpib_board, unsigned int gpib_device, char *command_string )$/;"	f
+gpib_send	LTE_PHY/signalanalyzer.c	/^void gpib_send(unsigned int gpib_card, unsigned int gpib_device, char *command_string )$/;"	f
+gpib_send	LTE_PHY/ulsignalgenerator.c	/^void gpib_send(unsigned int gpib_board, unsigned int gpib_device, char *command_string )$/;"	f
+group_list	ETH_TRANSPORT/multicast_link.c	/^static multicast_group_t group_list[MULTICAST_LINK_NUM_GROUPS];$/;"	v	file:
+handler	LTE_PHY/dlsim.c	/^void handler(int sig)$/;"	f
+harq_pid	ETH_TRANSPORT/defs.h	/^  uint8_t harq_pid[MAX_NUM_DCI];$/;"	m	struct:eNB_transport_info_s
+harq_pid	ETH_TRANSPORT/defs.h	/^  uint8_t harq_pid[NUMBER_OF_CONNECTED_eNB_MAX];$/;"	m	struct:UE_transport_info_s
+highsock	ETH_TRANSPORT/multicast_link.c	/^static int highsock;$/;"	v	file:
+indoor	TOOLS/defs.h	/^  indoor$/;"	e	enum:__anon4
+init_bypass	ETH_TRANSPORT/bypass_session_layer.c	/^void init_bypass (void)$/;"	f
+init_freq_channel	TOOLS/abstraction.c	/^int init_freq_channel(channel_desc_t *desc,uint16_t nb_rb,int16_t n_samples)$/;"	f
+interp_freq	TOOLS/defs.h	/^  time_stats_t interp_freq;$/;"	m	struct:__anon2
+interp_time	TOOLS/defs.h	/^  time_stats_t interp_time;$/;"	m	struct:__anon2
+ip	TOOLS/defs.h	/^  double ip;$/;"	m	struct:__anon2
+ir	TOOLS/rangen_double.c	/^static unsigned int seed, iy, ir[98];$/;"	v	file:
+iy	TOOLS/rangen_double.c	/^static unsigned int seed, iy, ir[98];$/;"	v	file:
+length_uci	ETH_TRANSPORT/defs.h	/^  uint8_t length_uci;$/;"	m	struct:UE_cntl_s
+load_pbch_desc	TOOLS/abstraction.c	/^void load_pbch_desc(FILE *pbch_file_fd)$/;"	f
+log_handler	ETH_TRANSPORT/pgm_link.c	/^log_handler ($/;"	f	file:
+lte_param_init	LTE_PHY/framegen.c	/^void lte_param_init(  unsigned char transmission_mode,$/;"	f
+lte_param_init	LTE_PHY/syncsim.c	/^void lte_param_init(unsigned char N_tx, unsigned char N_rx,unsigned char transmission_mode,unsigned char extended_prefix_flag,uint8_t frame_type,uint16_t Nid_cell,uint8_t N_RB_DL,uint8_t osf)$/;"	f
+main	LTE_PHY/dlsim.c	/^int main(int argc, char **argv)$/;"	f
+main	LTE_PHY/framegen.c	/^int main(int argc, char **argv)$/;"	f
+main	LTE_PHY/mbmssim.c	/^int main(int argc, char **argv)$/;"	f
+main	LTE_PHY/pbchsim.c	/^int main(int argc, char **argv)$/;"	f
+main	LTE_PHY/pdcchsim.c	/^int main(int argc, char **argv)$/;"	f
+main	LTE_PHY/prachsim.c	/^int main(int argc, char **argv)$/;"	f
+main	LTE_PHY/pucchsim.c	/^int main(int argc, char **argv)$/;"	f
+main	LTE_PHY/scansim.c	/^int main(int argc, char **argv)$/;"	f
+main	LTE_PHY/syncsim.c	/^int main(int argc, char **argv)$/;"	f
+main	LTE_PHY/test.c	/^int main(int argc, char **argv)$/;"	f
+main	LTE_PHY/ulsim.c	/^int main(int argc, char **argv)$/;"	f
+main	LTE_PHY/ulsim2.c	/^int main(int argc, char **argv)$/;"	f
+main	RF/rf.c	/^int main(int argc, char* argv[])$/;"	f
+main	TOOLS/ch_desc_proto.c	/^int main()$/;"	f
+main	TOOLS/gauss.c	/^void main(int argc,char **argv)$/;"	f
+main	TOOLS/llr_quantization.c	/^void main()$/;"	f
+main	TOOLS/random_channel.c	/^main(int argc,char **argv)$/;"	f
+main	TOOLS/rangen_double.c	/^main(int argc,char **argv)$/;"	f
+main	TOOLS/taus.c	/^main()$/;"	f
+main_loop_thread	ETH_TRANSPORT/multicast_link.c	/^static pthread_t main_loop_thread;$/;"	v	file:
+make_socket_inet	ETH_TRANSPORT/socket.c	/^make_socket_inet (int typeP, uint16_t * portP, struct sockaddr_in *ptr_addressP)$/;"	f
+master_id	ETH_TRANSPORT/defs.h	/^  unsigned char  master_id; \/*! \\brief *\/$/;"	m	struct:bypass_msg_header_s
+mat2wv	LTE_PHY/mat2wv.m	/^function mat2wv(vfcSignal, sFilename, fSampleRate, bNormalize)$/;"	f
+max_Doppler	TOOLS/defs.h	/^  double max_Doppler;$/;"	m	struct:__anon2
+max_array	TOOLS/llr_quantization.c	/^short max_array(const short *p, unsigned int size)$/;"	f
+mbsfn_amps_dB	TOOLS/random_channel.c	/^double mbsfn_amps_dB[] = {0,-1.5,-1.4,-3.6,-0.6,-7.0,-10,-11.5,-11.4,-13.6,-10.6,-17.0,-20,-21.5,-21.4,-23.6,-20.6,-27};$/;"	v
+mbsfn_delays	TOOLS/random_channel.c	/^double mbsfn_delays[] = {0,.03,.15,.31,.37,1.09,12.490,12.52,12.64,12.80,12.86,13.58,27.49,27.52,27.64,27.80,27.86,28.58};$/;"	v
+mcs	LTE_PHY/framegen.c	/^uint8_t mcs = 0;$/;"	v
+min_array	TOOLS/llr_quantization.c	/^short min_array(const short *p, unsigned int size)$/;"	f
+mod	TOOLS/rangen_double.c	47;"	d	file:
+mod	TOOLS/rangen_double.c	79;"	d	file:
+msg	ETH_TRANSPORT/socket.c	52;"	d	file:
+msg	LTE_PHY/pdcchsim.c	59;"	d	file:
+multicast_group	ETH_TRANSPORT/multicast_link.c	/^static unsigned char multicast_group;$/;"	v	file:
+multicast_group_list	ETH_TRANSPORT/multicast_link.c	/^const char *multicast_group_list[MULTICAST_LINK_NUM_GROUPS] = {$/;"	v
+multicast_if	ETH_TRANSPORT/multicast_link.c	/^static char *multicast_if;$/;"	v	file:
+multicast_link_build_select_list	ETH_TRANSPORT/multicast_link.c	/^multicast_link_build_select_list (void)$/;"	f
+multicast_link_init	ETH_TRANSPORT/multicast_link.c	/^multicast_link_init(void)$/;"	f
+multicast_link_main_loop	ETH_TRANSPORT/multicast_link.c	/^void* multicast_link_main_loop (void *param)$/;"	f
+multicast_link_read	ETH_TRANSPORT/multicast_link.c	/^multicast_link_read (void)$/;"	f
+multicast_link_read_data	ETH_TRANSPORT/multicast_link.c	/^multicast_link_read_data (int groupP)$/;"	f
+multicast_link_read_data_from_sock	ETH_TRANSPORT/multicast_link.c	/^int multicast_link_read_data_from_sock(uint8_t is_master)$/;"	f
+multicast_link_start	ETH_TRANSPORT/multicast_link.c	/^void multicast_link_start(void (*rx_handlerP) (unsigned int, char *),$/;"	f
+multicast_link_write_sock	ETH_TRANSPORT/multicast_link.c	/^multicast_link_write_sock(int groupP, char *dataP, uint32_t sizeP)$/;"	f
+multipath_channel	TOOLS/multipath_channel.c	/^void multipath_channel(channel_desc_t *desc,$/;"	f
+multipath_channel_nosigconv	TOOLS/multipath_channel.c	/^uint8_t multipath_channel_nosigconv(channel_desc_t *desc)$/;"	f
+multipath_tv_channel	TOOLS/multipath_tv_channel.c	/^void multipath_tv_channel(channel_desc_t *desc,$/;"	f
+n_rnti	LTE_PHY/framegen.c	/^uint16_t n_rnti = 0x1235;$/;"	v
+n_rx_dropped	LTE_PHY/dlsim.c	/^int n_rx_dropped = 0; \/*!< \\brief initial max process time for rx *\/$/;"	v
+n_rx_dropped	LTE_PHY/ulsim.c	/^int n_rx_dropped = 0; \/*!< \\brief initial max process time for rx *\/$/;"	v
+n_sectors	TOOLS/defs.h	/^  uint8_t n_sectors;$/;"	m	struct:__anon3
+n_tx_dropped	LTE_PHY/dlsim.c	/^int n_tx_dropped = 0; \/*!< \\brief initial max process time for tx *\/$/;"	v
+n_tx_dropped	LTE_PHY/ulsim.c	/^int n_tx_dropped = 0; \/*!< \\brief initial max process time for tx *\/$/;"	v
+n_users	LTE_PHY/framegen.c	/^int n_users = 1;$/;"	v
+nas_dest_addr	ETH_TRANSPORT/netlink_init.c	/^struct sockaddr_nl nas_src_addr, nas_dest_addr;$/;"	v	typeref:struct:
+nas_iov_rx	ETH_TRANSPORT/netlink_init.c	/^struct iovec nas_iov_rx = {nl_rx_buf, sizeof(nl_rx_buf)};$/;"	v	typeref:struct:iovec
+nas_iov_tx	ETH_TRANSPORT/netlink_init.c	/^struct iovec nas_iov_tx;$/;"	v	typeref:struct:iovec
+nas_msg_rx	ETH_TRANSPORT/netlink_init.c	/^struct msghdr nas_msg_rx;$/;"	v	typeref:struct:msghdr
+nas_msg_tx	ETH_TRANSPORT/netlink_init.c	/^struct msghdr nas_msg_tx;$/;"	v	typeref:struct:msghdr
+nas_nlh_rx	ETH_TRANSPORT/netlink_init.c	/^struct nlmsghdr *nas_nlh_rx = NULL;$/;"	v	typeref:struct:nlmsghdr
+nas_nlh_tx	ETH_TRANSPORT/netlink_init.c	/^struct nlmsghdr *nas_nlh_tx = NULL;$/;"	v	typeref:struct:nlmsghdr
+nas_sock_fd	ETH_TRANSPORT/netlink_init.c	/^int nas_sock_fd;$/;"	v
+nas_src_addr	ETH_TRANSPORT/netlink_init.c	/^struct sockaddr_nl nas_src_addr, nas_dest_addr;$/;"	v	typeref:struct:sockaddr_nl
+nb_enb	ETH_TRANSPORT/defs.h	/^  unsigned int   nb_enb; \/*! \\brief *\/$/;"	m	struct:bypass_msg_header_s
+nb_flow	ETH_TRANSPORT/defs.h	/^  unsigned int   nb_flow; \/*! \\brief *\/$/;"	m	struct:bypass_msg_header_s
+nb_paths	TOOLS/defs.h	/^  uint16_t nb_paths;$/;"	m	struct:__anon2
+nb_rx	TOOLS/defs.h	/^  uint8_t nb_rx;$/;"	m	struct:__anon2
+nb_taps	TOOLS/defs.h	/^  uint8_t nb_taps;$/;"	m	struct:__anon2
+nb_tx	TOOLS/defs.h	/^  uint8_t nb_tx;$/;"	m	struct:__anon2
+nb_ue	ETH_TRANSPORT/defs.h	/^  unsigned int   nb_ue; \/*! \\brief *\/$/;"	m	struct:bypass_msg_header_s
+netlink_init	ETH_TRANSPORT/netlink_init.c	/^int netlink_init(void)$/;"	f
+new_channel_desc_scm	TOOLS/random_channel.c	/^channel_desc_t *new_channel_desc_scm(uint8_t nb_tx,$/;"	f
+nl_rx_buf	ETH_TRANSPORT/netlink_init.c	/^char nl_rx_buf[NL_MAX_PAYLOAD];$/;"	v
+node_desc_t	TOOLS/defs.h	/^} node_desc_t;$/;"	t	typeref:struct:__anon3
+nodes	TOOLS/defs.h	/^  node_desc_t* nodes;$/;"	m	struct:__anon5
+num_bytesP	ETH_TRANSPORT/bypass_session_layer.c	/^unsigned int num_bytesP = 0;$/;"	v
+num_common_dci	ETH_TRANSPORT/defs.h	/^  uint8_t num_common_dci;$/;"	m	struct:eNB_transport_info_s
+num_eNB	ETH_TRANSPORT/defs.h	/^  uint8_t num_eNB;$/;"	m	struct:UE_transport_info_s
+num_pmch	ETH_TRANSPORT/defs.h	/^  uint8_t num_pmch;$/;"	m	struct:eNB_transport_info_s
+num_ue_spec_dci	ETH_TRANSPORT/defs.h	/^  uint8_t num_ue_spec_dci;$/;"	m	struct:eNB_transport_info_s
+opposite_q	LTE_PHY/Abstraction/opposite_q.m	/^function q = opposite_q(qq)$/;"	f
+otg_enabled	LTE_PHY/dlsim.c	/^int otg_enabled=0;$/;"	v
+path_loss_0	TOOLS/defs.h	/^  double path_loss_0;$/;"	m	struct:__anon5
+path_loss_dB	TOOLS/defs.h	/^  double path_loss_dB;$/;"	m	struct:__anon2
+path_loss_exponent	TOOLS/defs.h	/^  double path_loss_exponent;$/;"	m	struct:__anon5
+pbch_awgn_polynomial	TOOLS/abstraction.c	/^double pbch_awgn_polynomial[7]= {-7.2926e-05, -2.8749e-03, -4.5064e-02, -3.5301e-01, -1.4655e+00, -3.6282e+00, -6.6907e+00};$/;"	v
+pbch_bler	TOOLS/abstraction.c	/^double pbch_bler(double sinr)$/;"	f
+pbch_flag	ETH_TRANSPORT/defs.h	/^  uint32_t pbch_flag:1;$/;"	m	struct:eNB_cntl_s
+pbch_payload	ETH_TRANSPORT/defs.h	/^  uint32_t pbch_payload;$/;"	m	struct:eNB_cntl_s
+pbch_polynomial_degree	TOOLS/abstraction.c	/^int pbch_polynomial_degree=6;$/;"	v
+pgm_create_socket	ETH_TRANSPORT/pgm_link.c	/^int pgm_create_socket(int index, const char *if_addr)$/;"	f	file:
+pgm_link_send_msg	ETH_TRANSPORT/pgm_link.c	/^int pgm_link_send_msg(int group, uint8_t *data, uint32_t len)$/;"	f
+pgm_multicast_group	ETH_TRANSPORT/pgm_link.c	/^pgm_multicast_group_t pgm_multicast_group[MULTICAST_LINK_NUM_GROUPS];$/;"	v
+pgm_multicast_group_t	ETH_TRANSPORT/pgm_link.c	/^} pgm_multicast_group_t;$/;"	t	typeref:struct:__anon1	file:
+pgm_oai_init	ETH_TRANSPORT/pgm_link.c	/^int pgm_oai_init(char *if_addr)$/;"	f
+pgm_recv_msg	ETH_TRANSPORT/pgm_link.c	/^int pgm_recv_msg(int group, uint8_t *buffer, uint32_t length,$/;"	f
+pgm_would_block	ETH_TRANSPORT/pgm_link.c	/^unsigned int pgm_would_block = 1;$/;"	v
+phi_rad	TOOLS/defs.h	/^  double phi_rad;$/;"	m	struct:__anon3
+phich	ETH_TRANSPORT/defs.h	/^  uint32_t phich:19; \/\/ max 200 bit$/;"	m	struct:eNB_cntl_s
+pmch_flag	ETH_TRANSPORT/defs.h	/^  uint32_t pmch_flag:1;$/;"	m	struct:eNB_cntl_s
+polyfit_delta_BLER	LTE_PHY/Abstraction/Training/polyfit_delta_BLER.m	/^function std_deviat=polyfit_delta_BLER(beta)$/;"	f
+port	ETH_TRANSPORT/pgm_link.c	/^  uint16_t port;$/;"	m	struct:__anon1	file:
+prach_flag	ETH_TRANSPORT/defs.h	/^  uint8_t prach_flag:1;  \/\/ 0=none,1=active$/;"	m	struct:UE_cntl_s
+prach_id	ETH_TRANSPORT/defs.h	/^  uint8_t prach_id:6;    \/\/ this is the PHY preamble index for the prach$/;"	m	struct:UE_cntl_s
+private_multicast_link	ETH_TRANSPORT/multicast_link.h	41;"	d
+private_multicast_link	ETH_TRANSPORT/multicast_link.h	44;"	d
+private_socket	ETH_TRANSPORT/socket.h	41;"	d
+private_socket	ETH_TRANSPORT/socket.h	44;"	d
+pss	ETH_TRANSPORT/defs.h	/^  uint32_t pss:2;$/;"	m	struct:eNB_cntl_s
+public_multicast_link	ETH_TRANSPORT/multicast_link.h	42;"	d
+public_multicast_link	ETH_TRANSPORT/multicast_link.h	45;"	d
+public_socket	ETH_TRANSPORT/socket.h	42;"	d
+public_socket	ETH_TRANSPORT/socket.h	45;"	d
+pucch_Ncs1	ETH_TRANSPORT/defs.h	/^  uint8_t pucch_Ncs1:3;  \/\/ physical configuration of pucch, for abstraction purposes$/;"	m	struct:UE_cntl_s
+pucch_flag	ETH_TRANSPORT/defs.h	/^  uint8_t pucch_flag:3;  \/\/ 0,7 = none, 1 = type 1, 2=type 1a, 3=type 1b, 4=type 2, 5=type 2a, 6=type 2b$/;"	m	struct:UE_cntl_s
+pucch_payload	ETH_TRANSPORT/defs.h	/^  uint32_t pucch_payload:21;        \/\/ ack\/nak\/cqi information$/;"	m	struct:UE_cntl_s
+pucch_sel	ETH_TRANSPORT/defs.h	/^  uint8_t pucch_sel:1;$/;"	m	struct:UE_cntl_s
+pucchsignalG	LTE_PHY/pucchsignalgenerator.c	/^void pucchsignalG(unsigned int gpib_card,unsigned int gpib_device,unsigned int freqband,LTE_DL_FRAME_PARMS *frame_parms,PUCCH_FMT_t pucch_format)$/;"	f
+pusch_ack	ETH_TRANSPORT/defs.h	/^  uint8_t pusch_ack:2;   \/\/ ack\/nak on pusch$/;"	m	struct:UE_cntl_s
+pusch_flag	ETH_TRANSPORT/defs.h	/^  uint8_t pusch_flag:1;  \/\/ 0=none,1=active$/;"	m	struct:UE_cntl_s
+pusch_ri	ETH_TRANSPORT/defs.h	/^  uint8_t pusch_ri:2;    \/\/ ri information on pusch$/;"	m	struct:UE_cntl_s
+pusch_uci	ETH_TRANSPORT/defs.h	/^  uint8_t pusch_uci[MAX_CQI_BYTES];$/;"	m	struct:UE_cntl_s
+puschsignalG	LTE_PHY/ulsignalgenerator.c	/^void puschsignalG(unsigned int gpib_card,unsigned int gpib_device,unsigned int freqband,LTE_DL_FRAME_PARMS *frame_parms,void *UL_alloc_pdu)$/;"	f
+random_aoa	TOOLS/defs.h	/^  int8_t random_aoa;$/;"	m	struct:__anon2
+random_channel	TOOLS/defs.h	/^  time_stats_t random_channel;$/;"	m	struct:__anon2
+random_channel	TOOLS/random_channel.c	/^int random_channel(channel_desc_t *desc, uint8_t abstraction_flag)$/;"	f
+randominit	TOOLS/rangen_double.c	/^void randominit(unsigned seed_init)$/;"	f
+rf_rx	RF/rf.c	/^void rf_rx(double **r_re,$/;"	f
+rf_rx_simple	RF/rf.c	/^void rf_rx_simple(double **r_re,$/;"	f
+ricean_factor	TOOLS/defs.h	/^  double ricean_factor;$/;"	m	struct:__anon2
+rnti	ETH_TRANSPORT/defs.h	/^  uint16_t rnti[NUMBER_OF_CONNECTED_eNB_MAX];$/;"	m	struct:UE_transport_info_s
+rural	TOOLS/defs.h	/^  rural=0,$/;"	e	enum:__anon4
+rx_buffer	ETH_TRANSPORT/pgm_link.c	/^  uint8_t  rx_buffer[40000];$/;"	m	struct:__anon1	file:
+rx_bufferP	ETH_TRANSPORT/bypass_session_layer.c	/^char rx_bufferP[BYPASS_RX_BUFFER_SIZE];$/;"	v
+rx_handler	ETH_TRANSPORT/multicast_link.c	/^static void (*rx_handler) (unsigned int, char *);$/;"	v	file:
+rx_handler	ETH_TRANSPORT/vars.h	/^rx_handler_t rx_handler;$/;"	v
+rx_handler_t	ETH_TRANSPORT/defs.h	/^typedef unsigned int (*rx_handler_t) (unsigned char, char*, unsigned int);$/;"	t
+rx_noise_level	TOOLS/defs.h	/^  double rx_noise_level;$/;"	m	struct:__anon3
+s0	TOOLS/taus.c	/^unsigned int s0, s1, s2, b;$/;"	v
+s1	TOOLS/taus.c	/^unsigned int s0, s1, s2, b;$/;"	v
+s2	TOOLS/taus.c	/^unsigned int s0, s1, s2, b;$/;"	v
+sampling_rate	TOOLS/defs.h	/^  double sampling_rate;$/;"	m	struct:__anon2
+sampling_rate	TOOLS/random_channel.c	1087;"	d	file:
+scenario	TOOLS/ch_desc_proto.c	/^scenario_desc_t scenario;$/;"	v
+scenario	TOOLS/defs.h	/^  scenario_t scenario;$/;"	m	struct:__anon5
+scenario_desc_t	TOOLS/defs.h	/^} scenario_desc_t;$/;"	t	typeref:struct:__anon5
+scenario_t	TOOLS/defs.h	/^} scenario_t;$/;"	t	typeref:enum:__anon4
+scm_c_amps_dB	TOOLS/random_channel.c	/^double scm_c_amps_dB[] = {0.00, -2.22, -3.98, -1.86, -4.08, -5.84, -1.08, -3.30, -5.06, -9.08, -11.30, -13.06, -15.14, -17.36, -19.12, -20.64, -22.85, -24.62};$/;"	v
+scm_c_delays	TOOLS/random_channel.c	/^double scm_c_delays[] = {0, 0.0125, 0.0250, 0.3625, 0.3750, 0.3875, 0.2500, 0.2625, 0.2750, 1.0375, 1.0500, 1.0625, 2.7250, 2.7375, 2.7500, 4.6000, 4.6125, 4.6250};$/;"	v
+sector	TOOLS/ch_desc_proto.c	/^enum sector {SEC1, SEC2, SEC3};$/;"	g	file:
+seed	TOOLS/rangen_double.c	/^static unsigned int seed, iy, ir[98];$/;"	v	file:
+seq_num	ETH_TRANSPORT/defs.h	/^  uint64_t       seq_num;$/;"	m	struct:bypass_msg_header_s
+seq_num_tx	ETH_TRANSPORT/bypass_session_layer.c	/^static uint64_t seq_num_tx = 0;$/;"	v	file:
+set_taus_seed	TOOLS/taus.c	/^void set_taus_seed(unsigned int seed_init)$/;"	f
+shadow_fading_correlation_cells	TOOLS/defs.h	/^  double shadow_fading_correlation_cells;$/;"	m	struct:__anon5
+shadow_fading_correlation_distance	TOOLS/defs.h	/^  double shadow_fading_correlation_distance;$/;"	m	struct:__anon5
+shadow_fading_correlation_sectors	TOOLS/defs.h	/^  double shadow_fading_correlation_sectors;$/;"	m	struct:__anon5
+shadow_fading_std	TOOLS/defs.h	/^  double shadow_fading_std;$/;"	m	struct:__anon5
+sin_lut	TOOLS/abstraction.c	/^double **cos_lut=NULL,**sin_lut=NULL;$/;"	v
+sinr_Eff_Calc	LTE_PHY/Abstraction/Training/sinr_Eff_Calc.m	/^function [SINR_eff]=sinr_Eff_Calc(beta)$/;"	f
+size	ETH_TRANSPORT/defs.h	/^  unsigned int      size;$/;"	m	struct:bypass_proto2multicast_header_s
+sock	ETH_TRANSPORT/pgm_link.c	/^  pgm_sock_t *sock;$/;"	m	struct:__anon1	file:
+socket_setnonblocking	ETH_TRANSPORT/socket.c	/^socket_setnonblocking (int sockP)$/;"	f
+socks	ETH_TRANSPORT/multicast_link.c	/^static fd_set socks;$/;"	v	file:
+speed	TOOLS/defs.h	/^  double speed;$/;"	m	struct:__anon3
+sr	ETH_TRANSPORT/defs.h	/^  uint8_t sr:1;$/;"	m	struct:UE_cntl_s
+sss	ETH_TRANSPORT/defs.h	/^  uint32_t sss:8;$/;"	m	struct:eNB_cntl_s
+subframe	ETH_TRANSPORT/defs.h	/^  unsigned int   subframe;$/;"	m	struct:bypass_msg_header_s
+t_rx_max	LTE_PHY/dlsim.c	/^double t_rx_max = -1000000000; \/*!< \\brief initial max process time for rx *\/$/;"	v
+t_rx_max	LTE_PHY/ulsim.c	/^double t_rx_max = -1000000000; \/*!< \\brief initial max process time for rx *\/$/;"	v
+t_rx_min	LTE_PHY/dlsim.c	/^double t_rx_min = 1000000000; \/*!< \\brief initial min process time for rx *\/$/;"	v
+t_rx_min	LTE_PHY/ulsim.c	/^double t_rx_min = 1000000000; \/*!< \\brief initial min process time for tx *\/$/;"	v
+t_tx_max	LTE_PHY/dlsim.c	/^double t_tx_max = -1000000000; \/*!< \\brief initial max process time for tx *\/$/;"	v
+t_tx_max	LTE_PHY/ulsim.c	/^double t_tx_max = -1000000000; \/*!< \\brief initial max process time for tx *\/$/;"	v
+t_tx_min	LTE_PHY/dlsim.c	/^double t_tx_min = 1000000000; \/*!< \\brief initial min process time for tx *\/$/;"	v
+t_tx_min	LTE_PHY/ulsim.c	/^double t_tx_min = 1000000000; \/*!< \\brief initial min process time for tx *\/$/;"	v
+taus	TOOLS/taus.c	/^unsigned int taus(void)$/;"	f
+tbs	ETH_TRANSPORT/defs.h	/^  uint16_t tbs[MAX_NUM_DCI*2];    \/\/ times 2 for dual-stream MIMO formats$/;"	m	struct:eNB_transport_info_s
+tbs	ETH_TRANSPORT/defs.h	/^  uint16_t tbs[NUMBER_OF_CONNECTED_eNB_MAX];$/;"	m	struct:UE_transport_info_s
+test_llr_quant	TOOLS/llr_quantization.c	/^void test_llr_quant()$/;"	f
+theta_3dB	TOOLS/ch_desc_proto.c	37;"	d	file:
+time	TOOLS/taus.c	39;"	d	file:
+title	LTE_PHY/ulsim.c	/^char title[255];$/;"	v
+transport_blocks	ETH_TRANSPORT/defs.h	/^  uint8_t transport_blocks[MAX_TRANSPORT_BLOCKS_BUFFER_SIZE];$/;"	m	struct:eNB_transport_info_s
+transport_blocks	ETH_TRANSPORT/defs.h	/^  uint8_t transport_blocks[MAX_TRANSPORT_BLOCKS_BUFFER_SIZE];\/\/*NUMBER_OF_CONNECTED_eNB_MAX];$/;"	m	struct:UE_transport_info_s
+transport_names	ETH_TRANSPORT/bypass_session_layer.c	/^mapping transport_names[] = {$/;"	v
+tv_channel	TOOLS/multipath_tv_channel.c	/^void tv_channel(channel_desc_t *desc,double complex ***H,uint16_t length)$/;"	f
+tv_conv	TOOLS/multipath_tv_channel.c	/^void tv_conv(double complex **h, double complex *x, double complex *y, uint16_t nb_samples, uint8_t nb_taps, int dd)$/;"	f
+tx_handler	ETH_TRANSPORT/vars.h	/^tx_handler_t tx_handler;$/;"	v
+tx_handler_t	ETH_TRANSPORT/defs.h	/^typedef unsigned int (*tx_handler_t) (unsigned char, char*, unsigned int*, unsigned int*);$/;"	t
+tx_power_dBm	TOOLS/defs.h	/^  double tx_power_dBm;$/;"	m	struct:__anon3
+uci_format	ETH_TRANSPORT/defs.h	/^  uint8_t uci_format;$/;"	m	struct:UE_cntl_s
+ue_cntl_delay	ETH_TRANSPORT/vars.h	/^UE_cntl ue_cntl_delay[NUMBER_OF_UE_MAX][MAX_NUM_CCs][2];$/;"	v
+ue_data	LTE_PHY/ulsim.c	/^node_desc_t *ue_data[NUMBER_OF_UE_MAX];$/;"	v
+ue_id	ETH_TRANSPORT/defs.h	/^  uint8_t ue_id[MAX_NUM_DCI];$/;"	m	struct:eNB_transport_info_s
+uniformrandom	TOOLS/rangen_double.c	/^double uniformrandom(void)$/;"	f
+urban	TOOLS/defs.h	/^  urban,$/;"	e	enum:__anon4
+x	TOOLS/defs.h	/^  double x;$/;"	m	struct:__anon3
+xforms	LTE_PHY/ulsim.c	/^int xforms=0;$/;"	v
+y	TOOLS/defs.h	/^  double y;$/;"	m	struct:__anon3
+z	TOOLS/defs.h	/^  double z;$/;"	m	struct:__anon3

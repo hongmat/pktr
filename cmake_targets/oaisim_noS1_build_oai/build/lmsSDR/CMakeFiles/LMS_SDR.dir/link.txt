@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -std=c++0x -fPIC   -shared -Wl,-soname,libLMS_SDR.so -o libLMS_SDR.so CMakeFiles/LMS_SDR.dir/LMS_SDR.cpp.o LMS_StreamBoard/libLMS_StreamBoard.a -lusb-1.0 -lpthread connectionManager/libConnectionManager.a -lusb-1.0 -lpthread 

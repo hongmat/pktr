@@ -1,0 +1,2 @@
+/usr/bin/ar cr libLMS_StreamBoard.a  CMakeFiles/LMS_StreamBoard.dir/LMS_StreamBoard.cpp.o
+/usr/bin/ranlib libLMS_StreamBoard.a

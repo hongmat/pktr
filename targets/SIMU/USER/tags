@@ -1,0 +1,308 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ASN1_MSG_INC	Makefile	/^ASN1_MSG_INC = $(OPENAIR2_DIR)\/RRC\/LITE\/MESSAGES$/;"	m
+ASN1_RRC_MSG_OBJS1	Makefile	/^ASN1_RRC_MSG_OBJS1=$(addprefix $(OPENAIR2_DIR)\/RRC\/LITE\/MESSAGES\/, $(ASN1_MSG_OBJS))$/;"	m
+Am	sinr_sim.c	63;"	d	file:
+CCCH_RB_ALLOC	oaisim.c	126;"	d	file:
+CCCH_RB_ALLOC	oaisim_pad.c	97;"	d	file:
+DB_LDFLAGS	Makefile	/^DB_LDFLAGS = -lmysqlclient$/;"	m
+DEBUG_SIM	channel_sim.c	71;"	d	file:
+DECOR_DIST	oaisim.c	130;"	d	file:
+DECOR_DIST	oaisim_pad.c	101;"	d	file:
+DISABLE_XER_PRINT	Makefile	/^DISABLE_XER_PRINT=0$/;"	m
+DLSCH_RB_ALLOC	oaisim.c	128;"	d	file:
+DLSCH_RB_ALLOC	oaisim_pad.c	99;"	d	file:
+ENABLE_DB	Makefile	/^ENABLE_DB = $(shell if [ `dpkg -l | grep libmysqlclient -c` = "0" ]; then  echo "0" ; else  echo "1" ; fi )$/;"	m
+FD_phy_procedures_sim	phy_procedures_sim_form.h	/^} FD_phy_procedures_sim;$/;"	t	typeref:struct:__anon1
+FD_phy_procedures_sim_h_	phy_procedures_sim_form.h	4;"	d
+FRAME_END	oaisim_pad.c	245;"	d	file:
+JOB_DIST_DEBUG	oaisim_pad.c	247;"	d	file:
+JOB_REPLY_TAG	oaisim_pad.c	244;"	d	file:
+JOB_REQUEST_TAG	oaisim_pad.c	243;"	d	file:
+K	oaisim_functions.c	95;"	d	file:
+K	oaisim_pad.c	107;"	d	file:
+L2L1_RUNNING	oaisim.c	/^  L2L1_WAITTING, L2L1_RUNNING, L2L1_TERMINATED,$/;"	e	enum:l2l1_task_state_e	file:
+L2L1_TERMINATED	oaisim.c	/^  L2L1_WAITTING, L2L1_RUNNING, L2L1_TERMINATED,$/;"	e	enum:l2l1_task_state_e	file:
+L2L1_WAITTING	oaisim.c	/^  L2L1_WAITTING, L2L1_RUNNING, L2L1_TERMINATED,$/;"	e	enum:l2l1_task_state_e	file:
+LFDS_LIB	Makefile	/^LFDS_LIB		 = $(LFDS_OBJ_DIR)\/bin\/liblfds611.a$/;"	m
+LFDS_OBJ_DIR	Makefile	/^LFDS_OBJ_DIR		 = $(subst $(OPENAIR_DIR),$(OBJS_DIR),$(LFDS_DIR))$/;"	m
+MCL	sinr_sim.c	65;"	d	file:
+MCS_COUNT	oaisim_pad.c	85;"	d	file:
+MSG_PRINT	Makefile	/^MSG_PRINT=1$/;"	m
+NAS_FLAG	Makefile	/^NAS_FLAG=1$/;"	m
+NO_JOBS_TAG	oaisim_pad.c	246;"	d	file:
+N_TRIALS	oaisim_pad.c	86;"	d	file:
+Nid_cell	oaisim_functions.c	/^uint16_t           Nid_cell              = 0; \/\/needed by init_lte_vars$/;"	v
+OAISIM_COMPILED_OBJECTS	Makefile	/^OAISIM_COMPILED_OBJECTS = $(subst $(OPENAIR_DIR), $(OBJS_DIR), $(OBJ) $(OAISIM_OBJS) $(ASN1_RRC_MSG_OBJS1))$/;"	m
+OAISIM_FUNCTIONS_H_	oaisim_functions.h	38;"	d
+OAISIM_OBJS	Makefile	/^OAISIM_OBJS = $(OPENAIR_TARGETS)\/SIMU\/USER\/oaisim.o$/;"	m
+OAISIM_OBJS_COMMON	Makefile	/^OAISIM_OBJS_COMMON  = $(OPENAIR_TARGETS)\/SIMU\/USER\/channel_sim.o$/;"	m
+OAISIM_PAD_OBJS	Makefile	/^OAISIM_PAD_OBJS =  $(OPENAIR_TARGETS)\/SIMU\/USER\/discrete_event_generator.o$/;"	m
+OCG_FLAG	Makefile	/^OCG_FLAG =1$/;"	m
+OPENAIR1_TOP	Makefile	/^OPENAIR1_TOP          = $(OPENAIR1_DIR)$/;"	m
+OPENAIR2	Makefile	/^OPENAIR2=1$/;"	m
+OPENAIR2_TOP	Makefile	/^OPENAIR2_TOP          = $(OPENAIR2_DIR)$/;"	m
+OPENAIR3	Makefile	/^OPENAIR3              = $(OPENAIR3_DIR)$/;"	m
+OPENAIR3_TOP	Makefile	/^OPENAIR3_TOP          = $(OPENAIR3_DIR)$/;"	m
+OPENAIR_EMU	Makefile	/^export OPENAIR_EMU=1$/;"	m
+PAD	oaisim_pad.c	240;"	d	file:
+PI	sinr_sim.c	62;"	d	file:
+PRINT_STATS	oaisim.c	472;"	d	file:
+PRINT_STATS	oaisim.c	473;"	d	file:
+RA_RB_ALLOC	oaisim.c	127;"	d	file:
+RA_RB_ALLOC	oaisim_pad.c	98;"	d	file:
+RF	channel_sim.c	70;"	d	file:
+RF	oaisim_pad.c	81;"	d	file:
+RN_id	oaisim.c	/^static module_id_t RN_id = 0;$/;"	v	file:
+SECU	Makefile	/^SECU=0$/;"	m
+SF_DEVIATION_OFFSET_NS	oaisim_functions.c	93;"	d	file:
+SF_DEVIATION_OFFSET_NS	oaisim_pad.c	105;"	d	file:
+SF_VAR	oaisim.c	131;"	d	file:
+SF_VAR	oaisim_pad.c	102;"	d	file:
+SIMULATION_OBJS	Makefile	/^SIMULATION_OBJS  = $(TOP_DIR)\/SIMULATION\/TOOLS\/gauss.o$/;"	m
+SLEEP_STEP_US	oaisim_functions.c	94;"	d	file:
+SLEEP_STEP_US	oaisim_pad.c	106;"	d	file:
+ShaF	oaisim_functions.c	/^double      **ShaF                  = NULL;$/;"	v
+TARGET_SF_TIME_NS	oaisim_functions.c	96;"	d	file:
+TARGET_SF_TIME_NS	oaisim_pad.c	108;"	d	file:
+TOP_DIR	Makefile	/^TOP_DIR               = $(OPENAIR1_DIR)$/;"	m
+T_dont_fork	oaisim.c	/^int T_dont_fork = 0;  \/* default is to fork, see 'T_init' to understand *\/$/;"	v
+T_port	oaisim.c	/^int T_port = 2021;    \/* default port to listen to to wait for the tracer *\/$/;"	v
+T_wait	oaisim.c	/^int T_wait = 1;       \/* by default we wait for the tracer *\/$/;"	v
+UE2eNB	oaisim.c	/^channel_desc_t *UE2eNB[NUMBER_OF_UE_MAX][NUMBER_OF_eNB_MAX][MAX_NUM_CCs];$/;"	v
+UE2eNB	oaisim_pad.c	/^channel_desc_t *UE2eNB[NUMBER_OF_UE_MAX][NUMBER_OF_eNB_MAX];$/;"	v
+UE_inst	oaisim.c	/^static module_id_t UE_inst = 0;$/;"	v	file:
+UL_RB_ALLOC	oaisim.c	125;"	d	file:
+UL_RB_ALLOC	oaisim_pad.c	96;"	d	file:
+W	Makefile	/^	@echo "Usage: make pre-ci PW=mypassword"$/;"	m
+_THREADPOOL_H_	threadpool.h	30;"	d
+abstraction_flag	oaisim_functions.c	/^uint8_t            abstraction_flag      = 0;$/;"	v
+active	threadpool.h	/^  int active; \/\/ num active threads$/;"	m	struct:threadpool_t
+add_event	event_handler.c	/^void add_event(Event_t event)$/;"	f
+beta_ACK	oaisim_functions.c	/^uint8_t            beta_ACK              = 0;$/;"	v
+beta_CQI	oaisim_functions.c	/^uint8_t            beta_CQI              = 2;$/;"	v
+beta_RI	oaisim_functions.c	/^uint8_t            beta_RI               = 0;$/;"	v
+calc_path_loss	sinr_sim.c	/^void calc_path_loss(node_desc_t* enb_data, node_desc_t* ue_data, channel_desc_t *ch_desc, Environment_System_Config env_desc, double **Shad_Fad)$/;"	f
+calculate_sinr	sinr_sim.c	/^void calculate_sinr(channel_desc_t* eNB2UE, node_desc_t *enb_data, node_desc_t *ue_data, double *sinr_dB, uint16_t nb_rb)$/;"	f
+cba_backoff	oaisim_functions.c	/^int           cba_backoff           = 30;$/;"	v
+cdata	phy_procedures_sim_form.h	/^  char *cdata;$/;"	m	struct:__anon1
+ch00	phy_procedures_sim_form.h	/^  FL_OBJECT *ch00;$/;"	m	struct:__anon1
+check_and_adjust_params	oaisim_functions.c	/^void check_and_adjust_params(void)$/;"	f
+config_frames	oaisim.c	/^unsigned short config_frames[4] = {2,9,11,13};$/;"	v
+config_smbv	oaisim.c	/^uint8_t config_smbv = 0;$/;"	v
+cooperation_flag	oaisim_functions.c	/^uint8_t            cooperation_flag;          \/\/ for cooperative communication$/;"	v
+count	threadpool.h	/^  int count; \/\/ ????$/;"	m	struct:threadpool_t
+createMat	cor_SF_sim.c	/^double ** createMat (int nbRow, int nbCol)$/;"	f
+create_form_phy_procedures_sim	phy_procedures_sim_form.c	/^FD_phy_procedures_sim *create_form_phy_procedures_sim(void)$/;"	f
+destroyMat	cor_SF_sim.c	/^void destroyMat(double **mat1,int row,int col)$/;"	f
+dl_chan_stats	oaisim.c	/^time_stats_t dl_chan_stats;$/;"	v
+do_DL_sig	channel_sim.c	/^void do_DL_sig(double **r_re0,double **r_im0,$/;"	f
+do_UL_sig	channel_sim.c	/^void do_UL_sig(double **r_re0,double **r_im0,double **r_re,double **r_im,double **s_re,double **s_im,channel_desc_t *UE2eNB[NUMBER_OF_UE_MAX][NUMBER_OF_eNB_MAX][MAX_NUM_CCs],$/;"	f
+eMBMS_active	oaisim_pad.c	/^int eMBMS_active = 0;$/;"	v
+eNB2UE	oaisim.c	/^channel_desc_t *eNB2UE[NUMBER_OF_eNB_MAX][NUMBER_OF_UE_MAX][MAX_NUM_CCs];$/;"	v
+eNB2UE	oaisim_pad.c	/^channel_desc_t *eNB2UE[NUMBER_OF_eNB_MAX][NUMBER_OF_UE_MAX];$/;"	v
+eNB_inst	oaisim.c	/^static module_id_t eNB_inst = 0;$/;"	v	file:
+enb_data	oaisim.c	/^node_desc_t *enb_data[NUMBER_OF_eNB_MAX];$/;"	v
+enb_data	oaisim_pad.c	/^node_desc_t *enb_data[NUMBER_OF_eNB_MAX];$/;"	v
+enb_node_list	oaisim_functions.c	/^node_list*     enb_node_list         = NULL;$/;"	v
+enb_properties	oaisim_functions.c	/^const Enb_properties_array_t *enb_properties;$/;"	v
+ethernet_flag	oaisim_functions.c	/^uint8_t            ethernet_flag         = 0;$/;"	v
+event_list	event_handler.c	/^Event_List_t event_list;$/;"	v
+execute_events	event_handler.c	/^void execute_events(frame_t frame)$/;"	f
+exit_fun	oaisim_functions.c	/^void exit_fun(const char* s)$/;"	f
+extract_position	sinr_sim.c	/^void extract_position (node_list* input_node_list, node_desc_t **node_data, int nb_nodes)$/;"	f
+extract_position_fixed_enb	sinr_sim.c	/^void extract_position_fixed_enb  (node_desc_t **node_data, int nb_nodes, frame_t frame)$/;"	f
+extract_position_fixed_ue	sinr_sim.c	/^void extract_position_fixed_ue  (node_desc_t **node_data, int nb_nodes, frame_t frame)$/;"	f
+fdstr	oaisim_functions.c	/^char fdstr[10];$/;"	v
+first_rbUL	channel_sim.c	/^int first_rbUL ;$/;"	v
+flow_start_time	oaisim_config.c	/^int flow_start_time(int sid, int did, uint32_t n_frames, uint32_t start, uint32_t duration)$/;"	f
+for_main_times	oaisim_pad.c	/^int for_main_times = 0;$/;"	v
+for_times	oaisim_functions.c	/^int           for_times             = 0;$/;"	v
+forgetting_factor	oaisim_functions.c	/^double        forgetting_factor     = 0.0;$/;"	v
+frame	oaisim.c	/^frame_t frame = 0;$/;"	v
+frame	oaisim_pad.c	/^frame_t frame=0;$/;"	v
+frame_number	oaisim_pad.c	/^int frame_number = 1;$/;"	v
+frame_parms	oaisim_functions.c	/^LTE_DL_FRAME_PARMS *frame_parms[MAX_NUM_CCs];$/;"	v
+frame_type	oaisim_functions.c	/^char frame_type[10];$/;"	v
+frames	oaisim_functions.c	/^char frames[10];$/;"	v
+full_name	oaisim_functions.c	/^char full_name[200];$/;"	v
+get_MIESM_param	sinr_sim.c	/^void get_MIESM_param()$/;"	f
+get_OAI_emulation	oaisim.c	/^get_OAI_emulation ()$/;"	f
+get_beta_map	sinr_sim.c	/^void get_beta_map()$/;"	f
+get_beta_map_up	sinr_sim.c	/^void get_beta_map_up()$/;"	f
+get_eNB_mac_inst	oaisim.c	/^get_eNB_mac_inst (module_id_t module_idP)$/;"	f
+get_simulation_options	oaisim_functions.c	/^void get_simulation_options(int argc, char *argv[])$/;"	f
+help	oaisim.c	/^help (void)$/;"	f
+help	oaisim_pad.c	/^help (void)$/;"	f
+if_times	oaisim_functions.c	/^int           if_times              = 0;$/;"	v
+init_SF	cor_SF_sim.c	/^double **init_SF (int map_length, int map_height, double decor_dist,$/;"	f
+init_channel_vars	channel_sim.c	/^void init_channel_vars(LTE_DL_FRAME_PARMS *frame_parms, double ***s_re,double ***s_im,double ***r_re,double ***r_im,double ***r_re0,double ***r_im0)$/;"	f
+init_enb	sinr_sim.c	/^void init_enb(node_desc_t  *enb_data, eNB_Antenna enb_ant)  \/\/changed from node_struct$/;"	f
+init_lte_RN	init_lte.c	/^PHY_VARS_RN* init_lte_RN(LTE_DL_FRAME_PARMS *frame_parms,$/;"	f
+init_lte_UE	init_lte.c	/^PHY_VARS_UE* init_lte_UE(LTE_DL_FRAME_PARMS *frame_parms,$/;"	f
+init_lte_eNB	init_lte.c	/^PHY_VARS_eNB* init_lte_eNB(LTE_DL_FRAME_PARMS *frame_parms,$/;"	f
+init_lte_vars	init_lte.c	/^void init_lte_vars(LTE_DL_FRAME_PARMS *frame_parms[MAX_NUM_CCs],$/;"	f
+init_oai_emulation	oaisim_config.c	/^void init_oai_emulation(void)$/;"	f
+init_ocm	oaisim_functions.c	/^void init_ocm(void)$/;"	f
+init_omv	oaisim_functions.c	/^void init_omv(void)$/;"	f
+init_openair1	oaisim_functions.c	/^void init_openair1(void)$/;"	f
+init_openair2	oaisim_functions.c	/^void init_openair2(void)$/;"	f
+init_otg_pdcp_buffer	oaisim_functions.c	/^void init_otg_pdcp_buffer(void)$/;"	f
+init_seed	oaisim_functions.c	/^void init_seed(uint8_t set_seed)$/;"	f
+init_slot_isr	oaisim_functions.c	/^int init_slot_isr(void)$/;"	f
+init_snr	sinr_sim.c	/^void init_snr(channel_desc_t* eNB2UE, node_desc_t *enb_data, node_desc_t *ue_data, double* sinr_dB, double* N0, uint8_t transmission_mode, uint16_t q, uint8_t dl_power_off, uint16_t nb_rb)$/;"	f
+init_snr_up	sinr_sim.c	/^void init_snr_up(channel_desc_t* UE2eNB, node_desc_t *enb_data, node_desc_t *ue_data, double* sinr_dB, double* N0,uint16_t nb_rb,uint16_t fr_rb)$/;"	f
+init_time	oaisim_functions.c	/^void init_time()$/;"	f
+init_ue	sinr_sim.c	/^void init_ue(node_desc_t  *ue_data, UE_Antenna ue_ant)  \/\/changed from node_struct$/;"	f
+job_queue	threadpool.h	/^  Job_List job_queue;$/;"	m	struct:threadpool_t
+l2l1_state	oaisim.c	/^l2l1_task_state_t l2l1_state = L2L1_WAITTING;$/;"	v
+l2l1_task	oaisim.c	/^l2l1_task (void *args_p)$/;"	f
+l2l1_task_state_e	oaisim.c	/^typedef enum l2l1_task_state_e {$/;"	g	file:
+l2l1_task_state_t	oaisim.c	/^} l2l1_task_state_t;$/;"	t	typeref:enum:l2l1_task_state_e	file:
+ldata	phy_procedures_sim_form.h	/^  long  ldata;$/;"	m	struct:__anon1
+lock	threadpool.h	/^  pthread_mutex_t lock; \/\/ used to get \/ put a job in the queue, protect job_queue$/;"	m	struct:threadpool_t
+log_thread	oaisim.c	/^pthread_t log_thread;$/;"	v
+log_thread_finalize	oaisim.c	/^log_thread_finalize (void)$/;"	f
+log_thread_init	oaisim.c	/^log_thread_init (void)$/;"	f
+main	oaisim.c	/^main (int argc, char **argv)$/;"	f
+main	oaisim_pad.c	/^int main (int argc, char *argv[])$/;"	f
+map1	oaisim.c	/^int map1, map2;$/;"	v
+map1	oaisim_functions.c	/^int           map1,map2;$/;"	v
+map2	oaisim.c	/^int map1, map2;$/;"	v
+map2	oaisim_functions.c	/^int           map1,map2;$/;"	v
+nb_antenna	oaisim_functions.c	/^char nb_antenna[20];$/;"	v
+nb_antennas_rx_ue	oaisim_functions.c	/^int           nb_antennas_rx_ue        = 1; \/\/ \/\/$/;"	v
+notify	threadpool.h	/^  pthread_cond_t notify; \/\/ wakup threads$/;"	m	struct:threadpool_t
+num_enb	oaisim_functions.c	/^char num_enb[10];$/;"	v
+num_ue	oaisim_functions.c	/^char num_ue[10];$/;"	v
+number_rb_ul	channel_sim.c	/^int number_rb_ul;$/;"	v
+oai_shutdown	oaisim.c	/^oai_shutdown (void)$/;"	f
+oaisim_config	oaisim_config.c	/^void oaisim_config(void)$/;"	f
+oaisim_stats	oaisim.c	/^time_stats_t oaisim_stats;$/;"	v
+oaisim_stats_f	oaisim.c	/^time_stats_t oaisim_stats_f;$/;"	v
+ocg_config_app	oaisim_config.c	/^int ocg_config_app(void)$/;"	f
+ocg_config_emu	oaisim_config.c	/^int ocg_config_emu(void)$/;"	f
+ocg_config_env	oaisim_config.c	/^int ocg_config_env(void)$/;"	f
+ocg_config_proto	oaisim_config.c	/^void  ocg_config_proto(void)$/;"	f
+ocg_config_topo	oaisim_config.c	/^int ocg_config_topo(void)$/;"	f
+olg_config	oaisim_config.c	/^int olg_config(void)$/;"	f
+omg_model_names	oaisim_config.c	/^mapping omg_model_names[] = {$/;"	v
+omg_period	oaisim_functions.c	/^int           omg_period            = 10000;$/;"	v
+omg_rwp_names	oaisim_config.c	/^mapping omg_rwp_names[] = {$/;"	v
+omv_data	oaisim.c	/^static Data_Flow_Unit omv_data;$/;"	v	file:
+omv_end	oaisim.c	/^void omv_end(int pfd, Data_Flow_Unit omv_data)$/;"	f
+omv_end	oaisim_pad.c	/^void omv_end (int pfd, Data_Flow_Unit omv_data)$/;"	f
+omv_write	oaisim.c	/^int omv_write(int pfd, node_list* enb_node_list, node_list* ue_node_list, Data_Flow_Unit omv_data)$/;"	f
+omv_write	oaisim_pad.c	/^int omv_write (int pfd,  Node_list enb_node_list, Node_list ue_node_list, Data_Flow_Unit omv_data)$/;"	f
+otg_enabled	oaisim.c	/^int otg_enabled;$/;"	v
+otg_pdcp_buffer	oaisim.c	/^Packet_OTG_List_t *otg_pdcp_buffer;$/;"	v
+otg_pdcp_buffer	oaisim_functions.c	/^Packet_OTG_List_t *otg_pdcp_buffer = NULL;$/;"	v
+otg_times	oaisim_functions.c	/^int           otg_times             = 0;$/;"	v
+pad_finalize	oaisim_pad.c	/^void pad_finalize()$/;"	f
+pad_init	oaisim_pad.c	/^void pad_init()$/;"	f
+pad_inject_job	oaisim_pad.c	/^void pad_inject_job(int eNB_flag, int nid, int frame, int next_slot, int last_slot, enum Job_type type, int ctime)$/;"	f
+pad_synchronize	oaisim_pad.c	/^void pad_synchronize()$/;"	f
+pdcp_period	oaisim_functions.c	/^int           pdcp_period           = 0;$/;"	v
+pdsch_constellation	phy_procedures_sim_form.h	/^  FL_OBJECT *pdsch_constellation;$/;"	m	struct:__anon1
+pexpect	Makefile	/^pexpect = $(shell if [ `dpkg -l | grep pexpect -c` = "0" ]; then  echo "0" ; else  echo "1" ; fi )$/;"	m
+pfd	oaisim.c	/^int pfd[2]; \/\/ fd for omv : fixme: this could be a local var$/;"	v
+phy_procedures_sim	phy_procedures_sim_form.h	/^  FL_FORM *phy_procedures_sim;$/;"	m	struct:__anon1
+phy_test	oaisim_functions.c	/^int phy_test = 0;$/;"	v
+plot_results	plot_results.m	/^function plot_results(tm)$/;"	f
+pool	oaisim_pad.c	/^threadpool_t * pool;$/;"	v
+print_opp_meas	oaisim.c	/^print_opp_meas (void)$/;"	f
+pusch_constellation	phy_procedures_sim_form.h	/^  FL_OBJECT *pusch_constellation;$/;"	m	struct:__anon1
+r_im	oaisim_functions.c	/^double      **s_re, **s_im, **r_re, **r_im, **r_re0, **r_im0;$/;"	v
+r_im0	oaisim_functions.c	/^double      **s_re, **s_im, **r_re, **r_im, **r_re0, **r_im0;$/;"	v
+r_re	oaisim_functions.c	/^double      **s_re, **s_im, **r_re, **r_im, **r_re0, **r_im0;$/;"	v
+r_re0	oaisim_functions.c	/^double      **s_re, **s_im, **r_re, **r_im, **r_re0, **r_im0;$/;"	v
+rate_adaptation_flag	oaisim_functions.c	/^uint8_t            rate_adaptation_flag  = 0;$/;"	v
+reset_opp_meas	oaisim.c	/^reset_opp_meas (void)$/;"	f
+rrc_cellular	Makefile	/^rrc_cellular = 0$/;"	m
+rrc_cellular_UE	Makefile	/^    rrc_cellular_UE=1$/;"	m
+rrc_cellular_UE	Makefile	/^rrc_cellular_UE = 0$/;"	m
+rrc_cellular_eNB	Makefile	/^    rrc_cellular_eNB=1$/;"	m
+rrc_cellular_eNB	Makefile	/^rrc_cellular_eNB = 0$/;"	m
+run	oaisim_pad.c	/^void run(int argc, char *argv[])$/;"	f
+s_im	oaisim_functions.c	/^double      **s_re, **s_im, **r_re, **r_im, **r_re0, **r_im0;$/;"	v
+s_re	oaisim_functions.c	/^double      **s_re, **s_im, **r_re, **r_im, **r_re0, **r_im0;$/;"	v
+schedule	event_handler.c	/^void schedule(Operation_Type_t op, Event_Type_t type, int frame, char * key, void * value, int ue, int lcid)$/;"	f
+schedule_delayed	event_handler.c	/^void schedule_delayed(Operation_Type_t op, Event_Type_t type, char * key, void* value, char * date, int ue, int lcid)$/;"	f
+schedule_events	event_handler.c	/^void schedule_events()$/;"	f
+set_cli_start	oaisim.c	/^static void set_cli_start(module_id_t module_idP, uint8_t start)$/;"	f	file:
+set_seed	oaisim_functions.c	/^uint8_t            set_seed              = 0;$/;"	v
+set_sinr	oaisim_functions.c	/^uint8_t            set_sinr              = 0;$/;"	v
+set_snr	oaisim_functions.c	/^uint8_t        set_snr         = 0;$/;"	v
+shutdown	threadpool.h	/^  int shutdown; \/\/ end of sim\/emu$/;"	m	struct:threadpool_t
+sigh	oaisim.c	/^sigh (void *arg)$/;"	f	file:
+signal_buffers_g	oaisim_pad.c	/^Signal_buffers *signal_buffers_g;$/;"	v
+sinr_dB	oaisim.c	/^double snr_dB, sinr_dB, snr_direction; \/\/,sinr_direction;$/;"	v
+sinr_dB	oaisim_functions.c	/^double             snr_dB=0, sinr_dB=0;$/;"	v
+sleep_time_us	oaisim_functions.c	/^int             sleep_time_us       = 0;$/;"	v
+small_scale_names	oaisim.c	/^mapping small_scale_names[] = { $/;"	v
+small_scale_names	oaisim_pad.c	/^mapping small_scale_names[] = {$/;"	v
+smbv_fname	oaisim.c	/^char smbv_fname[] = "smbv_config_file.smbv";$/;"	v
+smbv_frame_cnt	oaisim.c	/^unsigned char smbv_frame_cnt = 0;$/;"	v
+smbv_ip	oaisim.c	/^char smbv_ip[16];$/;"	v
+smbv_nframes	oaisim.c	/^unsigned short smbv_nframes = 4; \/\/ how many frames to configure 1,..,4$/;"	v
+snr_dB	oaisim.c	/^double snr_dB, sinr_dB, snr_direction; \/\/,sinr_direction;$/;"	v
+snr_dB	oaisim_functions.c	/^double             snr_dB=0, sinr_dB=0;$/;"	v
+snr_direction	oaisim.c	/^double snr_dB, sinr_dB, snr_direction; \/\/,sinr_direction;$/;"	v
+snr_step	oaisim_functions.c	/^double        snr_step              = 1.0;$/;"	v
+started	threadpool.h	/^  int started; \/\/ total number of thread started , after init: started == count$/;"	m	struct:threadpool_t
+stats_buffer	oaisim.c	/^char stats_buffer[16384];$/;"	v
+stats_buffer	oaisim_pad.c	/^char stats_buffer[16384];$/;"	v
+sync_lock	threadpool.h	/^  pthread_mutex_t sync_lock; \/\/ used when there is a dependancy between two consecutive jobs, protect active$/;"	m	struct:threadpool_t
+sync_notify	threadpool.h	/^  pthread_cond_t sync_notify; \/\/ last worker sends this$/;"	m	struct:threadpool_t
+target_dl_mcs	oaisim_functions.c	/^uint8_t            target_dl_mcs         = 16; \/\/ max mcs used by MAC scheduler$/;"	v
+target_ul_mcs	oaisim_functions.c	/^uint8_t            target_ul_mcs         = 16;$/;"	v
+td	oaisim_functions.c	/^int             td                  = 0;$/;"	v
+td_avg	oaisim_functions.c	/^int             td_avg              = 0;$/;"	v
+tdd_config	oaisim_functions.c	/^char tdd_config[10];$/;"	v
+terminate	oaisim_pad.c	/^void terminate(void)$/;"	f
+thread_count	threadpool.h	/^  int thread_count;$/;"	m	struct:threadpool_t
+threadpool_add	threadpool.c	/^int threadpool_add(threadpool_t *pool, Job_elt *job)$/;"	f
+threadpool_create	threadpool.c	/^threadpool_t *threadpool_create(int thread_count)$/;"	f
+threadpool_destroy	threadpool.c	/^int threadpool_destroy(threadpool_t *pool)$/;"	f
+threadpool_error_t	threadpool.h	/^} threadpool_error_t;$/;"	t	typeref:enum:__anon2
+threadpool_free	threadpool.c	/^int threadpool_free(threadpool_t *pool)$/;"	f
+threadpool_invalid	threadpool.h	/^  threadpool_invalid = -1,$/;"	e	enum:__anon2
+threadpool_lock_failure	threadpool.h	/^  threadpool_lock_failure = -2,$/;"	e	enum:__anon2
+threadpool_queue_full	threadpool.h	/^  threadpool_queue_full = -3,$/;"	e	enum:__anon2
+threadpool_shutdown	threadpool.h	/^  threadpool_shutdown = -4,$/;"	e	enum:__anon2
+threadpool_t	threadpool.h	/^struct threadpool_t {$/;"	s
+threadpool_t	threadpool.h	/^typedef struct threadpool_t threadpool_t;$/;"	t	typeref:struct:threadpool_t
+threadpool_thread	threadpool.c	/^void *threadpool_thread(void *threadpool)$/;"	f
+threadpool_thread_failure	threadpool.h	/^  threadpool_thread_failure = -5$/;"	e	enum:__anon2
+threads	threadpool.h	/^  pthread_t *threads;$/;"	m	struct:threadpool_t
+time_last	oaisim_functions.c	/^unsigned long   time_last           = 0;$/;"	v
+time_now	oaisim_functions.c	/^unsigned long   time_now            = 0;$/;"	v
+time_spec	oaisim_functions.c	/^struct timespec time_spec;$/;"	v	typeref:struct:timespec
+ue_connection_test	oaisim_functions.c	/^uint8_t            ue_connection_test    = 0;$/;"	v
+ue_data	oaisim.c	/^node_desc_t *ue_data[NUMBER_OF_UE_MAX];$/;"	v
+ue_data	oaisim_pad.c	/^node_desc_t *ue_data[NUMBER_OF_UE_MAX];$/;"	v
+ue_node_list	oaisim_functions.c	/^node_list*     ue_node_list          = NULL;$/;"	v
+ul_chan_stats	oaisim.c	/^time_stats_t ul_chan_stats;$/;"	v
+update_app_model	event_handler.c	/^void update_app_model(Event_t event)$/;"	f
+update_emu_model	event_handler.c	/^void update_emu_model(Event_t event)$/;"	f
+update_mac	event_handler.c	/^void update_mac(Event_t event)$/;"	f
+update_oai_model	event_handler.c	/^void update_oai_model(char * key, void * value)$/;"	f
+update_ocm	oaisim_functions.c	/^void update_ocm()$/;"	f
+update_omg	oaisim_functions.c	/^void update_omg (frame_t frameP)$/;"	f
+update_omg_ocm	oaisim_functions.c	/^void update_omg_ocm()$/;"	f
+update_otg_UE	oaisim_functions.c	/^void update_otg_UE(module_id_t ue_mod_idP, unsigned int ctime)$/;"	f
+update_otg_eNB	oaisim_functions.c	/^void update_otg_eNB(module_id_t enb_module_idP, unsigned int ctime)$/;"	f
+update_sys_model	event_handler.c	/^void update_sys_model(Event_t event)$/;"	f
+update_topo_model	event_handler.c	/^void update_topo_model(Event_t event)$/;"	f
+validate_mac	event_handler.c	/^int validate_mac(Event_t event)$/;"	f
+vdata	phy_procedures_sim_form.h	/^  void *vdata;$/;"	m	struct:__anon1
+wait_for_slot_isr	oaisim_functions.c	/^void wait_for_slot_isr(void)$/;"	f
+worker_number	oaisim_pad.c	/^int worker_number;$/;"	v
+x_area	oaisim_functions.c	/^char x_area[20];$/;"	v
+xforms	oaisim.c	/^int xforms=0;$/;"	v
+y_area	oaisim_functions.c	/^char y_area[20];$/;"	v
+z_area	oaisim_functions.c	/^char z_area[20];$/;"	v

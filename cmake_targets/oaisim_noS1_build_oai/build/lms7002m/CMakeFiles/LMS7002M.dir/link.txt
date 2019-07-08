@@ -1,0 +1,2 @@
+/usr/bin/ar cr libLMS7002M.a  CMakeFiles/LMS7002M.dir/LMS7002M.cpp.o CMakeFiles/LMS7002M.dir/LMS7002M_parameters.cpp.o CMakeFiles/LMS7002M.dir/LMS7002M_statuses.cpp.o CMakeFiles/LMS7002M.dir/LMS7002M_filtersCalibration.cpp.o CMakeFiles/LMS7002M.dir/lmsComms.cpp.o CMakeFiles/LMS7002M.dir/LMS7002M_RegistersMap.cpp.o CMakeFiles/LMS7002M.dir/connectionManager/ConnectionManager.cpp.o CMakeFiles/LMS7002M.dir/connectionManager/ConnectionCOM.cpp.o CMakeFiles/LMS7002M.dir/connectionManager/ConnectionUSB.cpp.o
+/usr/bin/ranlib libLMS7002M.a

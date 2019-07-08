@@ -1,0 +1,169 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ASN1_MSG_INC	Makefile	/^ASN1_MSG_INC = $(OPENAIR2_DIR)\/RRC\/LITE\/MESSAGES$/;"	m
+Acknowledgment	Abstraction/Training/bare_adv.tex	/^\\else$/;"	s
+Acknowledgment	Abstraction/Training/bare_jrnl.tex	/^Appendix two text goes here.$/;"	s
+Acknowledgment	Abstraction/Training/bare_jrnl_compsoc.tex	/^\\else$/;"	s
+Acknowledgments	Abstraction/Training/bare_adv.tex	/^\\ifCLASSOPTIONcompsoc$/;"	s
+Acknowledgments	Abstraction/Training/bare_jrnl_compsoc.tex	/^\\ifCLASSOPTIONcompsoc$/;"	s
+BCCH_alloc_pdu	framegen.c	/^uint8_t BCCH_alloc_pdu[8];$/;"	v
+BW	scansim.c	56;"	d	file:
+BW	syncsim.c	73;"	d	file:
+BW	test.c	38;"	d	file:
+BW	ulsim2.c	44;"	d	file:
+CCCH_RB_ALLOC	dlsim.c	99;"	d	file:
+CCCH_RB_ALLOC	mbmssim.c	62;"	d	file:
+CCCH_RB_ALLOC	pdcchsim.c	56;"	d	file:
+COMMON_UTILS_DIR	Makefile	/^COMMON_UTILS_DIR = $(OPENAIR_DIR)\/common\/utils$/;"	m
+Conclusion	Abstraction/Training/bare_adv.tex	/^Subsubsection text here.$/;"	s
+Conclusion	Abstraction/Training/bare_jrnl.tex	/^Subsubsection text here.$/;"	s
+Conclusion	Abstraction/Training/bare_jrnl_compsoc.tex	/^Subsubsection text here.$/;"	s
+DCI_pdu	framegen.c	/^DCI_PDU DCI_pdu;$/;"	v
+DCI_pdu	pdcchsim.c	/^DCI_PDU DCI_pdu;$/;"	v
+DLSCH_RB_ALLOC	framegen.c	/^uint32_t DLSCH_RB_ALLOC = 0x1000;$/;"	v
+DLSCH_RB_ALLOC	pbchsim.c	58;"	d	file:
+DLSCH_RB_ALLOC	pdcchsim.c	57;"	d	file:
+DLSCH_RB_ALLOC	prachsim.c	51;"	d	file:
+DLSCH_RB_ALLOC	pucchsim.c	53;"	d	file:
+DLSCH_RB_ALLOC	scansim.c	62;"	d	file:
+DLSCH_RB_ALLOC	syncsim.c	79;"	d	file:
+DLSCH_alloc_pdu2_1E	dlsim.c	/^DCI1E_5MHz_2A_M10PRB_TDD_t  DLSCH_alloc_pdu2_1E[2];$/;"	v
+DLSCH_alloc_pdu2_1E	mbmssim.c	/^DCI1E_5MHz_2A_M10PRB_TDD_t  DLSCH_alloc_pdu2_1E[2];$/;"	v
+DLSCH_alloc_pdu_1	dlsim.c	/^uint64_t DLSCH_alloc_pdu_1[2];$/;"	v
+DLSCH_alloc_pdu_1	framegen.c	/^uint64_t DLSCH_alloc_pdu_1[2];$/;"	v
+DLSCH_pdu	framegen.c	/^uint8_t DLSCH_pdu[768*8];$/;"	v
+FRAME_LENGTH_BYTES	test.c	43;"	d	file:
+FRAME_LENGTH_COMPLEX_SAMPLES	test.c	42;"	d	file:
+IFFT_FPGA	test.c	36;"	d	file:
+Introduction	Abstraction/Training/bare_adv.tex	/^\\IEEEpeerreviewmaketitle$/;"	s
+Introduction	Abstraction/Training/bare_jrnl.tex	/^\\IEEEpeerreviewmaketitle$/;"	s
+Introduction	Abstraction/Training/bare_jrnl_compsoc.tex	/^\\IEEEpeerreviewmaketitle$/;"	s
+LFLAGS	Makefile	/^LFLAGS = -lm -lblas -lxml2 -lrt -lpthread $(LFDS_DIR)\/bin\/liblfds611.a$/;"	m
+N_TRIALS	pdcchsim.c	50;"	d	file:
+N_TRIALS	test.c	40;"	d	file:
+N_TRIALS	ulsim2.c	46;"	d	file:
+OBJ	Makefile	/^OBJ = $(PHY_OBJS) $(SIMULATION_OBJS) $(TOOLS_OBJS) $(SCHED_OBJS) $(LAYER2_OBJ) $(LOG_OBJS) $(ITTI_DIR)\/backtrace.o$/;"	m
+OPENAIR1_TOP	Makefile	/^OPENAIR1_TOP = $(OPENAIR1_DIR)$/;"	m
+OPENAIR2_TOP	Makefile	/^OPENAIR2_TOP = $(OPENAIR2_DIR)$/;"	m
+OPENAIR3	Makefile	/^OPENAIR3 = $(OPENAIR3_DIR)$/;"	m
+PERIOD	syncsim.c	444;"	d	file:
+PHY_vars_UE	dlsim.c	/^PHY_VARS_UE *PHY_vars_UE;$/;"	v
+PHY_vars_UE	mbmssim.c	/^PHY_VARS_UE *PHY_vars_UE;$/;"	v
+PHY_vars_UE	pbchsim.c	/^PHY_VARS_UE *PHY_vars_UE;$/;"	v
+PHY_vars_UE	pdcchsim.c	/^PHY_VARS_UE *PHY_vars_UE;$/;"	v
+PHY_vars_UE	prachsim.c	/^PHY_VARS_UE *PHY_vars_UE;$/;"	v
+PHY_vars_UE	pucchsim.c	/^PHY_VARS_UE *PHY_vars_UE;$/;"	v
+PHY_vars_UE	scansim.c	/^PHY_VARS_UE *PHY_vars_UE;$/;"	v
+PHY_vars_UE	syncsim.c	/^PHY_VARS_UE *PHY_vars_UE[2];$/;"	v
+PHY_vars_UE	ulsim.c	/^PHY_VARS_UE *PHY_vars_UE;$/;"	v
+PHY_vars_eNB	dlsim.c	/^PHY_VARS_eNB *PHY_vars_eNB;$/;"	v
+PHY_vars_eNB	mbmssim.c	/^PHY_VARS_eNB *PHY_vars_eNB;$/;"	v
+PHY_vars_eNB	pbchsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB	pdcchsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB	prachsim.c	/^PHY_VARS_eNB *PHY_vars_eNB;$/;"	v
+PHY_vars_eNB	pucchsim.c	/^PHY_VARS_eNB *PHY_vars_eNB;$/;"	v
+PHY_vars_eNB	scansim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB	syncsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB	ulsim.c	/^PHY_VARS_eNB *PHY_vars_eNB;$/;"	v
+PHY_vars_eNB1	pbchsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB1	pdcchsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB1	scansim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB1	syncsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB2	pbchsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB2	pdcchsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB2	scansim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+PHY_vars_eNB2	syncsim.c	/^PHY_VARS_eNB *PHY_vars_eNB,*PHY_vars_eNB1,*PHY_vars_eNB2;$/;"	v
+Proof of the First Zonklar Equation	Abstraction/Training/bare_adv.tex	/^\\appendices$/;"	s
+Proof of the First Zonklar Equation	Abstraction/Training/bare_jrnl.tex	/^\\appendices$/;"	s
+Proof of the First Zonklar Equation	Abstraction/Training/bare_jrnl_compsoc.tex	/^\\appendices$/;"	s
+RF	test.c	35;"	d	file:
+Subsection Heading Here	Abstraction/Training/bare_adv.tex	/^\\hfill January 11, 2007$/;"	u
+Subsection Heading Here	Abstraction/Training/bare_jrnl.tex	/^\\hfill January 11, 2007$/;"	u
+Subsection Heading Here	Abstraction/Training/bare_jrnl_compsoc.tex	/^\\hfill January 11, 2007$/;"	u
+Subsubsection Heading Here	Abstraction/Training/bare_adv.tex	/^Subsection text here.$/;"	b
+Subsubsection Heading Here	Abstraction/Training/bare_jrnl.tex	/^Subsection text here.$/;"	b
+Subsubsection Heading Here	Abstraction/Training/bare_jrnl_compsoc.tex	/^Subsection text here.$/;"	b
+TOP_DIR	Makefile	/^TOP_DIR = $(OPENAIR1_DIR)$/;"	m
+Td	ulsim2.c	45;"	d	file:
+UE2eNB	ulsim.c	/^channel_desc_t *UE2eNB[NUMBER_OF_UE_MAX][NUMBER_OF_eNB_MAX];$/;"	v
+UL_RB_ALLOC	dlsim.c	98;"	d	file:
+UL_RB_ALLOC	mbmssim.c	61;"	d	file:
+UL_RB_ALLOC	pdcchsim.c	55;"	d	file:
+analyzer	signalanalyzer.c	/^void analyzer(unsigned int gpib_card,unsigned int gpib_device,unsigned int freqband,LTE_DL_FRAME_PARMS *frame_parms,DCI_ALLOC_t *dci_alloc)$/;"	f
+calibration	LTE_Configuration.c	/^void calibration(unsigned int gpib_card,unsigned int gpib_device,unsigned int freqband,LTE_DL_FRAME_PARMS *frame_parms,DCI_ALLOC_t *dci_alloc)$/;"	f
+current_dlsch_cqi	prachsim.c	/^int current_dlsch_cqi; \/\/FIXME!$/;"	v
+current_dlsch_cqi	pucchsim.c	/^int current_dlsch_cqi; \/\/FIXME!$/;"	v
+delta_BLER	Abstraction/delta_BLER.m	/^function delta=delta_BLER(beta)$/;"	f
+delta_BLER_1	Abstraction/Training/delta_BLER_1.m	/^function delta=delta_BLER_1(beta)$/;"	f
+delta_BLER_1	Abstraction/delta_BLER_1.m	/^function delta=delta_BLER_1(beta)$/;"	f
+demap_q	Abstraction/demap_q.m	/^function [q] = demap_q(qq)$/;"	f
+do_OFDM_mod	framegen.c	/^void do_OFDM_mod(mod_sym_t **txdataF, int32_t **txdata, uint16_t next_slot, LTE_DL_FRAME_PARMS *frame_parms)$/;"	f
+do_OFDM_mod_l	dlsim.c	/^void do_OFDM_mod_l(int32_t **txdataF, int32_t **txdata, uint16_t next_slot, LTE_DL_FRAME_PARMS *frame_parms)$/;"	f
+do_forms2	syncsim.c	/^void do_forms2(FD_lte_scope *form,$/;"	f
+dummy0	pbchsim.c	/^int32_t dummy0[2048*14];$/;"	v
+dummy0	scansim.c	/^mod_sym_t dummy0[2048*14];$/;"	v
+dummy1	pbchsim.c	/^int32_t dummy1[2048*14];$/;"	v
+dummy1	scansim.c	/^mod_sym_t dummy1[2048*14];$/;"	v
+dummy2	pbchsim.c	/^int32_t dummy2[2048*14];$/;"	v
+dummy2	scansim.c	/^mod_sym_t dummy2[2048*14];$/;"	v
+dummy3	pbchsim.c	/^int32_t dummy3[2048*14];$/;"	v
+dummy3	scansim.c	/^mod_sym_t dummy3[2048*14];$/;"	v
+dummybuf	pbchsim.c	/^int32_t *dummybuf[4];$/;"	v
+dummybuf	scansim.c	/^mod_sym_t *dummybuf[4];$/;"	v
+eNB2UE	ulsim.c	/^channel_desc_t *eNB2UE[NUMBER_OF_eNB_MAX][NUMBER_OF_UE_MAX];$/;"	v
+eNB_scheduler	framegen.c	/^void eNB_scheduler(uint8_t Mod_id, uint8_t cooperation_flag, uint8_t frame, uint8_t subframe)$/;"	f
+enb_data	ulsim.c	/^node_desc_t *enb_data[NUMBER_OF_eNB_MAX];$/;"	v
+form_enb	ulsim.c	/^FD_lte_phy_scope_enb *form_enb;$/;"	v
+get_DLSCH_pdu	framegen.c	/^uint8_t *get_DLSCH_pdu(uint8_t Mod_id,uint16_t rnti,uint8_t abstraction_flag)$/;"	f
+get_dci	framegen.c	/^DCI_PDU *get_dci(uint8_t Mod_id, uint8_t frame, uint8_t subframe)$/;"	f
+get_dci	pdcchsim.c	/^DCI_PDU *get_dci(LTE_DL_FRAME_PARMS *lte_frame_parms,uint8_t log2L, uint8_t log2Lcommon, DCI_format_t format_selector[MAX_NUM_DCI], uint8_t num_dci, uint32_t rnti)$/;"	f
+gpib_send	LTE_Configuration.c	/^void gpib_send(unsigned int gpib_board, unsigned int gpib_device, char *command_string )$/;"	f
+gpib_send	gpib_send.c	/^void gpib_send(unsigned int gpib_board, unsigned int gpib_device, char *command_string )$/;"	f
+gpib_send	pucchsignalgenerator.c	/^void gpib_send(unsigned int gpib_board, unsigned int gpib_device, char *command_string )$/;"	f
+gpib_send	signalanalyzer.c	/^void gpib_send(unsigned int gpib_card, unsigned int gpib_device, char *command_string )$/;"	f
+gpib_send	ulsignalgenerator.c	/^void gpib_send(unsigned int gpib_board, unsigned int gpib_device, char *command_string )$/;"	f
+handler	dlsim.c	/^void handler(int sig)$/;"	f
+lte_param_init	framegen.c	/^void lte_param_init(  unsigned char transmission_mode,$/;"	f
+lte_param_init	syncsim.c	/^void lte_param_init(unsigned char N_tx, unsigned char N_rx,unsigned char transmission_mode,unsigned char extended_prefix_flag,uint8_t frame_type,uint16_t Nid_cell,uint8_t N_RB_DL,uint8_t osf)$/;"	f
+main	dlsim.c	/^int main(int argc, char **argv)$/;"	f
+main	framegen.c	/^int main(int argc, char **argv)$/;"	f
+main	mbmssim.c	/^int main(int argc, char **argv)$/;"	f
+main	pbchsim.c	/^int main(int argc, char **argv)$/;"	f
+main	pdcchsim.c	/^int main(int argc, char **argv)$/;"	f
+main	prachsim.c	/^int main(int argc, char **argv)$/;"	f
+main	pucchsim.c	/^int main(int argc, char **argv)$/;"	f
+main	scansim.c	/^int main(int argc, char **argv)$/;"	f
+main	syncsim.c	/^int main(int argc, char **argv)$/;"	f
+main	test.c	/^int main(int argc, char **argv)$/;"	f
+main	ulsim.c	/^int main(int argc, char **argv)$/;"	f
+main	ulsim2.c	/^int main(int argc, char **argv)$/;"	f
+mat2wv	mat2wv.m	/^function mat2wv(vfcSignal, sFilename, fSampleRate, bNormalize)$/;"	f
+mcs	framegen.c	/^uint8_t mcs = 0;$/;"	v
+msg	pdcchsim.c	59;"	d	file:
+n_rnti	framegen.c	/^uint16_t n_rnti = 0x1235;$/;"	v
+n_rx_dropped	dlsim.c	/^int n_rx_dropped = 0; \/*!< \\brief initial max process time for rx *\/$/;"	v
+n_rx_dropped	ulsim.c	/^int n_rx_dropped = 0; \/*!< \\brief initial max process time for rx *\/$/;"	v
+n_tx_dropped	dlsim.c	/^int n_tx_dropped = 0; \/*!< \\brief initial max process time for tx *\/$/;"	v
+n_tx_dropped	ulsim.c	/^int n_tx_dropped = 0; \/*!< \\brief initial max process time for tx *\/$/;"	v
+n_users	framegen.c	/^int n_users = 1;$/;"	v
+opposite_q	Abstraction/opposite_q.m	/^function q = opposite_q(qq)$/;"	f
+otg_enabled	dlsim.c	/^int otg_enabled=0;$/;"	v
+polyfit_delta_BLER	Abstraction/Training/polyfit_delta_BLER.m	/^function std_deviat=polyfit_delta_BLER(beta)$/;"	f
+pucchsignalG	pucchsignalgenerator.c	/^void pucchsignalG(unsigned int gpib_card,unsigned int gpib_device,unsigned int freqband,LTE_DL_FRAME_PARMS *frame_parms,PUCCH_FMT_t pucch_format)$/;"	f
+puschsignalG	ulsignalgenerator.c	/^void puschsignalG(unsigned int gpib_card,unsigned int gpib_device,unsigned int freqband,LTE_DL_FRAME_PARMS *frame_parms,void *UL_alloc_pdu)$/;"	f
+sinr_Eff_Calc	Abstraction/Training/sinr_Eff_Calc.m	/^function [SINR_eff]=sinr_Eff_Calc(beta)$/;"	f
+t_rx_max	dlsim.c	/^double t_rx_max = -1000000000; \/*!< \\brief initial max process time for rx *\/$/;"	v
+t_rx_max	ulsim.c	/^double t_rx_max = -1000000000; \/*!< \\brief initial max process time for rx *\/$/;"	v
+t_rx_min	dlsim.c	/^double t_rx_min = 1000000000; \/*!< \\brief initial min process time for rx *\/$/;"	v
+t_rx_min	ulsim.c	/^double t_rx_min = 1000000000; \/*!< \\brief initial min process time for tx *\/$/;"	v
+t_tx_max	dlsim.c	/^double t_tx_max = -1000000000; \/*!< \\brief initial max process time for tx *\/$/;"	v
+t_tx_max	ulsim.c	/^double t_tx_max = -1000000000; \/*!< \\brief initial max process time for tx *\/$/;"	v
+t_tx_min	dlsim.c	/^double t_tx_min = 1000000000; \/*!< \\brief initial min process time for tx *\/$/;"	v
+t_tx_min	ulsim.c	/^double t_tx_min = 1000000000; \/*!< \\brief initial min process time for tx *\/$/;"	v
+title	ulsim.c	/^char title[255];$/;"	v
+ue_data	ulsim.c	/^node_desc_t *ue_data[NUMBER_OF_UE_MAX];$/;"	v
+xforms	ulsim.c	/^int xforms=0;$/;"	v

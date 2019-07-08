@@ -1,0 +1,753 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BCCH	defs.h	331;"	d
+BCCH_PAYLOAD_SIZE_MAX	defs.h	83;"	d
+BCCH_PDU	defs.h	/^} __attribute__((__packed__))BCCH_PDU;$/;"	t	typeref:struct:__anon14
+BCCH_RB_ALLOC	lte_transport_init.c	31;"	d	file:
+BCCH_alloc_pdu	defs.h	/^  uint32_t BCCH_alloc_pdu;$/;"	m	struct:__anon33
+BCCH_alloc_pdu	vars.h	/^DCI1A_5MHz_TDD_1_6_t      BCCH_alloc_pdu;$/;"	v
+BCCH_alloc_pdu_fdd	vars.h	/^DCI1A_5MHz_FDD_t      BCCH_alloc_pdu_fdd;$/;"	v
+BCCH_pdu	defs.h	/^  BCCH_PDU BCCH_pdu;$/;"	m	struct:__anon33
+BI	defs.h	/^  uint8_t BI:4;$/;"	m	struct:__anon4
+BSR	defs.h	/^  uint8_t  BSR[MAX_NUM_LCGID]; \/\/ should be more for mesh topology$/;"	m	struct:__anon36
+BSR_LONG	defs.h	/^} __attribute__((__packed__))BSR_LONG;$/;"	t	typeref:struct:__anon9
+BSR_LONG_SIZE	defs.h	276;"	d
+BSR_SHORT	defs.h	/^} __attribute__((__packed__))BSR_SHORT;$/;"	t	typeref:struct:__anon8
+BSR_TABLE	vars.h	/^const uint32_t BSR_TABLE[BSR_TABLE_SIZE]= {0,10,12,14,17,19,22,26,31,36,42,49,57,67,78,91,$/;"	v
+BSR_TABLE_SIZE	defs.h	132;"	d
+BSR_TRUNCATED	defs.h	/^typedef BSR_SHORT BSR_TRUNCATED;$/;"	t
+BSR_bytes	defs.h	/^  uint16_t  BSR_bytes[MAX_NUM_LCGID];$/;"	m	struct:__anon36
+BSR_names	ue_procedures.c	/^mapping BSR_names[] = {$/;"	v
+Bj	defs.h	/^  int16_t Bj[MAX_NUM_LCID];$/;"	m	struct:__anon36
+Buffer_size	defs.h	/^  uint8_t Buffer_size:6;  \/\/ octet 1 LSB$/;"	m	struct:__anon8
+Buffer_size0	defs.h	/^  uint32_t Buffer_size0:6;$/;"	m	struct:__anon9
+Buffer_size1	defs.h	/^  uint32_t Buffer_size1:6;$/;"	m	struct:__anon9
+Buffer_size2	defs.h	/^  uint32_t Buffer_size2:6;$/;"	m	struct:__anon9
+Buffer_size3	defs.h	/^  uint32_t Buffer_size3:6;$/;"	m	struct:__anon9
+C1	defs.h	/^  uint8_t C1:1;\/*!< \\brief Component carrier 1 *\/$/;"	m	struct:__anon16
+C2	defs.h	/^  uint8_t C2:1;\/*!< \\brief Component carrier 2 *\/$/;"	m	struct:__anon16
+C3	defs.h	/^  uint8_t C3:1;\/*!< \\brief Component carrier 3 *\/$/;"	m	struct:__anon16
+C4	defs.h	/^  uint8_t C4:1;\/*!< \\brief Component carrier 4 *\/$/;"	m	struct:__anon16
+C5	defs.h	/^  uint8_t C5:1;\/*!< \\brief Component carrier 5 *\/$/;"	m	struct:__anon16
+C6	defs.h	/^  uint8_t C6:1;\/*!< \\brief Component carrier 6 *\/$/;"	m	struct:__anon16
+C7	defs.h	/^  uint8_t C7:1;\/*!< \\brief Component carrier 7 *\/$/;"	m	struct:__anon16
+CBA_ES	defs.h	/^  CBA_ES=0, \/\/\/ equal share of RB among groups w$/;"	e	enum:__anon23
+CBA_ES_S	defs.h	/^  CBA_ES_S,  \/\/\/ equal share of RB among groups with small allocation$/;"	e	enum:__anon23
+CBA_PF	defs.h	/^  CBA_PF, \/\/\/ proportional fair (kind of)$/;"	e	enum:__anon23
+CBA_PF_S	defs.h	/^  CBA_PF_S,  \/\/\/ proportional fair (kind of) with small RB allocation$/;"	e	enum:__anon23
+CBA_POLICY	defs.h	/^} CBA_POLICY;$/;"	t	typeref:enum:__anon23
+CBA_RS	defs.h	/^  CBA_RS \/\/\/ random allocation$/;"	e	enum:__anon23
+CCCH	defs.h	333;"	d
+CCCH_LCHANID	defs.h	329;"	d
+CCCH_PAYLOAD_SIZE_MAX	defs.h	84;"	d
+CCCH_PDU	defs.h	/^} __attribute__((__packed__))CCCH_PDU;$/;"	t	typeref:struct:__anon13
+CCCH_alloc_pdu	vars.h	/^DCI1A_5MHz_TDD_1_6_t      CCCH_alloc_pdu;$/;"	v
+CCCH_alloc_pdu_fdd	vars.h	/^DCI1A_5MHz_FDD_t      CCCH_alloc_pdu_fdd;$/;"	v
+CCCH_pdu	defs.h	/^  CCCH_PDU CCCH_pdu;$/;"	m	struct:__anon33
+CCCH_pdu	defs.h	/^  CCCH_PDU CCCH_pdu;$/;"	m	struct:__anon37
+CCE_allocation_infeasible	eNB_scheduler_primitives.c	/^boolean_t CCE_allocation_infeasible(int module_idP,$/;"	f
+CCE_table	defs.h	/^  int CCE_table[MAX_NUM_CCs][800];$/;"	m	struct:__anon34
+CC_ACT_DEACT	defs.h	361;"	d
+CC_ELEMENT	defs.h	/^} __attribute__((__packed__))CC_ELEMENT;$/;"	t	typeref:struct:__anon16
+CC_id	pre_processor.c	/^  uint8_t CC_id;$/;"	m	struct:arg_struct_getk	file:
+CC_id	pre_processor.c	/^  uint8_t CC_id;$/;"	m	struct:arg_struct_meas	file:
+CC_id	pre_processor.c	/^  uint8_t CC_id;$/;"	m	struct:arg_struct_tpc	file:
+COMMON_channels_t	defs.h	/^} COMMON_channels_t;$/;"	t	typeref:struct:__anon33
+CONNECTION_LOST	defs.h	/^  CONNECTION_LOST,$/;"	e	enum:__anon35
+CONNECTION_OK	defs.h	/^  CONNECTION_OK=0,$/;"	e	enum:__anon35
+CRNTI	defs.h	370;"	d
+DAI	defs.h	/^  uint8_t DAI;$/;"	m	struct:__anon28
+DAI_ul	defs.h	/^  uint8_t DAI_ul[10];$/;"	m	struct:__anon28
+DCCH	defs.h	335;"	d
+DCCH1	defs.h	337;"	d
+DCI_PDU	defs.h	/^} DCI_PDU;$/;"	t	typeref:struct:__anon12
+DCI_aggregation_min	defs.h	/^  uint8_t DCI_aggregation_min;$/;"	m	struct:__anon28
+DCI_pdu	defs.h	/^  DCI_PDU DCI_pdu;$/;"	m	struct:__anon33
+DEBUG_HEADER_PARSING	pre_processor.c	66;"	d	file:
+DEBUG_HEADER_PARSING	ue_procedures.c	78;"	d	file:
+DEBUG_RAR	rar_tools.c	48;"	d	file:
+DEBUG_eNB_SCHEDULER	eNB_scheduler.c	67;"	d	file:
+DEBUG_eNB_SCHEDULER	eNB_scheduler_bch.c	67;"	d	file:
+DEBUG_eNB_SCHEDULER	eNB_scheduler_mch.c	69;"	d	file:
+DEBUG_eNB_SCHEDULER	eNB_scheduler_primitives.c	68;"	d	file:
+DEBUG_eNB_SCHEDULER	eNB_scheduler_ulsch.c	69;"	d	file:
+DEBUG_eNB_SCHEDULER	pre_processor.c	65;"	d	file:
+DLSCH_DCI	defs.h	/^  uint8_t DLSCH_DCI[8][(MAX_DCI_SIZE_BITS>>3)+1];$/;"	m	struct:__anon28
+DLSCH_PDU	defs.h	/^} __attribute__ ((__packed__)) DLSCH_PDU;$/;"	t	typeref:struct:__anon18
+DLSCH_RB_ALLOC	lte_transport_init.c	33;"	d	file:
+DLSCH_alloc_pdu	vars.h	/^DCI1_5MHz_TDD_t           DLSCH_alloc_pdu;$/;"	v
+DLSCH_alloc_pdu1	vars.h	/^DCI2_5MHz_2A_TDD_t DLSCH_alloc_pdu1;$/;"	v
+DLSCH_alloc_pdu1A	vars.h	/^DCI1A_5MHz_TDD_1_6_t      DLSCH_alloc_pdu1A;$/;"	v
+DLSCH_alloc_pdu1A_fdd	vars.h	/^DCI1A_5MHz_FDD_t      DLSCH_alloc_pdu1A_fdd;$/;"	v
+DLSCH_alloc_pdu1E	vars.h	/^DCI1E_5MHz_2A_M10PRB_TDD_t DLSCH_alloc_pdu1E;$/;"	v
+DLSCH_alloc_pdu2	vars.h	/^DCI2_5MHz_2A_TDD_t DLSCH_alloc_pdu2;$/;"	v
+DLSCH_alloc_pdu_fdd	vars.h	/^DCI1_5MHz_FDD_t       DLSCH_alloc_pdu_fdd;$/;"	v
+DLSCH_dci_fmt	defs.h	/^  uint16_t DLSCH_dci_fmt;$/;"	m	struct:__anon28
+DLSCH_dci_size_bits	defs.h	/^  uint8_t DLSCH_dci_size_bits;$/;"	m	struct:__anon28
+DLSCH_pdu	defs.h	/^  DLSCH_PDU DLSCH_pdu[MAX_NUM_CCs][2][NUMBER_OF_UE_MAX];$/;"	m	struct:__anon32
+DRX_CMD	defs.h	350;"	d
+DTCH	defs.h	339;"	d
+E	defs.h	/^  uint8_t E:1;$/;"	m	struct:__anon3
+E	defs.h	/^  uint8_t E:1;$/;"	m	struct:__anon4
+E	defs.h	/^  uint8_t E:1;$/;"	m	struct:__anon5
+E	defs.h	/^  uint8_t E:1;$/;"	m	struct:__anon6
+E	defs.h	/^  uint8_t E:1;$/;"	m	struct:__anon7
+ENABLE_MAC_PAYLOAD_DEBUG	eNB_scheduler.c	66;"	d	file:
+ENABLE_MAC_PAYLOAD_DEBUG	eNB_scheduler_bch.c	66;"	d	file:
+ENABLE_MAC_PAYLOAD_DEBUG	eNB_scheduler_dlsch.c	70;"	d	file:
+ENABLE_MAC_PAYLOAD_DEBUG	eNB_scheduler_mch.c	68;"	d	file:
+ENABLE_MAC_PAYLOAD_DEBUG	eNB_scheduler_primitives.c	67;"	d	file:
+ENABLE_MAC_PAYLOAD_DEBUG	eNB_scheduler_ulsch.c	68;"	d	file:
+ENABLE_MAC_PAYLOAD_DEBUG	ue_procedures.c	79;"	d	file:
+ER	pre_processor.c	/^int ER[NUMBER_OF_UE_MAX] = {0};$/;"	v
+EXTENDED_POWER_HEADROOM	defs.h	366;"	d
+E_NI	pre_processor.c	/^double E_NI = 0, NI_tmp = 0, standardDeviation, sqr_target;$/;"	v
+F	defs.h	/^  uint8_t F:1;      \/\/ octet 2 MSB$/;"	m	struct:__anon6
+F	defs.h	/^  uint8_t F:1;     \/\/ octet 2 MSB$/;"	m	struct:__anon5
+Is_rrc_registered	vars.h	/^uint8_t Is_rrc_registered;$/;"	v
+L	defs.h	/^  uint8_t L:7;     \/\/ octet 2 LSB$/;"	m	struct:__anon5
+L	malekshan.h	/^  int L,T;$/;"	m	struct:__anon39
+LCGID	defs.h	/^  uint8_t  LCGID[MAX_NUM_LCID];$/;"	m	struct:__anon36
+LCGID	defs.h	/^  uint8_t LCGID:2;        \/\/ octet 1 MSB$/;"	m	struct:__anon8
+LCGID0	defs.h	118;"	d
+LCGID1	defs.h	120;"	d
+LCGID2	defs.h	122;"	d
+LCGID3	defs.h	124;"	d
+LCID	defs.h	/^  uint8_t LCID:5;   \/\/ octet 1 LSB$/;"	m	struct:__anon6
+LCID	defs.h	/^  uint8_t LCID:5;  \/\/ octet 1 LSB$/;"	m	struct:__anon5
+LCID	defs.h	/^  uint8_t LCID:5;$/;"	m	struct:__anon7
+LCID_EMPTY	defs.h	143;"	d
+LCID_NOT_EMPTY	defs.h	144;"	d
+LCID_status	defs.h	/^  uint8_t  LCID_status[MAX_NUM_LCID];$/;"	m	struct:__anon36
+LONG_BSR	defs.h	376;"	d
+L_LSB	defs.h	/^  uint8_t L_LSB:8;$/;"	m	struct:__anon6
+L_MSB	defs.h	/^  uint8_t L_MSB:7;$/;"	m	struct:__anon6
+MAX_CQI_VALUE	defs.h	140;"	d
+MAX_MBSFN_AREA	defs.h	104;"	d
+MAX_NUMBER_OF_LINK	malekshan.h	11;"	d
+MAX_NUMBER_OF_TIME	malekshan.h	10;"	d
+MAX_NUM_CE	defs.h	128;"	d
+MAX_NUM_LCGID	defs.h	116;"	d
+MAX_NUM_LCID	defs.h	126;"	d
+MAX_PMCH_perMBSFN	defs.h	105;"	d
+MBMS_flag	defs.h	/^  uint8_t MBMS_flag;$/;"	m	struct:__anon33
+MBSFN_FDD_SF1	defs.h	97;"	d
+MBSFN_FDD_SF2	defs.h	98;"	d
+MBSFN_FDD_SF3	defs.h	99;"	d
+MBSFN_FDD_SF6	defs.h	100;"	d
+MBSFN_FDD_SF7	defs.h	101;"	d
+MBSFN_FDD_SF8	defs.h	102;"	d
+MBSFN_TDD_SF3	defs.h	92;"	d
+MBSFN_TDD_SF4	defs.h	93;"	d
+MBSFN_TDD_SF7	defs.h	94;"	d
+MBSFN_TDD_SF8	defs.h	95;"	d
+MBSFN_TDD_SF9	defs.h	96;"	d
+MCCH	defs.h	341;"	d
+MCCH_LCHANID	defs.h	357;"	d
+MCCH_PAYLOAD_SIZE_MAX	defs.h	107;"	d
+MCCH_PDU	defs.h	/^} __attribute__((__packed__))MCCH_PDU;$/;"	t	typeref:struct:__anon15
+MCCH_alloc_pdu	vars.h	/^DCI1C_5MHz_t                 MCCH_alloc_pdu;$/;"	v
+MCCH_pdu	defs.h	/^  MCCH_PDU MCCH_pdu;$/;"	m	struct:__anon33
+MCH_PDU	defs.h	/^} __attribute__ ((__packed__)) MCH_PDU;$/;"	t	typeref:struct:__anon19
+MCH_SCHDL_INFO	defs.h	359;"	d
+MCH_pdu	defs.h	/^  MCH_PDU MCH_pdu;$/;"	m	struct:__anon33
+MIN_CQI_VALUE	defs.h	138;"	d
+MSI_ELEMENT	defs.h	/^} __attribute__((__packed__))MSI_ELEMENT;$/;"	t	typeref:struct:__anon17
+MTCH	defs.h	343;"	d
+Mac_rlc_xface	vars.h	/^MAC_RLC_XFACE *Mac_rlc_xface;$/;"	v
+Mod_id	pre_processor.c	/^  module_id_t Mod_id;$/;"	m	struct:arg_struct_getk	file:
+Mod_id	pre_processor.c	/^  module_id_t Mod_id;$/;"	m	struct:arg_struct_meas	file:
+Mod_id	pre_processor.c	/^  module_id_t Mod_id;$/;"	m	struct:arg_struct_tpc	file:
+Msg1_tx	ra_procedures.c	/^void Msg1_tx(module_id_t module_idP,uint8_t CC_id,frame_t frameP, uint8_t eNB_id)$/;"	f
+Msg3_subframe	defs.h	/^  uint8_t Msg3_subframe;$/;"	m	struct:__anon30
+Msg3_tx	ra_procedures.c	/^void Msg3_tx(module_id_t module_idP,uint8_t CC_id,frame_t frameP, uint8_t eNB_id)$/;"	f
+NB_INST	extern.h	79;"	d
+NB_INST	vars.h	/^unsigned char NB_INST=0;$/;"	v
+NB_RA_PROC_MAX	defs.h	130;"	d
+NB_RN_INST	vars.h	/^unsigned char NB_RN_INST=0;$/;"	v
+NB_UE_INST	vars.h	/^unsigned char NB_UE_INST=0;$/;"	v
+NB_eNB_INST	vars.h	/^unsigned char NB_eNB_INST=0;$/;"	v
+NI_tmp	pre_processor.c	/^double E_NI = 0, NI_tmp = 0, standardDeviation, sqr_target;$/;"	v
+N_RBG_MAX	defs.h	136;"	d
+Node_id	defs.h	/^  uint16_t Node_id;$/;"	m	struct:__anon34
+Node_id	defs.h	/^  uint16_t Node_id;$/;"	m	struct:__anon37
+Num_common_dci	defs.h	/^  uint8_t Num_common_dci  ;$/;"	m	struct:__anon12
+Num_ue_spec_dci	defs.h	/^  uint8_t Num_ue_spec_dci ;$/;"	m	struct:__anon12
+PH	defs.h	/^  uint8_t PH:6;$/;"	m	struct:__anon11
+PHR_MAPPING_OFFSET	defs.h	134;"	d
+PHR_reconfigured	defs.h	/^  uint8_t PHR_reconfigured;$/;"	m	struct:__anon37
+PHR_reporting_active	defs.h	/^  uint8_t PHR_reporting_active;$/;"	m	struct:__anon37
+PHR_state	defs.h	/^  uint8_t PHR_state;$/;"	m	struct:__anon37
+PHY_HO_PRACH	defs.h	/^  PHY_HO_PRACH$/;"	e	enum:__anon35
+PHY_RESYNCH	defs.h	/^  PHY_RESYNCH,$/;"	e	enum:__anon35
+PL	pre_processor.c	/^double meanRX, PL;$/;"	v
+POWER_HEADROOM	defs.h	368;"	d
+POWER_HEADROOM_CMD	defs.h	/^} __attribute__((__packed__))POWER_HEADROOM_CMD;$/;"	t	typeref:struct:__anon11
+PathlossChange	defs.h	/^  uint16_t PathlossChange;$/;"	m	struct:__anon36
+PathlossChange_db	defs.h	/^  uint16_t PathlossChange_db;$/;"	m	struct:__anon36
+Pdu_size	defs.h	/^  uint16_t Pdu_size;$/;"	m	struct:__anon19
+Pdu_size	defs.h	/^  uint16_t Pdu_size;$/;"	m	struct:__anon20
+Pdu_size	defs.h	/^  uint16_t Pdu_size[8];$/;"	m	struct:__anon18
+R	defs.h	/^  uint8_t R:1;\/*!< \\brief Reserved  *\/$/;"	m	struct:__anon16
+R	defs.h	/^  uint8_t R:2;      \/\/ octet 1 MSB$/;"	m	struct:__anon6
+R	defs.h	/^  uint8_t R:2;     \/\/ octet 1 MSB$/;"	m	struct:__anon5
+R	defs.h	/^  uint8_t R:2;$/;"	m	struct:__anon10
+R	defs.h	/^  uint8_t R:2;$/;"	m	struct:__anon11
+R	defs.h	/^  uint8_t R:2;$/;"	m	struct:__anon4
+R	defs.h	/^  uint8_t R:2;$/;"	m	struct:__anon7
+RAPID	defs.h	/^  uint8_t RAPID:6;$/;"	m	struct:__anon3
+RA_HEADER_BI	defs.h	/^} __attribute__((__packed__))RA_HEADER_BI;$/;"	t	typeref:struct:__anon4
+RA_HEADER_RAPID	defs.h	/^} __attribute__((__packed__))RA_HEADER_RAPID;$/;"	t	typeref:struct:__anon3
+RA_Msg3_size	defs.h	/^  uint8_t RA_Msg3_size;$/;"	m	struct:__anon37
+RA_PREAMBLE_TRANSMISSION_COUNTER	defs.h	/^  uint8_t RA_PREAMBLE_TRANSMISSION_COUNTER;$/;"	m	struct:__anon37
+RA_RB_ALLOC	lte_transport_init.c	32;"	d	file:
+RA_TEMPLATE	defs.h	/^} RA_TEMPLATE;$/;"	t	typeref:struct:__anon30
+RA_active	defs.h	/^  boolean_t RA_active;$/;"	m	struct:__anon30
+RA_active	defs.h	/^  uint8_t RA_active;$/;"	m	struct:__anon37
+RA_alloc_pdu	vars.h	/^DCI1A_5MHz_TDD_1_6_t      RA_alloc_pdu;$/;"	v
+RA_alloc_pdu1	defs.h	/^  uint8_t RA_alloc_pdu1[(MAX_DCI_SIZE_BITS>>3)+1];$/;"	m	struct:__anon30
+RA_alloc_pdu2	defs.h	/^  uint8_t RA_alloc_pdu2[(MAX_DCI_SIZE_BITS>>3)+1];$/;"	m	struct:__anon30
+RA_alloc_pdu_fdd	vars.h	/^DCI1A_5MHz_FDD_t      RA_alloc_pdu_fdd;$/;"	v
+RA_attempt_number	defs.h	/^  uint8_t RA_attempt_number;$/;"	m	struct:__anon37
+RA_backoff_cnt	defs.h	/^  int16_t RA_backoff_cnt;$/;"	m	struct:__anon37
+RA_backoff_frame	defs.h	/^  uint32_t RA_backoff_frame;$/;"	m	struct:__anon37
+RA_backoff_subframe	defs.h	/^  uint8_t RA_backoff_subframe;$/;"	m	struct:__anon37
+RA_contention_resolution_cnt	defs.h	/^  uint8_t RA_contention_resolution_cnt;$/;"	m	struct:__anon37
+RA_contention_resolution_timer_active	defs.h	/^  uint8_t RA_contention_resolution_timer_active;$/;"	m	struct:__anon37
+RA_dci_fmt1	defs.h	/^  uint8_t RA_dci_fmt1;$/;"	m	struct:__anon30
+RA_dci_fmt2	defs.h	/^  uint8_t RA_dci_fmt2;$/;"	m	struct:__anon30
+RA_dci_size_bits1	defs.h	/^  uint8_t RA_dci_size_bits1;$/;"	m	struct:__anon30
+RA_dci_size_bits2	defs.h	/^  uint8_t RA_dci_size_bits2;$/;"	m	struct:__anon30
+RA_dci_size_bytes1	defs.h	/^  uint8_t RA_dci_size_bytes1;$/;"	m	struct:__anon30
+RA_dci_size_bytes2	defs.h	/^  uint8_t RA_dci_size_bytes2;$/;"	m	struct:__anon30
+RA_maxPL	defs.h	/^  uint16_t RA_maxPL;$/;"	m	struct:__anon37
+RA_prachMaskIndex	defs.h	/^  uint8_t RA_prachMaskIndex;$/;"	m	struct:__anon37
+RA_prach_resources	defs.h	/^  PRACH_RESOURCES_t RA_prach_resources;$/;"	m	struct:__anon37
+RA_rnti	defs.h	/^  uint16_t RA_rnti;$/;"	m	struct:__anon30
+RA_template	defs.h	/^  RA_TEMPLATE RA_template[NB_RA_PROC_MAX];$/;"	m	struct:__anon33
+RA_tx_frame	defs.h	/^  uint32_t RA_tx_frame;$/;"	m	struct:__anon37
+RA_tx_subframe	defs.h	/^  uint8_t RA_tx_subframe;$/;"	m	struct:__anon37
+RA_usedGroupA	defs.h	/^  uint8_t RA_usedGroupA;$/;"	m	struct:__anon37
+RA_window_cnt	defs.h	/^  int8_t RA_window_cnt;$/;"	m	struct:__anon37
+RRC_CONNECTION_FLAG	vars.h	/^uint32_t RRC_CONNECTION_FLAG;$/;"	v
+RRC_timer	defs.h	/^  int16_t RRC_timer;$/;"	m	struct:__anon30
+SBMAP_CONF	defs.h	/^} SBMAP_CONF;$/;"	t	typeref:struct:__anon31
+SCH_PAYLOAD_SIZE_MAX	defs.h	86;"	d
+SCH_SUBHEADER_FIXED	defs.h	/^} __attribute__((__packed__))SCH_SUBHEADER_FIXED;$/;"	t	typeref:struct:__anon7
+SCH_SUBHEADER_LONG	defs.h	/^} __attribute__((__packed__))SCH_SUBHEADER_LONG;$/;"	t	typeref:struct:__anon6
+SCH_SUBHEADER_SHORT	defs.h	/^} __attribute__((__packed__))SCH_SUBHEADER_SHORT;$/;"	t	typeref:struct:__anon5
+SF05_LIMIT	pre_processor.c	1343;"	d	file:
+SHORT_BSR	defs.h	374;"	d
+SHORT_PADDING	defs.h	352;"	d
+SR_COUNTER	defs.h	/^  uint16_t SR_COUNTER;$/;"	m	struct:__anon36
+SR_indication	eNB_scheduler_primitives.c	/^void SR_indication(module_id_t mod_idP, int cc_idP, frame_t frameP, rnti_t rntiP, sub_frame_t subframeP)$/;"	f
+SR_pending	defs.h	/^  uint8_t  SR_pending;$/;"	m	struct:__anon36
+S_DL_BUFFERED	defs.h	/^  S_DL_BUFFERED,$/;"	e	enum:__anon22
+S_DL_NONE	defs.h	/^  S_DL_NONE =0,$/;"	e	enum:__anon22
+S_DL_NUM_STATUS	defs.h	/^  S_DL_NUM_STATUS$/;"	e	enum:__anon22
+S_DL_SCHEDULED	defs.h	/^  S_DL_SCHEDULED,$/;"	e	enum:__anon22
+S_DL_WAITING	defs.h	/^  S_DL_WAITING,$/;"	e	enum:__anon22
+S_UL_BUFFERED	defs.h	/^  S_UL_BUFFERED,$/;"	e	enum:__anon21
+S_UL_NONE	defs.h	/^  S_UL_NONE =0,$/;"	e	enum:__anon21
+S_UL_NUM_STATUS	defs.h	/^  S_UL_NUM_STATUS$/;"	e	enum:__anon21
+S_UL_SCHEDULED	defs.h	/^  S_UL_SCHEDULED,$/;"	e	enum:__anon21
+S_UL_WAITING	defs.h	/^  S_UL_WAITING,$/;"	e	enum:__anon21
+State_ACTIVE	defs.h	/^  State_ACTIVE = 1,$/;"	e	enum:__anon2
+State_INACTIVE	defs.h	/^  State_INACTIVE = -1$/;"	e	enum:__anon2
+State_UNDECIDED	defs.h	/^  State_UNDECIDED = 0,$/;"	e	enum:__anon2
+T	defs.h	/^  uint8_t T:1;$/;"	m	struct:__anon3
+T	defs.h	/^  uint8_t T:1;$/;"	m	struct:__anon4
+T	malekshan.h	/^  int L,T;$/;"	m	struct:__anon39
+TA	defs.h	/^  uint8_t TA:6;$/;"	m	struct:__anon10
+TARGET_K	defs.h	167;"	d
+TARGET_RE	defs.h	165;"	d
+TARGET_SINR	defs.h	169;"	d
+TBS	defs.h	/^  uint32_t TBS;$/;"	m	struct:__anon27
+TIMING_ADVANCE_CMD	defs.h	/^} __attribute__((__packed__))TIMING_ADVANCE_CMD;$/;"	t	typeref:struct:__anon10
+TIMING_ADV_CMD	defs.h	348;"	d
+TRUNCATED_BSR	defs.h	372;"	d
+UCS	defs.h	163;"	d
+UE_CONT_RES	defs.h	346;"	d
+UE_DLSCH_STATUS	defs.h	/^} UE_DLSCH_STATUS;$/;"	t	typeref:enum:__anon22
+UE_L2_STATE_t	defs.h	/^} UE_L2_STATE_t;$/;"	t	typeref:enum:__anon35
+UE_MAC_INST	defs.h	/^} UE_MAC_INST;$/;"	t	typeref:struct:__anon37
+UE_PCCID	eNB_scheduler_primitives.c	/^int UE_PCCID(module_id_t mod_idP,int ue_idP)$/;"	f
+UE_RNTI	eNB_scheduler_primitives.c	/^rnti_t UE_RNTI(module_id_t mod_idP, int ue_idP)$/;"	f
+UE_SCHEDULING_INFO	defs.h	/^} UE_SCHEDULING_INFO;$/;"	t	typeref:struct:__anon36
+UE_TEMPLATE	defs.h	/^} UE_TEMPLATE;$/;"	t	typeref:struct:__anon28
+UE_ULSCH_STATUS	defs.h	/^} UE_ULSCH_STATUS;$/;"	t	typeref:enum:__anon21
+UE_id	pre_processor.c	/^  int UE_id;$/;"	m	struct:arg_struct_getk	file:
+UE_id	pre_processor.c	/^  int UE_id;$/;"	m	struct:arg_struct_meas	file:
+UE_id	pre_processor.c	/^  int UE_id;$/;"	m	struct:arg_struct_tpc	file:
+UE_is_to_be_scheduled	eNB_scheduler_primitives.c	/^uint8_t UE_is_to_be_scheduled(module_id_t module_idP,int CC_id,uint8_t UE_id)$/;"	f
+UE_list	defs.h	/^  UE_list_t UE_list;$/;"	m	struct:__anon34
+UE_list_t	defs.h	/^} UE_list_t;$/;"	t	typeref:struct:__anon32
+UE_mac_inst	vars.h	/^UE_MAC_INST *UE_mac_inst; \/\/[NB_MODULE_MAX];$/;"	v
+UE_num_active_CC	eNB_scheduler_primitives.c	/^int UE_num_active_CC(UE_list_t *listP,int ue_idP)$/;"	f
+UE_sched_ctrl	defs.h	/^  UE_sched_ctrl UE_sched_ctrl[NUMBER_OF_UE_MAX];$/;"	m	struct:__anon32
+UE_sched_ctrl	defs.h	/^} UE_sched_ctrl;$/;"	t	typeref:struct:__anon29
+UE_template	defs.h	/^  UE_TEMPLATE UE_template[MAX_NUM_CCs][NUMBER_OF_UE_MAX];$/;"	m	struct:__anon32
+UE_x_position	malekshan.h	/^  double UE_x_position[MAX_NUMBER_OF_LINK], UE_y_position[MAX_NUMBER_OF_LINK];$/;"	m	struct:__anon39
+UE_y_position	malekshan.h	/^  double UE_x_position[MAX_NUMBER_OF_LINK], UE_y_position[MAX_NUMBER_OF_LINK];$/;"	m	struct:__anon39
+ULSCH_DCI	defs.h	/^  uint8_t ULSCH_DCI[8][(MAX_DCI_SIZE_BITS>>3)+1];$/;"	m	struct:__anon28
+ULSCH_PDU	defs.h	/^} __attribute__ ((__packed__)) ULSCH_PDU;$/;"	t	typeref:struct:__anon20
+UL_RB_ALLOC	lte_transport_init.c	30;"	d	file:
+UL_alloc_pdu	vars.h	/^DCI0_5MHz_TDD_1_6_t       UL_alloc_pdu;$/;"	v
+UL_alloc_pdu_fdd	vars.h	/^DCI0_5MHz_FDD_t       UL_alloc_pdu_fdd;$/;"	v
+UL_failure_indication	eNB_scheduler_primitives.c	/^void UL_failure_indication(module_id_t mod_idP, int cc_idP, frame_t frameP, rnti_t rntiP, sub_frame_t subframeP)$/;"	f
+__LAYER2_MAC_DEFS_H__	defs.h	45;"	d
+__LAYER2_MAC_PROTO_H__	proto.h	37;"	d
+__MAC_EXTERN_H__	extern.h	40;"	d
+__MAC_VARS_H__	vars.h	41;"	d
+__MALEKSHAN_H	malekshan.h	2;"	d
+active	defs.h	/^  boolean_t active[NUMBER_OF_UE_MAX];$/;"	m	struct:__anon32
+add_common_dci	eNB_scheduler_primitives.c	/^void add_common_dci(DCI_PDU *DCI_pdu,$/;"	f
+add_new_ue	eNB_scheduler_primitives.c	/^int add_new_ue(module_id_t mod_idP, int cc_idP, rnti_t rntiP,int harq_pidP)$/;"	f
+add_openair2_stats	openair2_proc.c	/^int add_openair2_stats()$/;"	f
+add_ue_dlsch_info	eNB_scheduler_dlsch.c	/^add_ue_dlsch_info($/;"	f
+add_ue_spec_dci	eNB_scheduler_primitives.c	/^void add_ue_spec_dci(DCI_PDU *DCI_pdu,void *pdu,rnti_t rnti,unsigned char dci_size_bytes,unsigned char aggregation,unsigned char dci_size_bits,unsigned char dci_fmt,uint8_t ra_flag)$/;"	f
+add_ue_ulsch_info	eNB_scheduler_ulsch.c	/^void add_ue_ulsch_info(module_id_t module_idP, int CC_id, int UE_id, sub_frame_t subframeP, UE_ULSCH_STATUS status)$/;"	f
+adj_cell_id	defs.h	/^  uint32_t adj_cell_id[6];$/;"	m	struct:__anon37
+aggregated_pdu_arrival	defs.h	/^  uint32_t aggregated_pdu_arrival;$/;"	m	struct:__anon27
+aggregated_pdu_size	defs.h	/^  uint32_t aggregated_pdu_size;$/;"	m	struct:__anon27
+allocate_CCEs	eNB_scheduler_primitives.c	/^int allocate_CCEs(int module_idP,$/;"	f
+allocate_prbs	eNB_scheduler_primitives.c	/^uint32_t allocate_prbs(int UE_id,unsigned char nb_rb, uint32_t *rballoc)$/;"	f
+allocate_prbs_sub	eNB_scheduler_primitives.c	/^uint32_t allocate_prbs_sub(int nb_rb, uint8_t *rballoc)$/;"	f
+alpha	malekshan.h	/^  double beta[MAX_NUMBER_OF_LINK], alpha; $/;"	m	struct:__anon39
+arg_struct_getk	pre_processor.c	/^struct arg_struct_getk {$/;"	s	file:
+arg_struct_meas	pre_processor.c	/^struct arg_struct_meas {$/;"	s	file:
+arg_struct_tpc	pre_processor.c	/^struct arg_struct_tpc {$/;"	s	file:
+argmax_target_tx_interf	malekshan.c	/^void argmax_target_tx_interf (double dist_link, double beta, double alpha, int *target_tx_addr, int *target_interf_addr)$/;"	f
+assign_max_mcs_min_rb	pre_processor.c	/^void assign_max_mcs_min_rb(module_id_t module_idP,int frameP, sub_frame_t subframeP, uint16_t *first_rb)$/;"	f
+assign_rbs_required	pre_processor.c	/^void assign_rbs_required (module_id_t Mod_id,$/;"	f
+assigned_mcs_ul	defs.h	/^  uint8_t assigned_mcs_ul;$/;"	m	struct:__anon28
+avail	defs.h	/^  int avail;$/;"	m	struct:__anon32
+available_ncces	defs.h	/^  uint16_t available_ncces;$/;"	m	struct:__anon26
+available_prbs	defs.h	/^  uint16_t available_prbs;$/;"	m	struct:__anon26
+avg_overhead_bytes	defs.h	/^  uint64_t avg_overhead_bytes;$/;"	m	struct:__anon27
+avg_overhead_bytes_rx	defs.h	/^  uint64_t avg_overhead_bytes_rx;$/;"	m	struct:__anon27
+avg_pdu_idt	defs.h	/^  uint32_t avg_pdu_idt;$/;"	m	struct:__anon27
+avg_pdu_ps	defs.h	/^  uint32_t avg_pdu_ps;$/;"	m	struct:__anon27
+bcch_buffer	defs.h	/^  uint32_t bcch_buffer;$/;"	m	struct:__anon26
+bcch_mcs	defs.h	/^  uint32_t bcch_mcs;$/;"	m	struct:__anon26
+beta	malekshan.h	/^  double beta[MAX_NUMBER_OF_LINK], alpha; $/;"	m	struct:__anon39
+bsr_info	defs.h	/^  uint8_t bsr_info[MAX_NUM_LCGID];$/;"	m	struct:__anon28
+bucket_size	defs.h	/^  int16_t bucket_size[MAX_NUM_LCID];$/;"	m	struct:__anon36
+bytes_to_bsr_index	eNB_scheduler_ulsch.c	/^uint32_t bytes_to_bsr_index(int32_t nbytes)$/;"	f
+cancel_ra_proc	eNB_scheduler_RA.c	/^void cancel_ra_proc(module_id_t module_idP, int CC_id, frame_t frameP, rnti_t rnti)$/;"	f
+cba_access	ue_procedures.c	/^int cba_access(module_id_t module_idP,frame_t frameP,sub_frame_t subframe, uint8_t eNB_index,uint16_t buflen)$/;"	f
+cba_last_access	defs.h	/^  uint8_t cba_last_access[NUM_MAX_CBA_GROUP];$/;"	m	struct:__anon37
+cba_rnti	defs.h	/^  uint16_t cba_rnti[NUM_MAX_CBA_GROUP];$/;"	m	struct:__anon33
+cba_rnti	defs.h	/^  uint16_t cba_rnti[NUM_MAX_CBA_GROUP];$/;"	m	struct:__anon37
+ccch_buffer	defs.h	/^  uint32_t ccch_buffer;$/;"	m	struct:__anon26
+ccch_mcs	defs.h	/^  uint32_t ccch_mcs;$/;"	m	struct:__anon26
+cell_ids	defs.h	/^  uint16_t cell_ids[6];$/;"	m	struct:__anon38
+common_channels	defs.h	/^  COMMON_channels_t common_channels[MAX_NUM_CCs];$/;"	m	struct:__anon34
+configured	defs.h	/^  boolean_t configured;$/;"	m	struct:__anon28
+cont_res_id	defs.h	/^  uint8_t cont_res_id[6];$/;"	m	struct:__anon30
+context_active_timer	defs.h	/^  int32_t       context_active_timer;$/;"	m	struct:__anon29
+converge	pre_processor.c	/^int converge = 0;$/;"	v
+count_calls	pre_processor.c	/^int count_calls = 0, g_count_calls = 0;$/;"	v
+cqiSchedInterval	defs.h	/^  uint16_t cqiSchedInterval;$/;"	m	struct:__anon29
+cqi_req_timer	defs.h	/^  int32_t       cqi_req_timer;$/;"	m	struct:__anon29
+crnti	defs.h	/^  rnti_t crnti; \/\/\/user id (rnti) of connected UEs$/;"	m	struct:__anon27
+crnti	defs.h	/^  uint16_t crnti;$/;"	m	struct:__anon37
+crnti_before_ho	defs.h	/^  rnti_t crnti_before_ho; \/\/\/user id (rnti) of connected UEs$/;"	m	struct:__anon37
+current_NI_0	pre_processor.c	/^int32_t current_NI_0 = 0;$/;"	v
+dci_alloc	defs.h	/^  DCI_ALLOC_t dci_alloc[NUM_DCI_MAX] ;$/;"	m	struct:__anon12
+delta	pre_processor.c	/^int32_t delta = 0;$/;"	v
+dist_link	malekshan.h	/^  double dist_link[MAX_NUMBER_OF_LINK]; \/\/distance between tx and rx $/;"	m	struct:__anon39
+dist_tx_origin	malekshan.h	/^  double dist_tx_origin[MAX_NUMBER_OF_LINK]; \/\/distance from transmitter to origin $/;"	m	struct:__anon39
+distance	defs.h	/^  eNB_UE_estimated_distances distance;$/;"	m	struct:__anon28
+dl_CC_bitmap	defs.h	/^  uint8_t dl_CC_bitmap[NUMBER_OF_UE_MAX];$/;"	m	struct:__anon32
+dl_bandwidth	defs.h	/^  uint8_t dl_bandwidth[MAX_NUM_LCID];$/;"	m	struct:__anon29
+dl_buffer_head_sdu_creation_time	defs.h	/^  uint32_t dl_buffer_head_sdu_creation_time[MAX_NUM_LCID];$/;"	m	struct:__anon28
+dl_buffer_head_sdu_creation_time_max	defs.h	/^  uint32_t  dl_buffer_head_sdu_creation_time_max;$/;"	m	struct:__anon28
+dl_buffer_head_sdu_is_segmented	defs.h	/^  uint8_t    dl_buffer_head_sdu_is_segmented[MAX_NUM_LCID];$/;"	m	struct:__anon28
+dl_buffer_head_sdu_remaining_size_to_send	defs.h	/^  uint32_t dl_buffer_head_sdu_remaining_size_to_send[MAX_NUM_LCID];$/;"	m	struct:__anon28
+dl_buffer_info	defs.h	/^  uint32_t dl_buffer_info[MAX_NUM_LCID];$/;"	m	struct:__anon28
+dl_buffer_total	defs.h	/^  uint32_t dl_buffer_total;$/;"	m	struct:__anon28
+dl_cqi	defs.h	/^  uint8_t dl_cqi;$/;"	m	struct:__anon27
+dl_pdus_in_buffer	defs.h	/^  uint32_t dl_pdus_in_buffer[MAX_NUM_LCID];$/;"	m	struct:__anon28
+dl_pdus_total	defs.h	/^  uint32_t dl_pdus_total;$/;"	m	struct:__anon28
+dl_phy_sync_success	main.c	/^void dl_phy_sync_success(module_id_t   module_idP,$/;"	f
+dl_pow_off	defs.h	/^  uint8_t       dl_pow_off[MAX_NUM_CCs];$/;"	m	struct:__anon29
+dlsch_bitrate	defs.h	/^  uint32_t  dlsch_bitrate;$/;"	m	struct:__anon27
+dlsch_bitrate	defs.h	/^  uint32_t dlsch_bitrate;$/;"	m	struct:__anon26
+dlsch_bytes_tx	defs.h	/^  uint32_t dlsch_bytes_tx;$/;"	m	struct:__anon26
+dlsch_mcs1	defs.h	/^  uint8_t dlsch_mcs1;$/;"	m	struct:__anon27
+dlsch_mcs2	defs.h	/^  uint8_t dlsch_mcs2;$/;"	m	struct:__anon27
+dlsch_pdus_tx	defs.h	/^  uint32_t dlsch_pdus_tx;$/;"	m	struct:__anon26
+dlsch_scheduler_pre_processor	pre_processor.c	/^void dlsch_scheduler_pre_processor (module_id_t   Mod_id,$/;"	f
+dlsch_scheduler_pre_processor_allocate	pre_processor.c	/^void dlsch_scheduler_pre_processor_allocate (module_id_t   Mod_id,$/;"	f
+dlsch_scheduler_pre_processor_reset	pre_processor.c	/^void dlsch_scheduler_pre_processor_reset (int module_idP,$/;"	f
+dmis_state_t	defs.h	/^} dmis_state_t;$/;"	t	typeref:enum:__anon2
+drx_config	defs.h	/^  struct DRX_Config *drx_config;$/;"	m	struct:__anon36	typeref:struct:__anon36::DRX_Config
+dump_ue_list	eNB_scheduler_primitives.c	/^void dump_ue_list(UE_list_t *listP, int ul_flag)$/;"	f
+eNB_DLSCH_INFO	defs.h	/^} eNB_DLSCH_INFO;$/;"	t	typeref:struct:__anon25
+eNB_MAC_INST	defs.h	/^} eNB_MAC_INST;$/;"	t	typeref:struct:__anon34
+eNB_STATS	defs.h	/^} eNB_STATS;$/;"	t	typeref:struct:__anon26
+eNB_UE_STATS	defs.h	/^} eNB_UE_STATS;$/;"	t	typeref:struct:__anon27
+eNB_UE_stats	defs.h	/^  eNB_UE_STATS eNB_UE_stats[MAX_NUM_CCs][NUMBER_OF_UE_MAX];$/;"	m	struct:__anon32
+eNB_ULSCH_INFO	defs.h	/^} eNB_ULSCH_INFO;$/;"	t	typeref:struct:__anon24
+eNB_dlsch_info	vars.h	/^eNB_DLSCH_INFO eNB_dlsch_info[NUMBER_OF_eNB_MAX][MAX_NUM_CCs][NUMBER_OF_UE_MAX]; \/\/ eNBxUE = 8x8$/;"	v
+eNB_dlsch_ulsch_scheduler	eNB_scheduler.c	/^void eNB_dlsch_ulsch_scheduler(module_id_t module_idP,uint8_t cooperation_flag, frame_t frameP, sub_frame_t subframeP)  \/\/, int calibration_flag) {$/;"	f
+eNB_id	defs.h	/^    int eNB_id; \/\/-1 if D2D$/;"	m	struct:map_entry
+eNB_mac_inst	vars.h	/^eNB_MAC_INST *eNB_mac_inst; \/\/[NB_MODULE_MAX];$/;"	v
+eNB_scheduler	defs.h	/^  time_stats_t eNB_scheduler;$/;"	m	struct:__anon34
+eNB_stats	defs.h	/^  eNB_STATS eNB_stats[MAX_NUM_CCs];$/;"	m	struct:__anon34
+eNB_ulsch_info	vars.h	/^eNB_ULSCH_INFO eNB_ulsch_info[NUMBER_OF_eNB_MAX][MAX_NUM_CCs][NUMBER_OF_UE_MAX]; \/\/ eNBxUE = 8x8$/;"	v
+eNB_x_position	malekshan.h	/^  double eNB_x_position[MAX_NUMBER_OF_LINK], eNB_y_position[MAX_NUMBER_OF_LINK];$/;"	m	struct:__anon39
+eNB_y_position	malekshan.h	/^  double eNB_x_position[MAX_NUMBER_OF_LINK], eNB_y_position[MAX_NUMBER_OF_LINK];$/;"	m	struct:__anon39
+fill_DLSCH_dci	defs.h	/^  time_stats_t fill_DLSCH_dci;$/;"	m	struct:__anon34
+fill_DLSCH_dci	eNB_scheduler_dlsch.c	/^fill_DLSCH_dci($/;"	f
+fill_rar	rar_tools.c	/^unsigned short fill_rar($/;"	f
+find_UE_id	eNB_scheduler_primitives.c	/^int find_UE_id(module_id_t mod_idP, rnti_t rntiP)$/;"	f
+first_subframe	defs.h	/^  uint8_t first_subframe;$/;"	m	struct:__anon31
+frame	defs.h	/^  frame_t     frame;$/;"	m	struct:__anon37
+frame	defs.h	/^  frame_t frame;$/;"	m	struct:__anon34
+frameP	pre_processor.c	/^  frame_t frameP;$/;"	m	struct:arg_struct_meas	file:
+g_call_nb_getK	pre_processor.c	/^int g_call_nb_getK = 0;$/;"	v
+g_call_pdr	pre_processor.c	/^int g_call_pdr = 1;$/;"	v
+g_call_sched_ctrl	pre_processor.c	/^int g_call_sched_ctrl = 0;$/;"	v
+g_call_tpc	pre_processor.c	/^int g_call_tpc = 0;$/;"	v
+g_count_calls	pre_processor.c	/^int count_calls = 0, g_count_calls = 0;$/;"	v
+g_last_rx_sn	pre_processor.c	/^uint16_t g_last_rx_sn = 0;$/;"	v
+g_thread_call	pre_processor.c	/^int g_thread_call = 0;$/;"	v
+generate_Msg4	defs.h	/^  uint8_t generate_Msg4;$/;"	m	struct:__anon30
+generate_dlsch_header	eNB_scheduler_dlsch.c	/^generate_dlsch_header($/;"	f
+generate_rar	defs.h	/^  uint8_t generate_rar;$/;"	m	struct:__anon30
+generate_ulsch_header	ue_procedures.c	/^unsigned char generate_ulsch_header(uint8_t *mac_header,$/;"	f
+get_DELTA_PREAMBLE	ra_procedures.c	/^int8_t get_DELTA_PREAMBLE(module_id_t module_idP,int CC_id)$/;"	f
+get_Po_NOMINAL_PUSCH	l1_helpers.c	/^int8_t get_Po_NOMINAL_PUSCH(module_id_t module_idP,uint8_t CC_id)$/;"	f
+get_bsr_lcgid	ue_procedures.c	/^int get_bsr_lcgid (module_id_t module_idP)$/;"	f
+get_bsr_len	ue_procedures.c	/^uint8_t get_bsr_len (module_id_t module_idP, uint16_t buflen)$/;"	f
+get_db_dl_PathlossChange	ue_procedures.c	/^int get_db_dl_PathlossChange(uint8_t dl_PathlossChange)$/;"	f
+get_dci_sdu	eNB_scheduler_primitives.c	/^DCI_PDU *get_dci_sdu(module_id_t module_idP, int CC_id,frame_t frameP, sub_frame_t subframeP)$/;"	f
+get_deltaP_rampup	l1_helpers.c	/^int8_t get_deltaP_rampup(module_id_t module_idP,uint8_t CC_id)$/;"	f
+get_dlsch_sdu	eNB_scheduler_dlsch.c	/^get_dlsch_sdu($/;"	f
+get_mbsfn_sf_alloction	eNB_scheduler_mch.c	/^int8_t get_mbsfn_sf_alloction (module_id_t module_idP, uint8_t CC_id, uint8_t mbsfn_sync_area)$/;"	f
+get_mch_sdu	eNB_scheduler_mch.c	/^MCH_PDU *get_mch_sdu(module_id_t module_idP, int CC_id, frame_t frameP, sub_frame_t subframeP)$/;"	f
+get_meas_pktR	pre_processor.c	/^void *get_meas_pktR (void *params)$/;"	f
+get_min_rb_unit	eNB_scheduler_primitives.c	/^int get_min_rb_unit(module_id_t module_id, uint8_t CC_id)$/;"	f
+get_ms_bucketsizeduration	ue_procedures.c	/^int get_ms_bucketsizeduration(uint8_t bucketsizeduration)$/;"	f
+get_nCCE_offset	eNB_scheduler_primitives.c	/^int get_nCCE_offset(int *CCE_table,$/;"	f
+get_nb_subband	eNB_scheduler_primitives.c	/^int get_nb_subband(void)$/;"	f
+get_phr_mapping	ue_procedures.c	/^uint8_t get_phr_mapping (module_id_t module_idP, int CC_id, uint8_t eNB_index)$/;"	f
+get_prach_resources	ra_procedures.c	/^void get_prach_resources(module_id_t module_idP,$/;"	f
+get_sf_periodicBSRTimer	ue_procedures.c	/^int get_sf_periodicBSRTimer(uint8_t sf_offset)$/;"	f
+get_sf_perioidicPHR_Timer	ue_procedures.c	/^int get_sf_perioidicPHR_Timer(uint8_t perioidicPHR_Timer)$/;"	f
+get_sf_prohibitPHR_Timer	ue_procedures.c	/^int get_sf_prohibitPHR_Timer(uint8_t prohibitPHR_Timer)$/;"	f
+get_sf_retxBSRTimer	ue_procedures.c	/^int get_sf_retxBSRTimer(uint8_t sf_offset)$/;"	f
+get_ue_weight	eNB_scheduler_primitives.c	/^unsigned char get_ue_weight(module_id_t module_idP, int CC_id, int ue_idP)$/;"	f
+get_value_K_pktR	pre_processor.c	/^void * get_value_K_pktR(void *params)$/;"	f
+group_mcs	defs.h	/^  uint8_t group_mcs[NUM_MAX_CBA_GROUP];$/;"	m	struct:__anon33
+harq_pid	defs.h	/^  uint8_t       harq_pid[MAX_NUM_CCs];$/;"	m	struct:__anon29
+harq_pid	defs.h	/^  uint8_t harq_pid;$/;"	m	struct:__anon27
+harq_round	defs.h	/^  uint8_t harq_round;$/;"	m	struct:__anon27
+head	defs.h	/^  int head;$/;"	m	struct:__anon32
+head_ul	defs.h	/^  int head_ul;$/;"	m	struct:__anon32
+ind_g	pre_processor.c	/^int ind_g = 0;$/;"	v
+init_CCE_table	eNB_scheduler_primitives.c	/^void init_CCE_table(int module_idP,int CC_idP)$/;"	f
+init_transport_channels	lte_transport_init.c	/^void init_transport_channels(unsigned char transmission_mode)$/;"	f
+init_ue_sched_info	eNB_scheduler_primitives.c	/^void init_ue_sched_info(void)$/;"	f
+initiate_ra_proc	eNB_scheduler_RA.c	/^void initiate_ra_proc(module_id_t module_idP, int CC_id,frame_t frameP, uint16_t preamble_index,int16_t timing_offset,uint8_t sect_id,sub_frame_t subframeP,$/;"	f
+interf_power	malekshan.h	/^  double interf_power[MAX_NUMBER_OF_LINK][MAX_NUMBER_OF_TIME]; \/\/Interference measured at receiver side$/;"	m	struct:__anon39
+is_UE_active	eNB_scheduler_primitives.c	/^boolean_t is_UE_active(module_id_t mod_idP, int ue_idP)$/;"	f
+l2_init	main.c	/^int l2_init(LTE_DL_FRAME_PARMS *frame_parms,int eMBMS_active, char *uecap_xer,uint8_t cba_group_active, uint8_t HO_active)$/;"	f
+layer2_init_UE	main.c	/^char layer2_init_UE(module_id_t module_idP)$/;"	f
+layer2_init_eNB	main.c	/^char layer2_init_eNB(module_id_t module_idP, unsigned char eNB_index)$/;"	f
+lcgidmap	defs.h	/^  long lcgidmap[11];$/;"	m	struct:__anon28
+lcid	defs.h	/^  uint8_t lcid:5;        \/\/ octet 2 MSB$/;"	m	struct:__anon17
+lcid_active	defs.h	/^  uint8_t lcid_active[NB_RB_MAX];$/;"	m	struct:__anon34
+link_type_t	defs.h	/^}link_type_t;$/;"	t	typeref:enum:__anon1
+locate	ue_procedures.c	/^uint8_t locate (const uint32_t *table, int size, int value)$/;"	f
+logicalChannelConfig	defs.h	/^  LogicalChannelConfig_t *logicalChannelConfig[MAX_NUM_LCID];$/;"	m	struct:__anon37
+m_cellular	defs.h	/^    m_cellular = 0x00,$/;"	e	enum:__anon1
+m_d2d	defs.h	/^      m_d2d$/;"	e	enum:__anon1
+macConfig	defs.h	/^  MAC_MainConfig_t *macConfig;$/;"	m	struct:__anon37
+mac_ContentionResolutionTimer	defs.h	/^  uint8_t mac_ContentionResolutionTimer;$/;"	m	struct:__anon29
+mac_UE_out_of_sync_ind	main.c	/^void mac_UE_out_of_sync_ind(module_id_t module_idP, frame_t frameP, uint16_t eNB_index)$/;"	f
+mac_init_global_param	main.c	/^int mac_init_global_param(void)$/;"	f
+mac_top_cleanup	main.c	/^void mac_top_cleanup(void)$/;"	f
+mac_top_init	main.c	/^int mac_top_init(int eMBMS_active, char *uecap_xer, uint8_t cba_group_active, uint8_t HO_active)$/;"	f
+mac_xface	vars.h	/^MAC_xface *mac_xface;$/;"	v
+map_entry	defs.h	/^typedef struct map_entry{$/;"	s
+map_entry_t	defs.h	/^} map_entry_t;$/;"	t	typeref:struct:map_entry
+maxHARQ_Tx	defs.h	/^  uint16_t maxHARQ_Tx;$/;"	m	struct:__anon36
+max_allowed_rbs	defs.h	/^  uint16_t max_allowed_rbs[MAX_NUM_LCID];$/;"	m	struct:__anon29
+max_mcs	defs.h	/^  uint8_t max_mcs[MAX_NUM_LCID];$/;"	m	struct:__anon29
+maxcqi	pre_processor.c	/^int maxcqi(module_id_t Mod_id,int32_t UE_id)$/;"	f
+maxround	pre_processor.c	/^int maxround(module_id_t Mod_id,uint16_t rnti,int frame,sub_frame_t subframe,uint8_t ul_flag )$/;"	f
+mbms_SessionList	defs.h	/^  struct MBMS_SessionInfoList_r9 *mbms_SessionList[MAX_PMCH_perMBSFN];$/;"	m	struct:__anon33	typeref:struct:__anon33::MBMS_SessionInfoList_r9
+mbsfn_AreaInfo	defs.h	/^  struct  MBSFN_AreaInfo_r9 *mbsfn_AreaInfo[MAX_MBSFN_AREA];$/;"	m	struct:__anon33	typeref:struct:__anon33::MBSFN_AreaInfo_r9
+mbsfn_AreaInfo	defs.h	/^  struct  MBSFN_AreaInfo_r9 *mbsfn_AreaInfo[MAX_MBSFN_AREA];$/;"	m	struct:__anon37	typeref:struct:__anon37::MBSFN_AreaInfo_r9
+mbsfn_SubframeConfig	defs.h	/^  struct MBSFN_SubframeConfig *mbsfn_SubframeConfig[8]; \/\/ FIXME replace 8 by MAX_MBSFN_AREA?$/;"	m	struct:__anon37	typeref:struct:__anon37::MBSFN_SubframeConfig
+mbsfn_SubframeConfig	defs.h	/^  struct MBSFN_SubframeConfig *mbsfn_SubframeConfig[8];$/;"	m	struct:__anon33	typeref:struct:__anon33::MBSFN_SubframeConfig
+mcch_active	defs.h	/^  uint8_t mcch_active;$/;"	m	struct:__anon19
+mcch_active	defs.h	/^  uint8_t mcch_active;$/;"	m	struct:__anon33
+mcch_status	defs.h	/^  uint8_t mcch_status;$/;"	m	struct:__anon37
+mcs	defs.h	/^  uint8_t mcs;$/;"	m	struct:__anon19
+meanRX	pre_processor.c	/^double meanRX, PL;$/;"	v
+mean_rx	pre_processor.c	/^int32_t w_txpower = 1, mean_rx = 0, test;$/;"	v
+measGapConfig	defs.h	/^  MeasGapConfig_t  *measGapConfig;$/;"	m	struct:__anon37
+min_dl_bandwidth	defs.h	/^  uint8_t min_dl_bandwidth[MAX_NUM_LCID];$/;"	m	struct:__anon29
+min_ul_bandwidth	defs.h	/^  uint8_t min_ul_bandwidth[MAX_NUM_LCID];$/;"	m	struct:__anon29
+mode	defs.h	/^    link_type_t mode; \/\/0: cellular, 1: D2D$/;"	m	struct:map_entry
+mrbch_phy_sync_failure	main.c	/^void mrbch_phy_sync_failure(module_id_t module_idP, frame_t frameP, uint8_t free_eNB_index) \/\/init as CH$/;"	f
+msi_active	defs.h	/^  uint8_t msi_active;$/;"	m	struct:__anon19
+msi_active	defs.h	/^  uint8_t msi_active;$/;"	m	struct:__anon33
+msi_status	defs.h	/^  uint8_t msi_status;\/\/ could be an array if there are >1 MCH in one MBSFN area$/;"	m	struct:__anon37
+mtch_active	defs.h	/^  uint8_t mtch_active;$/;"	m	struct:__anon19
+mtch_active	defs.h	/^  uint8_t mtch_active;$/;"	m	struct:__anon33
+mutex_tpc	pre_processor.c	/^pthread_mutex_t mutex_tpc = PTHREAD_MUTEX_INITIALIZER;$/;"	v
+n_adj_cells	defs.h	/^  uint8_t  n_adj_cells;$/;"	m	struct:__anon37
+n_adj_cells	defs.h	/^  uint8_t n_adj_cells;$/;"	m	struct:__anon38
+nb_active_sb	defs.h	/^  uint8_t nb_active_sb;$/;"	m	struct:__anon31
+nb_rb	defs.h	/^  uint16_t nb_rb[8]; \/\/ num_max_harq$/;"	m	struct:__anon28
+nb_rb_ul	defs.h	/^  uint16_t nb_rb_ul[8]; \/\/ num_max_harq$/;"	m	struct:__anon28
+ncce_used	defs.h	/^  uint16_t ncce_used;$/;"	m	struct:__anon27
+ncce_used_retx	defs.h	/^  uint16_t ncce_used_retx;$/;"	m	struct:__anon27
+neigh_cell_id_t	defs.h	/^} neigh_cell_id_t;$/;"	t	typeref:struct:__anon38
+next	defs.h	/^    struct map_entry *next;$/;"	m	struct:map_entry	typeref:struct:map_entry::map_entry
+next	defs.h	/^  int next[NUMBER_OF_UE_MAX];$/;"	m	struct:__anon32
+next_ul	defs.h	/^  int next_ul[NUMBER_OF_UE_MAX];$/;"	m	struct:__anon32
+normalized_rx_power	defs.h	/^  int32_t      normalized_rx_power;$/;"	m	struct:__anon27
+num_UEs	defs.h	/^  int num_UEs;$/;"	m	struct:__anon32
+num_active_cba_groups	defs.h	/^  uint8_t num_active_cba_groups;$/;"	m	struct:__anon33
+num_active_mbsfn_area	defs.h	/^  uint8_t num_active_mbsfn_area;$/;"	m	struct:__anon33
+num_active_mbsfn_area	defs.h	/^  uint8_t num_active_mbsfn_area;$/;"	m	struct:__anon37
+num_bytes_rx	defs.h	/^  uint32_t num_bytes_rx[NB_RB_MAX];$/;"	m	struct:__anon27
+num_bytes_tx	defs.h	/^  uint32_t num_bytes_tx[NB_RB_MAX];$/;"	m	struct:__anon27
+num_dlactive_UEs	defs.h	/^  uint16_t num_dlactive_UEs;$/;"	m	struct:__anon26
+num_errors_rx	defs.h	/^  uint32_t num_errors_rx;$/;"	m	struct:__anon27
+num_pdcch_symbols	defs.h	/^  uint32_t num_pdcch_symbols;$/;"	m	struct:__anon12
+num_pdu_rx	defs.h	/^  uint32_t num_pdu_rx[NB_RB_MAX];$/;"	m	struct:__anon27
+num_pdu_tx	defs.h	/^  uint32_t num_pdu_tx[NB_RB_MAX];$/;"	m	struct:__anon27
+num_retransmission	defs.h	/^  uint32_t num_retransmission;$/;"	m	struct:__anon27
+num_retransmission_rx	defs.h	/^  uint32_t num_retransmission_rx;$/;"	m	struct:__anon27
+num_sf_allocation_pattern	defs.h	/^  uint8_t num_sf_allocation_pattern;$/;"	m	struct:__anon33
+num_sf_allocation_pattern	defs.h	/^  uint8_t num_sf_allocation_pattern;$/;"	m	struct:__anon37
+numactiveCCs	defs.h	/^  int numactiveCCs[NUMBER_OF_UE_MAX];$/;"	m	struct:__anon32
+numactiveULCCs	defs.h	/^  int numactiveULCCs[NUMBER_OF_UE_MAX];$/;"	m	struct:__anon32
+oldNDI	defs.h	/^  uint8_t oldNDI[8];$/;"	m	struct:__anon28
+oldNDI_UL	defs.h	/^  uint8_t oldNDI_UL[8];$/;"	m	struct:__anon28
+openair2_stats_read	openair2_proc.c	/^static int openair2_stats_read(char *buffer, char **my_buffer, off_t off, int length)$/;"	f	file:
+ordered_CCids	defs.h	/^  int ordered_CCids[MAX_NUM_CCs][NUMBER_OF_UE_MAX];$/;"	m	struct:__anon32
+ordered_ULCCids	defs.h	/^  int ordered_ULCCids[MAX_NUM_CCs][NUMBER_OF_UE_MAX];$/;"	m	struct:__anon32
+overhead_bytes	defs.h	/^  uint64_t overhead_bytes;$/;"	m	struct:__anon27
+overhead_bytes_rx	defs.h	/^  uint64_t overhead_bytes_rx;$/;"	m	struct:__anon27
+pCC_id	defs.h	/^  int pCC_id[NUMBER_OF_UE_MAX];$/;"	m	struct:__anon32
+pCC_id	vars.h	/^int pCC_id[NUMBER_OF_eNB_MAX];$/;"	v
+padding	defs.h	/^  uint32_t padding:8;$/;"	m	struct:__anon9
+padding	defs.h	/^  uint8_t padding;$/;"	m	struct:__anon6
+parse_header	ue_procedures.c	/^unsigned char *parse_header(unsigned char *mac_header,$/;"	f
+parse_mch_header	ue_procedures.c	/^unsigned char *parse_mch_header(unsigned char *mac_header,$/;"	f
+parse_ulsch_header	eNB_scheduler_ulsch.c	/^unsigned char *parse_ulsch_header(unsigned char *mac_header,$/;"	f
+pathloss	defs.h	/^    uint32_t pathloss;$/;"	m	struct:map_entry
+payload	defs.h	/^  int8_t payload[8][SCH_PAYLOAD_SIZE_MAX];$/;"	m	struct:__anon18
+payload	defs.h	/^  int8_t payload[SCH_PAYLOAD_SIZE_MAX];         \/*!< \\brief SACH payload *\/$/;"	m	struct:__anon20
+payload	defs.h	/^  int8_t payload[SCH_PAYLOAD_SIZE_MAX];$/;"	m	struct:__anon19
+payload	defs.h	/^  uint8_t payload[BCCH_PAYLOAD_SIZE_MAX] ;$/;"	m	struct:__anon14
+payload	defs.h	/^  uint8_t payload[CCCH_PAYLOAD_SIZE_MAX] ;$/;"	m	struct:__anon13
+payload	defs.h	/^  uint8_t payload[MCCH_PAYLOAD_SIZE_MAX] ;$/;"	m	struct:__anon15
+pdu_bytes_rx	defs.h	/^  uint64_t pdu_bytes_rx;$/;"	m	struct:__anon27
+periodicBSR_SF	defs.h	/^  int16_t periodicBSR_SF;$/;"	m	struct:__anon36
+periodicBSR_Timer	defs.h	/^  uint16_t periodicBSR_Timer;$/;"	m	struct:__anon36
+periodicPHR_SF	defs.h	/^  int16_t periodicPHR_SF;$/;"	m	struct:__anon36
+periodicPHR_Timer	defs.h	/^  uint16_t periodicPHR_Timer;$/;"	m	struct:__anon36
+periodicity	defs.h	/^  uint8_t periodicity;$/;"	m	struct:__anon31
+phr_config	defs.h	/^  struct MAC_MainConfig__phr_Config *phr_config;$/;"	m	struct:__anon36	typeref:struct:__anon36::MAC_MainConfig__phr_Config
+phr_info	defs.h	/^  int8_t phr_info;$/;"	m	struct:__anon28
+phr_info_configured	defs.h	/^  int8_t phr_info_configured;$/;"	m	struct:__anon28
+phr_received	defs.h	/^  int32_t       phr_received;$/;"	m	struct:__anon29
+physicalConfigDedicated	defs.h	/^  struct PhysicalConfigDedicated *physicalConfigDedicated;$/;"	m	struct:__anon37	typeref:struct:__anon37::PhysicalConfigDedicated
+physicalConfigDedicatedSCell_r10	defs.h	/^  struct PhysicalConfigDedicatedSCell_r10 *physicalConfigDedicatedSCell_r10;$/;"	m	struct:__anon37	typeref:struct:__anon37::PhysicalConfigDedicatedSCell_r10
+pmch_Config	defs.h	/^  struct PMCH_Config_r9 *pmch_Config[MAX_PMCH_perMBSFN];$/;"	m	struct:__anon33	typeref:struct:__anon33::PMCH_Config_r9
+pmch_Config	defs.h	/^  struct PMCH_Config_r9 *pmch_Config[MAX_PMCH_perMBSFN];$/;"	m	struct:__anon37	typeref:struct:__anon37::PMCH_Config_r9
+power_backoff_db	defs.h	/^  uint8_t power_backoff_db[NUMBER_OF_eNB_MAX];$/;"	m	struct:__anon37
+pre_allocated_nb_rb_ul	defs.h	/^  uint8_t pre_allocated_nb_rb_ul;$/;"	m	struct:__anon28
+pre_allocated_rb_table_index_ul	defs.h	/^  int8_t pre_allocated_rb_table_index_ul;$/;"	m	struct:__anon28
+pre_assigned_mcs_ul	defs.h	/^  uint8_t pre_assigned_mcs_ul;$/;"	m	struct:__anon28
+pre_nb_available_rbs	defs.h	/^  uint16_t      pre_nb_available_rbs[MAX_NUM_CCs];$/;"	m	struct:__anon29
+preamble_index	defs.h	/^  uint8_t preamble_index;$/;"	m	struct:__anon30
+preamble_subframe	defs.h	/^  uint8_t preamble_subframe;$/;"	m	struct:__anon30
+prev	eNB_scheduler_primitives.c	/^int prev(UE_list_t *listP, int nodeP, int ul_flag)$/;"	f
+printk	defs.h	112;"	d
+priority	defs.h	/^  uint16_t priority[MAX_NUM_LCID];$/;"	m	struct:__anon29
+proc_openair2_root	openair2_proc.c	/^static struct proc_dir_entry *proc_openair2_root;$/;"	v	typeref:struct:proc_dir_entry	file:
+process_tpc_pktR	pre_processor.c	/^void *process_tpc_pktR (void *params)$/;"	f
+process_ue_cqi	eNB_scheduler_primitives.c	/^unsigned char process_ue_cqi (module_id_t module_idP, int ue_idP)$/;"	f
+prohibitPHR_SF	defs.h	/^  int16_t prohibitPHR_SF;$/;"	m	struct:__anon36
+prohibitPHR_Timer	defs.h	/^  uint16_t prohibitPHR_Timer;$/;"	m	struct:__anon36
+pucch_tpc_tx_frame	defs.h	/^  uint32_t pucch_tpc_tx_frame;$/;"	m	struct:__anon28
+pucch_tpc_tx_subframe	defs.h	/^  uint32_t pucch_tpc_tx_subframe;$/;"	m	struct:__anon28
+pusch_tpc_tx_frame	defs.h	/^  uint32_t pusch_tpc_tx_frame;$/;"	m	struct:__anon28
+pusch_tpc_tx_subframe	defs.h	/^  uint32_t pusch_tpc_tx_subframe;$/;"	m	struct:__anon28
+ra_pdcch_order_sent	defs.h	/^  int32_t       ra_pdcch_order_sent;$/;"	m	struct:__anon29
+rach_ConfigDedicated	defs.h	/^  struct RACH_ConfigDedicated *rach_ConfigDedicated;$/;"	m	struct:__anon37	typeref:struct:__anon37::RACH_ConfigDedicated
+radioResourceConfigCommon	defs.h	/^  RadioResourceConfigCommonSIB_t *radioResourceConfigCommon;$/;"	m	struct:__anon37
+rb_table	eNB_scheduler_ulsch.c	/^uint8_t rb_table[33] = {1,2,3,4,5,6,8,9,10,12,15,16,18,20,24,25,27,30,32,36,40,45,48,50,54,60,72,75,80,81,90,96,100};$/;"	v
+rballoc_sub_UE	defs.h	/^  unsigned char rballoc_sub_UE[MAX_NUM_CCs][N_RBG_MAX];$/;"	m	struct:__anon29
+rballoc_subband	defs.h	/^  uint8_t rballoc_subband[8][50];$/;"	m	struct:__anon28
+rbs_used	defs.h	/^  uint16_t rbs_used;$/;"	m	struct:__anon27
+rbs_used_retx	defs.h	/^  uint16_t rbs_used_retx;$/;"	m	struct:__anon27
+rbs_used_retx_rx	defs.h	/^  uint32_t rbs_used_retx_rx;$/;"	m	struct:__anon27
+rbs_used_rx	defs.h	/^  uint32_t rbs_used_rx;$/;"	m	struct:__anon27
+reliability	pre_processor.c	/^uint16_t reliability(module_id_t Mod_idP, int UE_id)$/;"	f
+remove_openair2_stats	openair2_proc.c	/^void remove_openair2_stats()$/;"	f
+retxBSR_SF	defs.h	/^  int16_t retxBSR_SF;$/;"	m	struct:__anon36
+retxBSR_Timer	defs.h	/^  uint16_t retxBSR_Timer;$/;"	m	struct:__anon36
+rnti	defs.h	/^    int  rnti;$/;"	m	struct:map_entry
+rnti	defs.h	/^  rnti_t rnti;$/;"	m	struct:__anon24
+rnti	defs.h	/^  rnti_t rnti;$/;"	m	struct:__anon25
+rnti	defs.h	/^  rnti_t rnti;$/;"	m	struct:__anon28
+rnti	defs.h	/^  rnti_t rnti;$/;"	m	struct:__anon30
+round	defs.h	/^  uint8_t       round[MAX_NUM_CCs];$/;"	m	struct:__anon29
+rrc_get_estimated_ue_distance	config.c	/^rrc_get_estimated_ue_distance($/;"	f
+rrc_mac_config_req	config.c	/^rrc_mac_config_req($/;"	f
+rrc_mac_remove_ue	eNB_scheduler_primitives.c	/^int rrc_mac_remove_ue(module_id_t mod_idP,rnti_t rntiP) $/;"	f
+rrc_status	defs.h	/^  uint8_t rrc_status;$/;"	m	struct:__anon27
+rx_dlsch_sdu	defs.h	/^  time_stats_t rx_dlsch_sdu ; $/;"	m	struct:__anon37
+rx_mch_sdu	defs.h	/^  time_stats_t rx_mch_sdu;$/;"	m	struct:__anon37
+rx_sdu	eNB_scheduler_ulsch.c	/^void rx_sdu(const module_id_t enb_mod_idP,$/;"	f
+rx_si	defs.h	/^  time_stats_t rx_si; $/;"	m	struct:__anon37
+rx_ulsch_sdu	defs.h	/^  time_stats_t rx_ulsch_sdu; \/\/ include rlc_data_ind$/;"	m	struct:__anon34
+sb_size	defs.h	/^  uint8_t sb_size;$/;"	m	struct:__anon31
+sbmap	defs.h	/^  uint8_t sbmap[NUMBER_OF_SUBBANDS_MAX]; \/\/13 = number of SB MAX for 100 PRB$/;"	m	struct:__anon31
+sbmap_conf	defs.h	/^  SBMAP_CONF sbmap_conf;$/;"	m	struct:__anon34
+sched_controller_pktR	pre_processor.c	/^void sched_controller_pktR(int UE_id, module_id_t Mod_id, uint8_t CC_id, frame_t frameP, sub_frame_t subframeP)$/;"	f
+schedule_MBMS	eNB_scheduler_mch.c	/^int schedule_MBMS(module_id_t module_idP, uint8_t CC_id, frame_t frameP, sub_frame_t subframeP)$/;"	f
+schedule_RA	eNB_scheduler_RA.c	/^void schedule_RA(module_id_t module_idP,frame_t frameP, sub_frame_t subframeP,unsigned char Msg3_subframe)$/;"	f
+schedule_SI	eNB_scheduler_bch.c	/^schedule_SI($/;"	f
+schedule_dlsch	defs.h	/^  time_stats_t schedule_dlsch; \/\/ include rlc_data_req + MAC header + preprocessor$/;"	m	struct:__anon34
+schedule_dlsch_preprocessor	defs.h	/^  time_stats_t schedule_dlsch_preprocessor;$/;"	m	struct:__anon34
+schedule_mch	defs.h	/^  time_stats_t schedule_mch;$/;"	m	struct:__anon34
+schedule_next_dlue	eNB_scheduler_dlsch.c	/^schedule_next_dlue($/;"	f
+schedule_ra	defs.h	/^  time_stats_t schedule_ra;$/;"	m	struct:__anon34
+schedule_si	defs.h	/^  time_stats_t schedule_si;$/;"	m	struct:__anon34
+schedule_ue_spec	eNB_scheduler_dlsch.c	/^schedule_ue_spec($/;"	f
+schedule_ulsch	defs.h	/^  time_stats_t schedule_ulsch;$/;"	m	struct:__anon34
+schedule_ulsch	eNB_scheduler_ulsch.c	/^void schedule_ulsch(module_id_t module_idP, $/;"	f
+schedule_ulsch_cba_rnti	eNB_scheduler_ulsch.c	/^void schedule_ulsch_cba_rnti(module_id_t module_idP, unsigned char cooperation_flag, frame_t frameP, sub_frame_t subframeP, unsigned char sched_subframe, uint16_t *first_rb)$/;"	f
+schedule_ulsch_rnti	eNB_scheduler_ulsch.c	/^void schedule_ulsch_rnti(module_id_t   module_idP,$/;"	f
+scheduling_info	defs.h	/^  UE_SCHEDULING_INFO scheduling_info;$/;"	m	struct:__anon37
+seqnum	defs.h	/^  uint8_t seqnum[1000];$/;"	m	struct:__anon26
+seqnum_long	defs.h	/^  uint16_t seqnum_long[1000]; $/;"	m	struct:__anon26
+serving_num	defs.h	/^  uint16_t serving_num;$/;"	m	struct:__anon24
+serving_num	defs.h	/^  uint16_t serving_num;$/;"	m	struct:__anon25
+set_link_time	malekshan.h	/^} set_link_time;$/;"	t	typeref:struct:__anon39
+set_ue_dai	eNB_scheduler_dlsch.c	/^void set_ue_dai($/;"	f
+set_ul_DAI	eNB_scheduler_dlsch.c	/^set_ul_DAI($/;"	f
+signal_map	defs.h	/^map_entry_t signal_map[MAX_MOBILES_PER_ENB];$/;"	v
+sort_UEs	pre_processor.c	/^void sort_UEs (module_id_t Mod_idP,$/;"	f
+sort_ue_ul	pre_processor.c	/^void sort_ue_ul (module_id_t module_idP,int frameP, sub_frame_t subframeP)$/;"	f
+sqr_target	pre_processor.c	/^double E_NI = 0, NI_tmp = 0, standardDeviation, sqr_target;$/;"	v
+sr_ProhibitTimer	defs.h	/^  uint16_t sr_ProhibitTimer;$/;"	m	struct:__anon36
+sr_ProhibitTimer_Running	defs.h	/^  uint8_t sr_ProhibitTimer_Running;$/;"	m	struct:__anon36
+standardDeviation	pre_processor.c	/^double E_NI = 0, NI_tmp = 0, standardDeviation, sqr_target;$/;"	v
+status	defs.h	/^  UE_DLSCH_STATUS status;$/;"	m	struct:__anon25
+status	defs.h	/^  UE_ULSCH_STATUS status;$/;"	m	struct:__anon24
+stop_sf_LSB	defs.h	/^  uint8_t stop_sf_LSB:8;$/;"	m	struct:__anon17
+stop_sf_MSB	defs.h	/^  uint8_t stop_sf_MSB:3; \/\/ octet 1 LSB$/;"	m	struct:__anon17
+store_NI	pre_processor.c	/^uint32_t store_NI = 0;$/;"	v
+store_dlsch_buffer	pre_processor.c	/^void store_dlsch_buffer (module_id_t Mod_id,$/;"	f
+subframe	defs.h	/^  sub_frame_t subframe;$/;"	m	struct:__anon34
+subframe	defs.h	/^  sub_frame_t subframe;$/;"	m	struct:__anon37
+subframe	defs.h	/^  uint16_t subframe;$/;"	m	struct:__anon24
+subframe	defs.h	/^  uint16_t subframe;$/;"	m	struct:__anon25
+subframeP	pre_processor.c	/^  sub_frame_t subframeP;$/;"	m	struct:arg_struct_meas	file:
+swap_UEs	eNB_scheduler_primitives.c	/^void swap_UEs(UE_list_t *listP,int nodeiP, int nodejP, int ul_flag)$/;"	f
+sync_area	defs.h	/^  uint8_t sync_area;$/;"	m	struct:__anon19
+ta_timer	defs.h	/^  uint16_t      ta_timer;$/;"	m	struct:__anon29
+ta_update	defs.h	/^  int16_t       ta_update;$/;"	m	struct:__anon29
+target_interf_power	malekshan.h	/^  double target_interf_power[MAX_NUMBER_OF_LINK]; \/\/target interference power of links$/;"	m	struct:__anon39
+target_rx_power	defs.h	/^  int32_t    target_rx_power;$/;"	m	struct:__anon27
+target_tx_power	malekshan.h	/^  double target_tx_power[MAX_NUMBER_OF_LINK]; \/\/target tx_power of links$/;"	m	struct:__anon39
+tdd_Config	defs.h	/^  TDD_Config_t *tdd_Config;$/;"	m	struct:__anon37
+test	pre_processor.c	/^int32_t w_txpower = 1, mean_rx = 0, test;$/;"	v
+test_V_empty	malekshan.c	/^int test_V_empty(set_link_time V)$/;"	f
+timing_offset	defs.h	/^  int16_t timing_offset;$/;"	m	struct:__anon30
+total_allocated_rbs	defs.h	/^  int8_t total_allocated_rbs;$/;"	m	struct:__anon28
+total_available_prbs	defs.h	/^  uint32_t total_available_prbs;$/;"	m	struct:__anon26
+total_bcch_buffer	defs.h	/^  uint32_t total_bcch_buffer;$/;"	m	struct:__anon26
+total_ccch_buffer	defs.h	/^  uint32_t total_ccch_buffer;$/;"	m	struct:__anon26
+total_dlsch_bitrate	defs.h	/^  uint32_t  total_dlsch_bitrate;$/;"	m	struct:__anon27
+total_dlsch_bitrate	defs.h	/^  uint32_t total_dlsch_bitrate;$/;"	m	struct:__anon26
+total_dlsch_bytes_tx	defs.h	/^  uint32_t total_dlsch_bytes_tx;$/;"	m	struct:__anon26
+total_dlsch_pdus_tx	defs.h	/^  uint32_t total_dlsch_pdus_tx;$/;"	m	struct:__anon26
+total_num_bcch_pdu	defs.h	/^  uint32_t total_num_bcch_pdu;$/;"	m	struct:__anon26
+total_num_ccch_pdu	defs.h	/^  uint32_t total_num_ccch_pdu;$/;"	m	struct:__anon26
+total_num_errors_rx	defs.h	/^  uint32_t total_num_errors_rx;$/;"	m	struct:__anon27
+total_num_pdus	defs.h	/^  uint32_t total_num_pdus;$/;"	m	struct:__anon27
+total_num_pdus_rx	defs.h	/^  uint32_t total_num_pdus_rx;$/;"	m	struct:__anon27
+total_overhead_bytes	defs.h	/^  uint64_t total_overhead_bytes;$/;"	m	struct:__anon27
+total_overhead_bytes_rx	defs.h	/^  uint64_t total_overhead_bytes_rx;$/;"	m	struct:__anon27
+total_pdu_bytes	defs.h	/^  uint64_t total_pdu_bytes;$/;"	m	struct:__anon27
+total_pdu_bytes_rx	defs.h	/^  uint64_t total_pdu_bytes_rx;$/;"	m	struct:__anon27
+total_rbs_used	defs.h	/^  uint32_t total_rbs_used;$/;"	m	struct:__anon27
+total_rbs_used_retx	defs.h	/^  uint32_t total_rbs_used_retx;$/;"	m	struct:__anon27
+total_rbs_used_rx	defs.h	/^  uint32_t total_rbs_used_rx;$/;"	m	struct:__anon27
+total_sdu_bytes	defs.h	/^  uint64_t total_sdu_bytes;$/;"	m	struct:__anon27
+total_ulsch_bitrate	defs.h	/^  uint32_t  total_ulsch_bitrate;$/;"	m	struct:__anon27
+total_ulsch_bitrate	defs.h	/^  uint32_t total_ulsch_bitrate;$/;"	m	struct:__anon26
+total_ulsch_bytes_rx	defs.h	/^  uint32_t total_ulsch_bytes_rx;$/;"	m	struct:__anon26
+total_ulsch_pdus_rx	defs.h	/^  uint32_t total_ulsch_pdus_rx;$/;"	m	struct:__anon26
+ttiBundling	defs.h	/^  uint16_t ttiBundling;$/;"	m	struct:__anon36
+tx_pow	pre_processor.c	/^int tx_pow;$/;"	v
+tx_power	malekshan.h	/^  double tx_power[MAX_NUMBER_OF_LINK][MAX_NUMBER_OF_TIME]; \/\/tx_power measured at receiver side$/;"	m	struct:__anon39
+tx_ulsch_sdu	defs.h	/^  time_stats_t tx_ulsch_sdu;  $/;"	m	struct:__anon37
+txp	pre_processor.c	/^double txpower = 1, txp = 1;$/;"	v
+txp_buffer	pre_processor.c	/^int32_t txp_buffer[50];$/;"	v
+txpower	pre_processor.c	/^double txpower = 1, txp = 1;$/;"	v
+ue_AggregatedMaximumBitrateDL	defs.h	/^  uint64_t  ue_AggregatedMaximumBitrateDL;$/;"	m	struct:__anon29
+ue_AggregatedMaximumBitrateUL	defs.h	/^  uint64_t  ue_AggregatedMaximumBitrateUL;$/;"	m	struct:__anon29
+ue_decode_si	ue_procedures.c	/^void ue_decode_si(module_id_t module_idP,int CC_id,frame_t frameP, uint8_t eNB_index, void *pdu,uint16_t len)$/;"	f
+ue_get_SR	ue_procedures.c	/^uint32_t ue_get_SR(module_id_t module_idP,int CC_id,frame_t frameP,uint8_t eNB_id,uint16_t rnti, sub_frame_t subframe)$/;"	f
+ue_get_mbsfn_sf_alloction	ue_procedures.c	/^int8_t ue_get_mbsfn_sf_alloction (module_id_t module_idP, uint8_t mbsfn_sync_area, unsigned char eNB_index)$/;"	f
+ue_get_rach	ra_procedures.c	/^PRACH_RESOURCES_t *ue_get_rach(module_id_t module_idP,int CC_id,frame_t frameP, uint8_t eNB_indexP,sub_frame_t subframeP)$/;"	f
+ue_get_sdu	ue_procedures.c	/^void ue_get_sdu(module_id_t module_idP,int CC_id,frame_t frameP,sub_frame_t subframe, uint8_t eNB_index,uint8_t *ulsch_buffer,uint16_t buflen, uint8_t *access_mode)$/;"	f
+ue_init_mac	ue_procedures.c	/^void ue_init_mac(module_id_t module_idP)$/;"	f
+ue_mac_reset	config.c	/^void ue_mac_reset(module_id_t module_idP,uint8_t eNB_index)$/;"	f
+ue_pl	pre_processor.c	/^uint32_t ue_pl = 0;$/;"	v
+ue_process_rar	rar_tools.c	/^ue_process_rar($/;"	f
+ue_query_mch	defs.h	/^  time_stats_t ue_query_mch;$/;"	m	struct:__anon37
+ue_query_mch	ue_procedures.c	/^int ue_query_mch(module_id_t module_idP, uint8_t CC_id, uint32_t frameP, uint32_t subframe, uint8_t eNB_index,uint8_t *sync_area, uint8_t *mcch_active)$/;"	f
+ue_scheduler	defs.h	/^  time_stats_t ue_scheduler; \/\/ total$/;"	m	struct:__anon37
+ue_scheduler	ue_procedures.c	/^ue_scheduler($/;"	f
+ue_send_mch_sdu	ue_procedures.c	/^void ue_send_mch_sdu(module_id_t module_idP, uint8_t CC_id, frame_t frameP, uint8_t *sdu, uint16_t sdu_len, uint8_t eNB_index, uint8_t sync_area)$/;"	f
+ue_send_sdu	ue_procedures.c	/^ue_send_sdu(module_id_t module_idP,$/;"	f
+ue_tx_power	defs.h	/^  int32_t ue_tx_power;$/;"	m	struct:__anon28
+ul_SR	defs.h	/^  uint8_t ul_SR;$/;"	m	struct:__anon28
+ul_active	defs.h	/^  boolean_t ul_active;$/;"	m	struct:__anon28
+ul_active	defs.h	/^  uint8_t ul_active;$/;"	m	struct:__anon37
+ul_bandwidth	defs.h	/^  uint8_t ul_bandwidth[MAX_NUM_LCID];$/;"	m	struct:__anon29
+ul_buffer_creation_time	defs.h	/^  uint32_t ul_buffer_creation_time[MAX_NUM_LCGID];$/;"	m	struct:__anon28
+ul_buffer_creation_time_max	defs.h	/^  uint32_t ul_buffer_creation_time_max;$/;"	m	struct:__anon28
+ul_buffer_info	defs.h	/^  uint32_t ul_buffer_info[MAX_NUM_LCGID];$/;"	m	struct:__anon28
+ul_failure_timer	defs.h	/^  int32_t       ul_failure_timer;$/;"	m	struct:__anon29
+ul_inactivity_timer	defs.h	/^  int32_t       ul_inactivity_timer;$/;"	m	struct:__anon29
+ul_out_of_sync	defs.h	/^  int32_t       ul_out_of_sync;$/;"	m	struct:__anon29
+ul_scheduled	defs.h	/^  int32_t       ul_scheduled;$/;"	m	struct:__anon29
+ul_total_buffer	defs.h	/^  uint32_t ul_total_buffer;$/;"	m	struct:__anon28
+ulsch_TBS	defs.h	/^  uint32_t ulsch_TBS;$/;"	m	struct:__anon27
+ulsch_bitrate	defs.h	/^  uint32_t  ulsch_bitrate;$/;"	m	struct:__anon27
+ulsch_bitrate	defs.h	/^  uint32_t ulsch_bitrate;$/;"	m	struct:__anon26
+ulsch_bytes_rx	defs.h	/^  uint32_t ulsch_bytes_rx;$/;"	m	struct:__anon26
+ulsch_mcs1	defs.h	/^  uint8_t ulsch_mcs1;$/;"	m	struct:__anon27
+ulsch_mcs2	defs.h	/^  uint8_t ulsch_mcs2;$/;"	m	struct:__anon27
+ulsch_pdus_rx	defs.h	/^  uint64_t ulsch_pdus_rx; $/;"	m	struct:__anon26
+ulsch_scheduler_pre_processor	pre_processor.c	/^void ulsch_scheduler_pre_processor(module_id_t module_idP,$/;"	f
+uniform_rngen	ue_procedures.c	/^double uniform_rngen(int min, int max)$/;"	f
+update_bsr	ue_procedures.c	/^boolean_t  update_bsr(module_id_t module_idP, frame_t frameP, eNB_index_t eNB_index, uint8_t lcid, uint8_t lcg_id)$/;"	f
+update_phr	ue_procedures.c	/^void update_phr(module_id_t module_idP,int CC_id)$/;"	f
+update_ul_dci	eNB_scheduler_dlsch.c	/^update_ul_dci($/;"	f
+value_K	pre_processor.c	/^double value_K[NUMBER_OF_UE_MAX] = {1};$/;"	v
+vrb_map	defs.h	/^  uint8_t vrb_map[100];$/;"	m	struct:__anon33
+w_txpower	pre_processor.c	/^int32_t w_txpower = 1, mean_rx = 0, test;$/;"	v
+wait_ack_Msg4	defs.h	/^  uint8_t wait_ack_Msg4;$/;"	m	struct:__anon30
+weight	defs.h	/^  uint16_t weight;$/;"	m	struct:__anon25

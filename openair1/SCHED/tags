@@ -1,0 +1,272 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AMP_OVER_2	phy_procedures_lte_eNb.c	381;"	d	file:
+AMP_OVER_SQRT2	phy_procedures_lte_eNb.c	380;"	d	file:
+CHANSOUNDER_FIFO_DEV	phy_procedures_emos.h	47;"	d
+CHANSOUNDER_FIFO_MINOR	phy_procedures_emos.h	46;"	d
+CHANSOUNDER_FIFO_SIZE	phy_procedures_emos.h	44;"	d
+DAQ_AGC_OFF	defs.h	86;"	d
+DAQ_AGC_ON	defs.h	85;"	d
+DCI_pdu_tmp	phy_procedures_lte_eNb.c	/^DCI_PDU DCI_pdu_tmp;$/;"	v
+DEBUG_PHY_PROC	phy_procedures_lte_eNb.c	3296;"	d	file:
+DEBUG_PHY_PROC	phy_procedures_lte_ue.c	3629;"	d	file:
+DEBUG_PHY_PROC	phy_procedures_lte_ue.c	60;"	d	file:
+DLC_SCHED_THREAD_INDEX	defs.h	/^                    DLC_SCHED_THREAD_INDEX,$/;"	e	enum:THREAD_INDEX
+DLSCH_RB_ALLOC	phy_procedures_lte_ue.c	84;"	d	file:
+DLSCH_RB_ALLOC_12	phy_procedures_lte_ue.c	85;"	d	file:
+NB_ANTENNAS_RX_EMOS	phy_procedures_emos.h	58;"	d
+NB_ANTENNAS_TX_EMOS	phy_procedures_emos.h	57;"	d
+NS_PER_SLOT	phy_procedures_lte_eNb.c	73;"	d	file:
+NS_PER_SLOT	phy_procedures_lte_ue.c	87;"	d	file:
+NUMBER_OF_OFDM_CARRIERS_EMOS	phy_procedures_emos.h	49;"	d
+NUMBER_OF_USEFUL_CARRIERS_EMOS	phy_procedures_emos.h	50;"	d
+N_PILOTS_DL_EMOS	phy_procedures_emos.h	53;"	d
+N_PILOTS_UL_EMOS	phy_procedures_emos.h	54;"	d
+N_RB_UL_EMOS	phy_procedures_emos.h	52;"	d
+N_SLOTS_DL_EMOS	phy_procedures_emos.h	55;"	d
+N_SUBFRAMES_UL_EMOS	phy_procedures_emos.h	56;"	d
+Np100	phy_procedures_lte_common.c	/^uint8_t Np100[4]= {0,22,55,88};$/;"	v
+Np15	phy_procedures_lte_common.c	/^uint8_t Np15[4]= {0,3,8,13};$/;"	v
+Np25	phy_procedures_lte_common.c	/^uint8_t Np25[4]= {0,5,13,22};$/;"	v
+Np50	phy_procedures_lte_common.c	/^uint8_t Np50[4]= {0,11,27,44};$/;"	v
+Np6	phy_procedures_lte_common.c	/^uint8_t Np6[4]= {0,1,3,5};$/;"	v
+Np75	phy_procedures_lte_common.c	/^uint8_t Np75[4]= {0,16,41,66};$/;"	v
+OPENAIR_DAQ_VARS	defs.h	/^} OPENAIR_DAQ_VARS;$/;"	t	typeref:struct:__anon1
+OPENAIR_THREAD_INDEX	defs.h	/^enum THREAD_INDEX { OPENAIR_THREAD_INDEX = 0,$/;"	e	enum:THREAD_INDEX
+OPENAIR_THREAD_PRIORITY	defs.h	48;"	d
+OPENAIR_THREAD_STACK_SIZE	defs.h	51;"	d
+PHY_measurements	phy_procedures_emos.h	/^  PHY_MEASUREMENTS PHY_measurements;       \/\/! Structure holding all PHY measurements (one for every slot)$/;"	m	struct:fifo_dump_emos_struct_UE
+PHY_measurements_eNB	phy_procedures_emos.h	/^  PHY_MEASUREMENTS_eNB PHY_measurements_eNB;            \/\/\/ UL measurements$/;"	m	struct:fifo_dump_emos_struct_eNB
+PUCCH	phy_procedures_lte_eNb.c	75;"	d	file:
+PUCCH	phy_procedures_lte_ue.c	63;"	d	file:
+QPSK	phy_procedures_lte_eNb.c	/^int QPSK[4]= {AMP_OVER_SQRT2|(AMP_OVER_SQRT2<<16),AMP_OVER_SQRT2|((65536-AMP_OVER_SQRT2)<<16),((65536-AMP_OVER_SQRT2)<<16)|AMP_OVER_SQRT2,((65536-AMP_OVER_SQRT2)<<16)|(65536-AMP_OVER_SQRT2)};$/;"	v
+QPSK2	phy_procedures_lte_eNb.c	/^int QPSK2[4]= {AMP_OVER_2|(AMP_OVER_2<<16),AMP_OVER_2|((65536-AMP_OVER_2)<<16),((65536-AMP_OVER_2)<<16)|AMP_OVER_2,((65536-AMP_OVER_2)<<16)|(65536-AMP_OVER_2)};$/;"	v
+THREAD_INDEX	defs.h	/^enum THREAD_INDEX { OPENAIR_THREAD_INDEX = 0,$/;"	g
+TOP_LEVEL_SCHEDULER_THREAD_INDEX	defs.h	/^                    TOP_LEVEL_SCHEDULER_THREAD_INDEX,$/;"	e	enum:THREAD_INDEX
+UE_mode	phy_procedures_emos.h	/^  UE_MODE_t        UE_mode;$/;"	m	struct:fifo_dump_emos_struct_UE
+_RT_COMPAT_H_	rt_compat.h	40;"	d
+__NO_VERSION__	extern.h	35;"	d
+__PHY_PROCEDURES_EMOS_H__	phy_procedures_emos.h	30;"	d
+__SCHED_EXTERN_H__	extern.h	32;"	d
+__openair_SCHED_H__	defs.h	36;"	d
+access_mode	phy_procedures_lte_ue.c	/^uint8_t access_mode;$/;"	v
+add_ue	phy_procedures_lte_eNb.c	/^int32_t add_ue(int16_t rnti, PHY_VARS_eNB *phy_vars_eNB)$/;"	f
+aggregate_eNB_UE_localization_stats	phy_procedures_lte_common.c	/^double aggregate_eNB_UE_localization_stats(PHY_VARS_eNB *phy_vars_eNB, int8_t UE_id, frame_t frame, sub_frame_t subframe, int32_t UE_tx_power_dB)$/;"	f
+alpha_lut	pusch_pc.c	/^uint8_t alpha_lut[8] = {0,40,50,60,70,80,90,100};$/;"	v
+auto_freq_correction	defs.h	/^  uint32_t   auto_freq_correction;$/;"	m	struct:__anon1
+bitrate	phy_procedures_emos.h	/^  unsigned int     bitrate;$/;"	m	struct:fifo_dump_emos_struct_UE
+cba_procedures	phy_procedures_lte_eNb.c	/^void cba_procedures(const unsigned char sched_subframe,PHY_VARS_eNB *phy_vars_eNB,int UE_id,int harq_pid,const uint8_t abstraction_flag) {$/;"	f
+channel	phy_procedures_emos.h	/^  int              channel[NB_ANTENNAS_RX_EMOS][NB_ANTENNAS_TX_EMOS][NUMBER_OF_OFDM_CARRIERS_EMOS*N_PILOTS_DL_EMOS*N_SLOTS_DL_EMOS];$/;"	m	struct:fifo_dump_emos_struct_UE
+channel	phy_procedures_emos.h	/^  int              channel[NB_ANTENNAS_RX_EMOS][N_RB_UL_EMOS*12*N_PILOTS_UL_EMOS*N_SUBFRAMES_UL_EMOS]; \/\/\/UL channel estimate$/;"	m	struct:fifo_dump_emos_struct_eNB
+channel_vacant	defs.h	/^  uint32_t   channel_vacant[4];$/;"	m	struct:__anon1
+clock_gethrtime	rt_compat.h	76;"	d
+dci_alloc_rx	phy_procedures_lte_ue.c	/^DCI_ALLOC_t dci_alloc_rx[8];$/;"	v
+dlsch_cntl_errors	phy_procedures_emos.h	/^  unsigned int     dlsch_cntl_errors;                  \/\/\/ Total number of error on the DLSCH (control)$/;"	m	struct:fifo_dump_emos_struct_UE
+dlsch_errors	phy_procedures_emos.h	/^  unsigned int     dlsch_errors;                       \/\/\/ Total number of error on the DLSCH (data)$/;"	m	struct:fifo_dump_emos_struct_UE
+dlsch_errors_last	phy_procedures_emos.h	/^  unsigned int     dlsch_errors_last;$/;"	m	struct:fifo_dump_emos_struct_UE
+dlsch_fer	phy_procedures_emos.h	/^  unsigned int     dlsch_fer;$/;"	m	struct:fifo_dump_emos_struct_UE
+dlsch_input_buffer	phy_procedures_lte_eNb.c	/^unsigned char dlsch_input_buffer[2700] __attribute__ ((aligned(32)));$/;"	v
+dlsch_ra_errors	phy_procedures_emos.h	/^  unsigned int     dlsch_ra_errors;                    \/\/\/ Total number of error on the DLSCH (random access)$/;"	m	struct:fifo_dump_emos_struct_UE
+dlsch_rate_adaptation	defs.h	/^  uint32_t   dlsch_rate_adaptation;$/;"	m	struct:__anon1
+dlsch_received	phy_procedures_emos.h	/^  unsigned int     dlsch_received;$/;"	m	struct:fifo_dump_emos_struct_UE
+dlsch_received_last	phy_procedures_emos.h	/^  unsigned int     dlsch_received_last;$/;"	m	struct:fifo_dump_emos_struct_UE
+dlsch_transmission_mode	defs.h	/^  uint32_t   dlsch_transmission_mode;$/;"	m	struct:__anon1
+do_synch	defs.h	/^  uint8_t    do_synch;$/;"	m	struct:__anon1
+dual_tx	defs.h	/^  uint32_t   dual_tx;                \/\/\/ 1 for dual-antenna TX, 0 for single-antenna TX$/;"	m	struct:__anon1
+dummy_tx_buffer	phy_procedures_lte_ue.c	/^int dummy_tx_buffer[3840*4] __attribute__((aligned(16)));$/;"	v
+dump_dlsch	phy_procedures_lte_ue.c	/^void dump_dlsch(PHY_VARS_UE *phy_vars_ue,uint8_t eNB_id,uint8_t subframe,uint8_t harq_pid)$/;"	f
+dump_dlsch_SI	phy_procedures_lte_ue.c	/^void dump_dlsch_SI(PHY_VARS_UE *phy_vars_ue,uint8_t eNB_id,uint8_t subframe)$/;"	f
+dump_dlsch_ra	phy_procedures_lte_ue.c	/^void dump_dlsch_ra(PHY_VARS_UE *phy_vars_ue,uint8_t eNB_id,uint8_t subframe)$/;"	f
+eNB_UE_stats	phy_procedures_emos.h	/^  LTE_eNB_UE_stats eNB_UE_stats[NUMBER_OF_UE_MAX]; \/\/\/ Contains received feedback$/;"	m	struct:fifo_dump_emos_struct_eNB
+eNB_sync_buffer	phy_procedures_lte_eNb.c	/^int *eNB_sync_buffer[2] = {eNB_sync_buffer0, eNB_sync_buffer1};$/;"	v
+eNB_sync_buffer0	phy_procedures_lte_eNb.c	/^int eNB_sync_buffer0[640*6] __attribute__ ((aligned(32)));$/;"	v
+eNB_sync_buffer1	phy_procedures_lte_eNb.c	/^int eNB_sync_buffer1[640*6] __attribute__ ((aligned(32)));$/;"	v
+eNb_id	phy_procedures_emos.h	/^  unsigned char    eNb_id;                             \/\/\/ eNb_id UE is synched to$/;"	m	struct:fifo_dump_emos_struct_UE
+emos_dump_UE	phy_procedures_lte_ue.c	/^fifo_dump_emos_UE emos_dump_UE;$/;"	v
+emos_dump_eNB	phy_procedures_lte_eNb.c	/^fifo_dump_emos_eNB emos_dump_eNB;$/;"	v
+estimate_ue_tx_power	pusch_pc.c	/^int16_t estimate_ue_tx_power(uint32_t tbs, uint32_t nb_rb, uint8_t control_only, lte_prefix_type_t ncp, uint8_t use_srs)$/;"	f
+fifo_dump_emos_UE	phy_procedures_emos.h	/^typedef struct  fifo_dump_emos_struct_UE fifo_dump_emos_UE;$/;"	t	typeref:struct:fifo_dump_emos_struct_UE
+fifo_dump_emos_eNB	phy_procedures_emos.h	/^typedef struct  fifo_dump_emos_struct_eNB fifo_dump_emos_eNB;$/;"	t	typeref:struct:fifo_dump_emos_struct_eNB
+fifo_dump_emos_struct_UE	phy_procedures_emos.h	/^struct fifo_dump_emos_struct_UE {$/;"	s
+fifo_dump_emos_struct_eNB	phy_procedures_emos.h	/^struct fifo_dump_emos_struct_eNB {$/;"	s
+fill_dci	phy_mac_stub.c	/^void fill_dci(DCI_PDU *DCI_pdu, uint8_t sched_subframe, PHY_VARS_eNB *phy_vars_eNB)$/;"	f
+fill_dci_emos	phy_mac_stub.c	/^void fill_dci_emos(DCI_PDU *DCI_pdu, uint8_t subframe, PHY_VARS_eNB *phy_vars_eNB)$/;"	f
+find_next_ue_index	phy_procedures_lte_eNb.c	/^int8_t find_next_ue_index(PHY_VARS_eNB *phy_vars_eNB)$/;"	f
+find_ue	phy_procedures_lte_common.c	/^int8_t find_ue(uint16_t rnti, PHY_VARS_eNB *phy_vars_eNB)$/;"	f
+first_sync_call	defs.h	/^  uint8_t    first_sync_call;$/;"	m	struct:__anon1
+frame_rx	phy_procedures_emos.h	/^  unsigned int     frame_rx;               \/\/! Framenumber of the RX$/;"	m	struct:fifo_dump_emos_struct_UE
+frame_tx	phy_procedures_emos.h	/^  unsigned int     frame_tx;               \/\/! Framenumber of the TX (encoded in the BCH)$/;"	m	struct:fifo_dump_emos_struct_UE
+frame_tx	phy_procedures_emos.h	/^  unsigned int     frame_tx;               \/\/! Framenumber of the TX$/;"	m	struct:fifo_dump_emos_struct_eNB
+freq	defs.h	/^  uint32_t   freq;$/;"	m	struct:__anon1
+freq_offset	defs.h	/^  int32_t    freq_offset;$/;"	m	struct:__anon1
+freq_offset	phy_procedures_emos.h	/^  int              freq_offset;                        \/\/\/ Frequency offset$/;"	m	struct:fifo_dump_emos_struct_UE
+get_Msg3_alloc	phy_procedures_lte_common.c	/^void get_Msg3_alloc(LTE_DL_FRAME_PARMS *frame_parms,$/;"	f
+get_Msg3_alloc_ret	phy_procedures_lte_common.c	/^void get_Msg3_alloc_ret(LTE_DL_FRAME_PARMS *frame_parms,$/;"	f
+get_Msg3_harq_pid	phy_procedures_lte_common.c	/^uint8_t get_Msg3_harq_pid(LTE_DL_FRAME_PARMS *frame_parms,$/;"	f
+get_Np	phy_procedures_lte_common.c	/^uint16_t get_Np(uint8_t N_RB_DL,uint8_t nCCE,uint8_t plus1)$/;"	f
+get_PHR	pusch_pc.c	/^int8_t get_PHR(uint8_t Mod_id, uint8_t CC_id,uint8_t eNB_index)$/;"	f
+get_ack	phy_procedures_lte_common.c	/^uint8_t get_ack(LTE_DL_FRAME_PARMS *frame_parms,$/;"	f
+get_eNB_UE_stats	phy_procedures_lte_common.c	/^LTE_eNB_UE_stats* get_eNB_UE_stats(uint8_t Mod_id, uint8_t  CC_id,uint16_t rnti)$/;"	f
+get_frame_done	defs.h	/^  uint32_t   get_frame_done;$/;"	m	struct:__anon1
+get_hundred_times_delta_IF	pusch_pc.c	/^int16_t get_hundred_times_delta_IF(PHY_VARS_UE *phy_vars_ue,uint8_t eNB_id,uint8_t harq_pid)$/;"	f
+get_hundred_times_delta_IF_eNB	pusch_pc.c	/^int16_t get_hundred_times_delta_IF_eNB(PHY_VARS_eNB *phy_vars_eNB,uint8_t UE_id,uint8_t harq_pid, uint8_t bw_factor)$/;"	f
+get_hundred_times_delta_IF_mac	pusch_pc.c	/^int16_t get_hundred_times_delta_IF_mac(module_id_t module_idP, uint8_t CC_id, rnti_t rnti, uint8_t harq_pid)$/;"	f
+get_lte_frame_parms	phy_procedures_lte_common.c	/^LTE_DL_FRAME_PARMS* get_lte_frame_parms(module_id_t Mod_id, uint8_t  CC_id)$/;"	f
+get_mu_mimo_mode	phy_procedures_lte_common.c	/^MU_MIMO_mode *get_mu_mimo_mode (module_id_t Mod_id, uint8_t  CC_id, rnti_t rnti)$/;"	f
+get_n1_pucch	phy_procedures_lte_ue.c	/^uint16_t get_n1_pucch(PHY_VARS_UE *phy_vars_ue,$/;"	f
+get_n1_pucch_eNB	phy_procedures_lte_eNb.c	/^void get_n1_pucch_eNB(PHY_VARS_eNB *phy_vars_eNB,$/;"	f
+get_subframe_direction	phy_procedures_lte_common.c	/^lte_subframe_t get_subframe_direction(uint8_t Mod_id,uint8_t CC_id,uint8_t subframe)$/;"	f
+get_target_pucch_rx_power	phy_procedures_lte_eNb.c	/^int16_t get_target_pucch_rx_power(const module_id_t module_idP, const uint8_t CC_id)$/;"	f
+get_target_pusch_rx_power	phy_procedures_lte_eNb.c	/^int16_t get_target_pusch_rx_power(const module_id_t module_idP, const uint8_t CC_id)$/;"	f
+get_tx_amp	phy_procedures_lte_ue.c	/^unsigned int get_tx_amp(int power_dBm, int power_max_dBm, int N_RB_UL, int nb_rb)$/;"	f
+get_ue_active_harq_pid	phy_procedures_lte_eNb.c	/^int get_ue_active_harq_pid(const uint8_t Mod_id,const uint8_t CC_id,const uint16_t rnti, const int frame, const uint8_t subframe,uint8_t *harq_pid,uint8_t *round,const uint8_t ul_flag)$/;"	f
+get_ue_mode	phy_procedures_lte_ue.c	/^UE_MODE_t get_ue_mode(uint8_t Mod_id,uint8_t CC_id,uint8_t eNB_index)$/;"	f
+gethrtime	rt_compat.h	77;"	d
+hrtime_t	rt_compat.h	46;"	d
+hundred_times_delta_TF	pusch_pc.c	/^int16_t hundred_times_delta_TF[100] = {-32768,-1268,-956,-768,-631,-523,-431,-352,-282,-219,-161,-107,-57,-9,36,79,120,159,197,234,269,304,337,370,402,434,465,495,525,555,583,612,640,668,696,723,750,777,803,829,856,881,907,933,958,983,1008,1033,1058,1083,1108,1132,1157,1181,1205,1229,1254,1278,1302,1325,1349,1373,1397,1421,1444,1468,1491,1515,1538,1562,1585,1609,1632,1655,1679,1702,1725,1748,1772,1795,1818,1841,1864,1887,1910,1933,1956,1980,2003,2026,2049,2072,2095,2118,2141,2164,2186,2209,2232,2255};$/;"	v
+hundred_times_log10_NPRB	pusch_pc.c	/^uint16_t hundred_times_log10_NPRB[100] = {0,301,477,602,698,778,845,903,954,1000,1041,1079,1113,1146,1176,1204,1230,1255,1278,1301,1322,1342,1361,1380,1397,1414,1431,1447,1462,1477,1491,1505,1518,1531,1544,1556,1568,1579,1591,1602,1612,1623,1633,1643,1653,1662,1672,1681,1690,1698,1707,1716,1724,1732,1740,1748,1755,1763,1770,1778,1785,1792,1799,1806,1812,1819,1826,1832,1838,1845,1851,1857,1863,1869,1875,1880,1886,1892,1897,1903,1908,1913,1919,1924,1929,1934,1939,1944,1949,1954,1959,1963,1968,1973,1977,1982,1986,1991,1995,2000};$/;"	v
+hw_frame	defs.h	/^  uint32_t   hw_frame;$/;"	m	struct:__anon1
+instance_cnt	defs.h	/^  int32_t    instance_cnt;$/;"	m	struct:__anon1
+is_SR_TXOp	phy_procedures_lte_ue.c	/^uint8_t is_SR_TXOp(PHY_VARS_UE *phy_vars_ue,uint8_t eNB_id,uint8_t subframe)$/;"	f
+is_SR_subframe	phy_procedures_lte_eNb.c	/^uint8_t is_SR_subframe(PHY_VARS_eNB *phy_vars_eNB,uint8_t UE_id,uint8_t sched_subframe)$/;"	f
+is_eNB	defs.h	/^  boolean_t  is_eNB;$/;"	m	struct:__anon1
+is_phich_subframe	phy_procedures_lte_common.c	/^unsigned int is_phich_subframe(LTE_DL_FRAME_PARMS *frame_parms,unsigned char subframe)$/;"	f
+last_adac_cnt	defs.h	/^  uint32_t   last_adac_cnt;$/;"	m	struct:__anon1
+lte_ue_measurement_procedures	phy_procedures_lte_ue.c	/^void lte_ue_measurement_procedures(uint16_t l, PHY_VARS_UE *phy_vars_ue,uint8_t eNB_id,uint8_t abstraction_flag,runmode_t mode)$/;"	f
+lte_ue_pbch_procedures	phy_procedures_lte_ue.c	/^void lte_ue_pbch_procedures(uint8_t eNB_id,PHY_VARS_UE *phy_vars_ue,uint8_t abstraction_flag)$/;"	f
+lte_ue_pdcch_procedures	phy_procedures_lte_ue.c	/^int lte_ue_pdcch_procedures(uint8_t eNB_id,PHY_VARS_UE *phy_vars_ue,uint8_t abstraction_flag)$/;"	f
+mac_phy_remove_ue	phy_procedures_lte_eNb.c	/^int mac_phy_remove_ue(module_id_t Mod_idP,rnti_t rntiP) {$/;"	f
+mac_registered	defs.h	/^  uint8_t    mac_registered;$/;"	m	struct:__anon1
+manual_timing_advance	defs.h	/^  uint32_t   manual_timing_advance;  \/\/\/ 1 to override automatic timing advance$/;"	m	struct:__anon1
+max_peak_val	phy_procedures_lte_eNb.c	/^unsigned int max_peak_val;$/;"	v
+max_sync_pos	phy_procedures_lte_eNb.c	/^int max_sync_pos;$/;"	v
+mcs	phy_procedures_emos.h	/^  unsigned short   mcs;$/;"	m	struct:fifo_dump_emos_struct_UE
+mimo_mode	phy_procedures_emos.h	/^  unsigned char    mimo_mode;                          \/\/\/ Transmission mode$/;"	m	struct:fifo_dump_emos_struct_UE
+mimo_mode	phy_procedures_emos.h	/^  unsigned char    mimo_mode;              \/\/\/ Transmission mode$/;"	m	struct:fifo_dump_emos_struct_eNB
+mode	defs.h	/^  uint8_t    mode;$/;"	m	struct:__anon1
+node_configured	defs.h	/^  uint8_t    node_configured;  \/\/ &1..basic config, &3..ue config &5..eNb config$/;"	m	struct:__anon1
+node_id	defs.h	/^  uint32_t   node_id;$/;"	m	struct:__anon1
+node_running	defs.h	/^  uint8_t    node_running;$/;"	m	struct:__anon1
+one_shot_get_frame	defs.h	/^  uint8_t    one_shot_get_frame;$/;"	m	struct:__anon1
+openair_ERROR	defs.h	/^enum openair_ERROR {$/;"	g
+openair_ERROR_HARDWARE_CLOCK_STOPPED	defs.h	/^  openair_ERROR_HARDWARE_CLOCK_STOPPED= 1,$/;"	e	enum:openair_ERROR
+openair_ERROR_OPENAIR_RUNNING_LATE	defs.h	/^  openair_ERROR_OPENAIR_RUNNING_LATE,$/;"	e	enum:openair_ERROR
+openair_ERROR_OPENAIR_SCHEDULING_FAILED	defs.h	/^  openair_ERROR_OPENAIR_SCHEDULING_FAILED,$/;"	e	enum:openair_ERROR
+openair_ERROR_OPENAIR_TIMING_OFFSET_OUT_OF_BOUNDS	defs.h	/^  openair_ERROR_OPENAIR_TIMING_OFFSET_OUT_OF_BOUNDS,$/;"	e	enum:openair_ERROR
+openair_NOT_SYNCHED	defs.h	/^  openair_NOT_SYNCHED=1,$/;"	e	enum:openair_SYNCH_STATUS
+openair_SCHED_EXIT	defs.h	/^  openair_SCHED_EXIT$/;"	e	enum:openair_SYNCH_STATUS
+openair_SCHED_NB_THREADS	defs.h	/^                    openair_SCHED_NB_THREADS$/;"	e	enum:THREAD_INDEX
+openair_SCHED_STARTED	defs.h	/^  openair_SCHED_STARTED,$/;"	e	enum:openair_SCHED_STATUS
+openair_SCHED_STARTING	defs.h	/^  openair_SCHED_STARTING,$/;"	e	enum:openair_SCHED_STATUS
+openair_SCHED_STATUS	defs.h	/^enum openair_SCHED_STATUS {$/;"	g
+openair_SCHED_STOPPED	defs.h	/^  openair_SCHED_STOPPED=1,$/;"	e	enum:openair_SCHED_STATUS
+openair_SCHED_STOPPING	defs.h	/^  openair_SCHED_STOPPING$/;"	e	enum:openair_SCHED_STATUS
+openair_SYNCHED	defs.h	/^  openair_SYNCHED,$/;"	e	enum:openair_SYNCH_STATUS
+openair_SYNCH_STATUS	defs.h	/^enum openair_SYNCH_STATUS {$/;"	g
+openair_daq_vars	vars.h	/^OPENAIR_DAQ_VARS openair_daq_vars;$/;"	v
+pbch_errors	phy_procedures_emos.h	/^  unsigned int     pbch_errors;                        \/\/\/ Total number of errors on PBCH$/;"	m	struct:fifo_dump_emos_struct_UE
+pbch_errors_conseq	phy_procedures_emos.h	/^  unsigned int     pbch_errors_conseq;                 \/\/\/ Total number of consecutive errors on PBCH$/;"	m	struct:fifo_dump_emos_struct_UE
+pbch_errors_last	phy_procedures_emos.h	/^  unsigned int     pbch_errors_last;                   \/\/\/ Total number of errors on PBCH 100 frames ago$/;"	m	struct:fifo_dump_emos_struct_UE
+pbch_fer	phy_procedures_emos.h	/^  unsigned int     pbch_fer;                           \/\/\/ PBCH FER (in percent)$/;"	m	struct:fifo_dump_emos_struct_UE
+phich_subframe_to_harq_pid	phy_procedures_lte_common.c	/^uint8_t phich_subframe_to_harq_pid(LTE_DL_FRAME_PARMS *frame_parms,uint32_t frame,uint8_t subframe)$/;"	f
+phy_UE_lte_check_measurement_thresholds	phy_procedures_lte_ue.c	/^void phy_UE_lte_check_measurement_thresholds(instance_t instanceP, ral_threshold_phy_t* threshold_phy_pP)$/;"	f
+phy_UE_lte_measurement_thresholds_test_and_report	phy_procedures_lte_ue.c	/^void phy_UE_lte_measurement_thresholds_test_and_report(instance_t instanceP, ral_threshold_phy_t* threshold_phy_pP, uint16_t valP)$/;"	f
+phy_eNB_lte_check_measurement_thresholds	phy_procedures_lte_eNb.c	/^void phy_eNB_lte_check_measurement_thresholds(instance_t instanceP, ral_threshold_phy_t* threshold_phy_pP)$/;"	f
+phy_eNB_lte_measurement_thresholds_test_and_report	phy_procedures_lte_eNb.c	/^void phy_eNB_lte_measurement_thresholds_test_and_report(instance_t instanceP, ral_threshold_phy_t* threshold_phy_pP, uint16_t valP)$/;"	f
+phy_procedures_RN_UE_RX	phy_procedures_lte_ue.c	/^int phy_procedures_RN_UE_RX(uint8_t slot_rx, uint8_t next_slot, relaying_type_t r_type)$/;"	f
+phy_procedures_RN_eNB_TX	phy_procedures_lte_eNb.c	/^int phy_procedures_RN_eNB_TX(unsigned char last_slot, unsigned char next_slot, relaying_type_t r_type)$/;"	f
+phy_procedures_UE_RX	phy_procedures_lte_ue.c	/^int phy_procedures_UE_RX(PHY_VARS_UE *phy_vars_ue,uint8_t eNB_id,uint8_t abstraction_flag,runmode_t mode,$/;"	f
+phy_procedures_UE_S_TX	phy_procedures_lte_ue.c	/^void phy_procedures_UE_S_TX(PHY_VARS_UE *phy_vars_ue,uint8_t eNB_id,uint8_t abstraction_flag,relaying_type_t r_type)$/;"	f
+phy_procedures_UE_TX	phy_procedures_lte_ue.c	/^void phy_procedures_UE_TX(PHY_VARS_UE *phy_vars_ue,uint8_t eNB_id,uint8_t abstraction_flag,runmode_t mode,relaying_type_t r_type)$/;"	f
+phy_procedures_UE_lte	phy_procedures_lte_ue.c	/^void phy_procedures_UE_lte(PHY_VARS_UE *phy_vars_ue,uint8_t eNB_id,uint8_t abstraction_flag,runmode_t mode,$/;"	f
+phy_procedures_eNB_RX	phy_procedures_lte_eNb.c	/^void phy_procedures_eNB_RX(const unsigned char sched_subframe,PHY_VARS_eNB *phy_vars_eNB,const uint8_t abstraction_flag,const relaying_type_t r_type)$/;"	f
+phy_procedures_eNB_S_RX	phy_procedures_lte_eNb.c	/^void phy_procedures_eNB_S_RX(unsigned char sched_subframe,PHY_VARS_eNB *phy_vars_eNB,uint8_t abstraction_flag,relaying_type_t r_type)$/;"	f
+phy_procedures_eNB_TX	phy_procedures_lte_eNb.c	/^void phy_procedures_eNB_TX(unsigned char sched_subframe,PHY_VARS_eNB *phy_vars_eNB,uint8_t abstraction_flag,$/;"	f
+phy_procedures_eNB_lte	phy_procedures_lte_eNb.c	/^void phy_procedures_eNB_lte(unsigned char subframe,PHY_VARS_eNB **phy_vars_eNB,uint8_t abstraction_flag,$/;"	f
+phy_procedures_emos_UE_RX	phy_procedures_lte_ue.c	/^void phy_procedures_emos_UE_RX(PHY_VARS_UE *phy_vars_ue,uint8_t last_slot,uint8_t eNB_id)$/;"	f
+phy_procedures_emos_eNB_RX	phy_procedures_lte_eNb.c	/^void phy_procedures_emos_eNB_RX(unsigned char subframe,PHY_VARS_eNB *phy_vars_eNB)$/;"	f
+phy_procedures_emos_eNB_TX	phy_procedures_lte_eNb.c	/^void phy_procedures_emos_eNB_TX(unsigned char subframe, PHY_VARS_eNB *phy_vars_eNB)$/;"	f
+phy_reset_ue	phy_procedures_lte_ue.c	/^void phy_reset_ue(uint8_t Mod_id,uint8_t CC_id,uint8_t eNB_index)$/;"	f
+pmi_saved	phy_procedures_emos.h	/^  unsigned short   pmi_saved;$/;"	m	struct:fifo_dump_emos_struct_UE
+prach_procedures	phy_procedures_lte_eNb.c	/^void prach_procedures(PHY_VARS_eNB *phy_vars_eNB,uint8_t sched_subframe,uint8_t abstraction_flag)$/;"	f
+prach_resources_local	phy_procedures_lte_ue.c	/^PRACH_RESOURCES_t prach_resources_local;$/;"	v
+process_HARQ_feedback	phy_procedures_lte_eNb.c	/^void process_HARQ_feedback(uint8_t UE_id,$/;"	f
+process_Msg3	phy_procedures_lte_eNb.c	/^void process_Msg3(PHY_VARS_eNB *phy_vars_eNB,uint8_t sched_subframe,uint8_t UE_id, uint8_t harq_pid)$/;"	f
+process_timing_advance	phy_procedures_lte_ue.c	/^void process_timing_advance(uint8_t Mod_id,uint8_t CC_id,int16_t timing_advance)$/;"	f
+process_timing_advance_rar	phy_procedures_lte_ue.c	/^void process_timing_advance_rar(PHY_VARS_UE *phy_vars_ue,uint16_t timing_advance)$/;"	f
+pthread_attr_init	rt_compat.h	98;"	d
+pthread_attr_setschedparam	rt_compat.h	101;"	d
+pthread_attr_setschedpolicy	rt_compat.h	104;"	d
+pthread_attr_setstacksize	rt_compat.h	122;"	d
+pthread_cancel	rt_compat.h	110;"	d
+pthread_cond_destroy	rt_compat.h	89;"	d
+pthread_cond_init	rt_compat.h	80;"	d
+pthread_cond_signal	rt_compat.h	86;"	d
+pthread_cond_wait	rt_compat.h	83;"	d
+pthread_create	rt_compat.h	107;"	d
+pthread_delete_np	rt_compat.h	113;"	d
+pthread_exit	rt_compat.h	129;"	d
+pthread_make_periodic_np	rt_compat.h	49;"	d
+pthread_mutex_destroy	rt_compat.h	73;"	d
+pthread_mutex_init	rt_compat.h	58;"	d
+pthread_mutex_lock	rt_compat.h	67;"	d
+pthread_mutex_unlock	rt_compat.h	70;"	d
+pthread_mutexattr_init	rt_compat.h	61;"	d
+pthread_mutexattr_setprotocol	rt_compat.h	64;"	d
+pthread_self	rt_compat.h	95;"	d
+pthread_setfp_np	rt_compat.h	132;"	d
+pthread_setschedparam	rt_compat.h	141;"	d
+pthread_wakeup_np	rt_compat.h	92;"	d
+pucch_power_cntl	pucch_pc.c	/^int8_t pucch_power_cntl(PHY_VARS_UE *phy_vars_ue,uint8_t subframe,uint8_t eNB_id,PUCCH_FMT_t pucch_fmt)$/;"	f
+pucch_procedures	phy_procedures_lte_eNb.c	/^void pucch_procedures(const unsigned char sched_subframe,PHY_VARS_eNB *phy_vars_eNB,int UE_id,int harq_pid,const uint8_t abstraction_flag) {$/;"	f
+pusch_power_cntl	pusch_pc.c	/^void pusch_power_cntl(PHY_VARS_UE *phy_vars_ue,uint8_t subframe,uint8_t eNB_id,uint8_t j, uint8_t abstraction_flag)$/;"	f
+ra_failed	phy_procedures_lte_ue.c	/^void ra_failed(uint8_t Mod_id,uint8_t CC_id,uint8_t eNB_index)$/;"	f
+ra_succeeded	phy_procedures_lte_ue.c	/^void ra_succeeded(uint8_t Mod_id,uint8_t CC_id,uint8_t eNB_index)$/;"	f
+rach_detection_count	defs.h	/^  uint32_t   rach_detection_count;$/;"	m	struct:__anon1
+restart_phy	phy_procedures_lte_ue.c	/^void restart_phy(PHY_VARS_UE *phy_vars_ue,uint8_t eNB_id,uint8_t abstraction_flag)$/;"	f
+rtf_flush	rt_compat.h	119;"	d
+rtl_cpu_exists	rt_compat.h	116;"	d
+rtl_free_soft_irq	rt_compat.h	135;"	d
+rtl_getcpuid	rt_compat.h	55;"	d
+rtl_global_pend_irq	rt_compat.h	138;"	d
+rtl_printf	rt_compat.h	52;"	d
+rx_gain_mode	defs.h	/^  uint32_t   rx_gain_mode;$/;"	m	struct:__anon1
+rx_gain_val	defs.h	/^  uint32_t   rx_gain_val;$/;"	m	struct:__anon1
+rx_rf_mode	defs.h	/^  uint32_t   rx_rf_mode;$/;"	m	struct:__anon1
+rx_total_gain_dB	defs.h	/^  uint32_t   rx_total_gain_dB;$/;"	m	struct:__anon1
+rx_total_gain_dB	phy_procedures_emos.h	/^  unsigned int     rx_total_gain_dB;                   \/\/\/ Total gain$/;"	m	struct:fifo_dump_emos_struct_UE
+rx_total_gain_dB	phy_procedures_emos.h	/^  unsigned int     rx_total_gain_dB;       \/\/\/ Total gain$/;"	m	struct:fifo_dump_emos_struct_eNB
+sched_cnt	defs.h	/^  uint32_t   sched_cnt;$/;"	m	struct:__anon1
+scheduler_interval_ns	defs.h	/^  uint32_t   scheduler_interval_ns;$/;"	m	struct:__anon1
+slot_count	defs.h	/^  uint32_t   slot_count;$/;"	m	struct:__anon1
+subframe_select	phy_procedures_lte_common.c	/^lte_subframe_t subframe_select(LTE_DL_FRAME_PARMS *frame_parms,unsigned char subframe)$/;"	f
+sync_state	defs.h	/^  uint32_t   sync_state;$/;"	m	struct:__anon1
+synch_source	defs.h	/^  uint8_t    synch_source;$/;"	m	struct:__anon1
+synch_wait_cnt	defs.h	/^  uint32_t   synch_wait_cnt;$/;"	m	struct:__anon1
+target_ue_dl_mcs	defs.h	/^  uint32_t   target_ue_dl_mcs;$/;"	m	struct:__anon1
+target_ue_ul_mcs	defs.h	/^  uint32_t   target_ue_ul_mcs;$/;"	m	struct:__anon1
+tcxo_dac	defs.h	/^  uint32_t   tcxo_dac;$/;"	m	struct:__anon1
+tdd	defs.h	/^  uint32_t   tdd;                    \/\/\/ 1 for TDD mode, 0 for FDD mode$/;"	m	struct:__anon1
+timestamp	phy_procedures_emos.h	/^  uint64_t              timestamp;              \/\/! Timestamp of the receiver$/;"	m	struct:fifo_dump_emos_struct_UE
+timestamp	phy_procedures_emos.h	/^  uint64_t              timestamp;              \/\/! Timestamp of the receiver$/;"	m	struct:fifo_dump_emos_struct_eNB
+timing_advance	defs.h	/^  int32_t   timing_advance;$/;"	m	struct:__anon1
+timing_advance	phy_procedures_emos.h	/^  int              timing_advance;                     \/\/\/ Timing advance$/;"	m	struct:fifo_dump_emos_struct_UE
+timing_offset	phy_procedures_emos.h	/^  int              timing_offset;                      \/\/\/ Timing offset$/;"	m	struct:fifo_dump_emos_struct_UE
+total_TBS	phy_procedures_emos.h	/^  unsigned int     total_TBS;$/;"	m	struct:fifo_dump_emos_struct_UE
+total_TBS_last	phy_procedures_emos.h	/^  unsigned int     total_TBS_last;$/;"	m	struct:fifo_dump_emos_struct_UE
+total_received_bits	phy_procedures_emos.h	/^  unsigned int     total_received_bits;$/;"	m	struct:fifo_dump_emos_struct_UE
+tx_rx_switch_point	defs.h	/^  uint32_t   tx_rx_switch_point;$/;"	m	struct:__anon1
+tx_test	defs.h	/^  uint8_t    tx_test;$/;"	m	struct:__anon1
+ue_dl_rb_alloc	defs.h	/^  uint32_t   ue_dl_rb_alloc;$/;"	m	struct:__anon1
+ue_ul_nb_rb	defs.h	/^  uint32_t   ue_ul_nb_rb;$/;"	m	struct:__anon1
+ul_ACK_subframe2_M	phy_procedures_lte_common.c	/^unsigned char ul_ACK_subframe2_M(LTE_DL_FRAME_PARMS *frame_parms,unsigned char subframe)$/;"	f
+ul_ACK_subframe2_dl_subframe	phy_procedures_lte_common.c	/^unsigned char ul_ACK_subframe2_dl_subframe(LTE_DL_FRAME_PARMS *frame_parms,unsigned char subframe,unsigned char ACK_index)$/;"	f
+ulsch_allocation_mode	defs.h	/^  uint32_t   ulsch_allocation_mode;$/;"	m	struct:__anon1
+ulsch_decoding_procedures	phy_procedures_lte_eNb.c	/^void ulsch_decoding_procedures(unsigned char subframe, unsigned int i, PHY_VARS_eNB *phy_vars_eNB, unsigned char abstraction_flag)$/;"	f
+ulsch_input_buffer	phy_procedures_lte_ue.c	/^uint8_t ulsch_input_buffer[2700] __attribute__ ((aligned(16)));$/;"	v
+use_ia_receiver	defs.h	/^  uint32_t   use_ia_receiver;$/;"	m	struct:__anon1
+use_ia_receiver	phy_procedures_emos.h	/^  int              use_ia_receiver;$/;"	m	struct:fifo_dump_emos_struct_UE

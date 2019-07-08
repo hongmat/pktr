@@ -1,0 +1,63 @@
+eNB 0/1 Frame 48: RX Gain 130 dB, I0 0 dBm (0,0) dB 
+PRB I0 (1000001.0.0.0):    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
+
+PERFORMANCE PARAMETERS
+Total DLSCH 1 kbits / 49 frames Total DLSCH throughput 0 kbps Total DLSCH trans 11 / 49 frames
+UE 0 (fc89) Power: (45,45) dB, Po_PUSCH: (226,0) dBm, Po_PUCCH (-122/-108) dBm, Po_PUCCH1 (-130,-122) dBm,  PUCCH1 Thres -14 dBm 
+DL mcs 0, UL mcs 10, UL rb 6, delta_TF -32768, Wideband CQI: (0,0) dB
+DL TM 1, DL_cqi 15, DL_pmi_single 0 Timing advance 5 samples (1 16Ts), update 0 Mode = PUSCH(3) UE_id_mac = 0, RRC status = 4
+SR received/total: 9/38 (diff 29)
+DL Subband CQI: 15 15 15 15 15 15 15 
+ULSCH errors/attempts per harq (per round): 
+   harq 0: 0/1 (fer 0) (0/1, 0/0, 0/0, 0/0)    harq 1: 0/3 (fer 0) (0/3, 0/0, 0/0, 0/0) 
+   harq 2: 0/1 (fer 0) (0/1, 0/0, 0/0, 0/0)    harq 3: 0/3 (fer 0) (0/3, 0/0, 0/0, 0/0) 
+   harq 4: 0/1 (fer 0) (0/1, 0/0, 0/0, 0/0)    harq 5: 0/3 (fer 0) (0/3, 0/0, 0/0, 0/0) 
+   harq 6: 0/1 (fer 0) (0/1, 0/0, 0/0, 0/0)    harq 7: 0/4 (fer 0) (0/4, 0/0, 0/0, 0/0) 
+ULSCH errors/attempts total 0/17 (0/17, 0/0, 0/0, 0/0)
+DLSCH errors/attempts per harq (per round): 
+   harq 0: 0/2 (2/0/2, 0/0/0, 0/0/0, 0/0/0)    harq 1: 0/1 (1/0/1, 0/0/0, 0/0/0, 0/0/0) 
+   harq 2: 0/2 (2/0/2, 0/0/0, 0/0/0, 0/0/0)    harq 3: 0/1 (1/0/1, 0/0/0, 0/0/0, 0/0/0) 
+   harq 4: 0/2 (2/0/2, 0/0/0, 0/0/0, 0/0/0)    harq 5: 0/1 (1/0/1, 0/0/0, 0/0/0, 0/0/0) 
+   harq 6: 0/1 (1/0/1, 0/0/0, 0/0/0, 0/0/0)    harq 7: 0/1 (1/0/1, 0/0/0, 0/0/0, 0/0/0) 
+DLSCH errors/attempts total 0/11 (0/11, 0/0, 0/0, 0/0): 
+DLSCH total bits from MAC: 1kbit DLSCH total bits ack'ed: 1kbit DLSCH Average throughput (100 frames): 0kbps
+Total DLSCH 3 kbits / 49 frames Total DLSCH throughput 0 kbps Total DLSCH trans 22 / 49 frames
+UE 1 (fa2f) Power: (45,45) dB, Po_PUSCH: (226,0) dBm, Po_PUCCH (-122/-108) dBm, Po_PUCCH1 (-130,-122) dBm,  PUCCH1 Thres -14 dBm 
+DL mcs 13, UL mcs 10, UL rb 6, delta_TF -32768, Wideband CQI: (0,0) dB
+DL TM 1, DL_cqi 15, DL_pmi_single 0 Timing advance 5 samples (1 16Ts), update 0 Mode = PUSCH(3) UE_id_mac = 1, RRC status = 4
+SR received/total: 9/22 (diff 13)
+DL Subband CQI: 15 15 15 15 15 15 15 
+ULSCH errors/attempts per harq (per round): 
+   harq 0: 0/3 (fer 0) (0/3, 0/0, 0/0, 0/0)    harq 1: 0/0 (fer 0) (0/0, 0/0, 0/0, 0/0) 
+   harq 2: 0/2 (fer 0) (0/2, 0/0, 0/0, 0/0)    harq 3: 0/1 (fer 0) (0/1, 0/0, 0/0, 0/0) 
+   harq 4: 0/2 (fer 0) (0/2, 0/0, 0/0, 0/0)    harq 5: 0/0 (fer 0) (0/0, 0/0, 0/0, 0/0) 
+   harq 6: 0/3 (fer 0) (0/3, 0/0, 0/0, 0/0)    harq 7: 0/0 (fer 0) (0/0, 0/0, 0/0, 0/0) 
+ULSCH errors/attempts total 0/11 (0/11, 0/0, 0/0, 0/0)
+DLSCH errors/attempts per harq (per round): 
+   harq 0: 0/2 (2/0/2, 0/0/0, 0/0/0, 0/0/0)    harq 1: 0/1 (1/0/1, 0/0/0, 0/0/0, 0/0/0) 
+   harq 2: 0/1 (1/0/1, 0/0/0, 0/0/0, 0/0/0)    harq 3: 0/2 (2/0/2, 0/0/0, 0/0/0, 0/0/0) 
+   harq 4: 0/1 (1/0/1, 0/0/0, 0/0/0, 0/0/0)    harq 5: 0/2 (2/0/2, 0/0/0, 0/0/0, 0/0/0) 
+   harq 6: 0/1 (1/0/1, 0/0/0, 0/0/0, 0/0/0)    harq 7: 0/1 (1/0/1, 0/0/0, 0/0/0, 0/0/0) 
+DLSCH errors/attempts total 0/11 (0/11, 0/0, 0/0, 0/0): 
+DLSCH total bits from MAC: 1kbit DLSCH total bits ack'ed: 1kbit DLSCH Average throughput (100 frames): 0kbps
+Total DLSCH 4 kbits / 49 frames Total DLSCH throughput 0 kbps Total DLSCH trans 26 / 49 frames
+UE 2 (6607) Power: (45,45) dB, Po_PUSCH: (226,0) dBm, Po_PUCCH (-122/-108) dBm, Po_PUCCH1 (-130,-122) dBm,  PUCCH1 Thres -14 dBm 
+DL mcs 7, UL mcs 10, UL rb 6, delta_TF -32768, Wideband CQI: (0,0) dB
+DL TM 1, DL_cqi 15, DL_pmi_single 0 Timing advance 5 samples (1 16Ts), update 0 Mode = PUSCH(3) UE_id_mac = 2, RRC status = 3
+SR received/total: 2/6 (diff 4)
+DL Subband CQI: 15 15 15 15 15 15 15 
+ULSCH errors/attempts per harq (per round): 
+   harq 0: 0/1 (fer 0) (0/1, 0/0, 0/0, 0/0)    harq 1: 0/1 (fer 0) (0/1, 0/0, 0/0, 0/0) 
+   harq 2: 0/0 (fer 0) (0/0, 0/0, 0/0, 0/0)    harq 3: 0/0 (fer 0) (0/0, 0/0, 0/0, 0/0) 
+   harq 4: 0/0 (fer 0) (0/0, 0/0, 0/0, 0/0)    harq 5: 0/1 (fer 0) (0/1, 0/0, 0/0, 0/0) 
+   harq 6: 0/0 (fer 0) (0/0, 0/0, 0/0, 0/0)    harq 7: 0/0 (fer 0) (0/0, 0/0, 0/0, 0/0) 
+ULSCH errors/attempts total 0/3 (0/3, 0/0, 0/0, 0/0)
+DLSCH errors/attempts per harq (per round): 
+   harq 0: 0/1 (1/0/1, 0/0/0, 0/0/0, 0/0/0)    harq 1: 0/0 (0/0/0, 0/0/0, 0/0/0, 0/0/0) 
+   harq 2: 0/0 (0/0/0, 0/0/0, 0/0/0, 0/0/0)    harq 3: 0/1 (1/0/1, 0/0/0, 0/0/0, 0/0/0) 
+   harq 4: 0/1 (1/0/1, 0/0/0, 0/0/0, 0/0/0)    harq 5: 0/1 (1/0/1, 0/0/0, 0/0/0, 0/0/0) 
+   harq 6: 0/0 (0/0/0, 0/0/0, 0/0/0, 0/0/0)    harq 7: 0/0 (0/0/0, 0/0/0, 0/0/0, 0/0/0) 
+DLSCH errors/attempts total 0/4 (0/4, 0/0, 0/0, 0/0): 
+DLSCH total bits from MAC: 0kbit DLSCH total bits ack'ed: 0kbit DLSCH Average throughput (100 frames): 0kbps
+
+EOF
