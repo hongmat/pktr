@@ -1,14 +1,14 @@
 ********************
      #README
 ********************  
-Author: msfrigau@iastate.edu
-Institute: Iowa State University
-Lab: Dependable Networking and Computing
+Author: msfrigau@iastate.edu  
+Institute: Iowa State University  
+Lab: Dependable Networking and Computing  
 
 # MAC scheduler pktR for oaisim
 
-pktR is a joint interference and power control MAC scheduler for cellular networks.
-pktR objective is to guarantee per-packet reliability in the presence of co-channel interference.
+pktR is a joint interference and power control MAC scheduler for cellular networks.  
+pktR objective is to guarantee per-packet reliability in the presence of co-channel interference.  
 It leverages the PRK (physical-ratio-K) interference model: [PRKS paper]{www.ece.iastate.edu/~hongwei/group/publications/PRKS-TWC.pdf}
 This version of the code has been implemented under OpenAirInterface5G v0.5.2 - oaisim - tag: large_scale_simulations.
 
