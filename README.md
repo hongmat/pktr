@@ -23,6 +23,11 @@ This version of the code has been implemented under OpenAirInterface5G v0.5.2 - 
 
 ### Overview of pktR code structure
 
+*** Files modified ***
+oaisim.c
+channel_sim.c
+
+
 *** List of files modified in openair2/LAYER2/MAC:
 - defs.h: structure definitions and constants such as SINR and reliability thresholds
 - pre_processor.c: pktR functions
