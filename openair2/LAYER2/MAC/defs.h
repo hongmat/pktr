@@ -148,7 +148,7 @@
 
 typedef enum {
     m_cellular = 0x00,
-      m_d2d
+    m_d2d
 }link_type_t;
 
 typedef struct map_entry{
@@ -160,13 +160,25 @@ typedef struct map_entry{
 } map_entry_t;
 
 map_entry_t signal_map[MAX_MOBILES_PER_ENB];
+
+typedef struct k_entry{
+    int  UE_id;
+    int k;
+    int eNB_id;
+} k_entry_t;
+k_entry_t k_map[MAX_MOBILES_PER_ENB];
+
+
+#define PKTR 1
 #define UCS 0
+
+#define MAX_UCS_PRIORITY 100
 //Reliability threshold
-#define TARGET_RE 96
+#define TARGET_RE 95
 // Initial K value
 #define TARGET_K 6
 // SINR threshold
-#define TARGET_SINR 2
+#define TARGET_SINR 10
 
 /*********************
  * UCS
@@ -500,10 +512,9 @@ typedef struct {
   //
   uint32_t total_ulsch_pdus_rx;
 
-  // PDCP header rx user plane
+  // pktr - PDCP header rx user plane to compute PDR
   uint8_t seqnum[1000];
-  int seqnum_count[NUMBER_OF_UE_MAX];
-  uint16_t seqnum_long[1000][NUMBER_OF_UE_MAX]; 
+  uint16_t seqnum_long[1000][NUMBER_OF_UE_MAX];
   
 } eNB_STATS;
 /*! \brief eNB statistics for the connected UEs*/
