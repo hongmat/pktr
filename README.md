@@ -13,9 +13,10 @@ It leverages the PRK (physical-ratio-K) interference model: [PRKS paper]{www.ece
 This version of the code has been implemented under OpenAirInterface5G v0.5.2 - oaisim - tag: large_scale_simulations.
 
 ## Run automated overwrite on edited files 
-1. source oaienv
-2. chmod +x files-overwrite
-3. ./files-overwrite
+1. cp ~/pktr/files-overwrite $YOUR_OPENAIR/files-overwrite
+2. source oaienv
+3. chmod +x files-overwrite
+4. ./files-overwrite
 
 ## Getting Started
 1. Clone the repo:
