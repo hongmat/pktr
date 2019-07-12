@@ -101,6 +101,11 @@ int g_tmp = 0;
 pthread_mutex_t mutex_tpc = PTHREAD_MUTEX_INITIALIZER;
 
 
+//UCS
+int UE_status[NUMBER_OF_UE_MAX][N_RBG_MAX];
+int priority[NUMBER_OF_UE_MAX][N_RBG_MAX];
+int conflict[NUMBER_OF_UE_MAX][NUMBER_OF_UE_MAX];
+
 // This function stores the downlink buffer for all the logical channels
 void store_dlsch_buffer (module_id_t Mod_id,
                          frame_t     frameP,
@@ -394,12 +399,189 @@ void sort_UEs (module_id_t Mod_idP,
   }
 }
 
+/******* ONAMA functions *******/
+
+void init_onama(int UE_status[][N_RBG_MAX],
+		int priority[][N_RBG_MAX],
+		int conflict[][NUMBER_OF_UE_MAX])
+{
+	int i, iii;
+
+	for(i=0; i<NUMBER_OF_UE_MAX; i++) {
+		for(iii=0; iii<N_RBG_MAX; iii++)
+			priority[i][iii]=0;
+	}
+
+	for(i=0; i<NUMBER_OF_UE_MAX; i++) {
+		 for(iii=0; iii<N_RBG_MAX; iii++)
+	   	UE_status[i][iii]=0;
+	}
+
+	for(i=0; i<NUMBER_OF_UE_MAX; i++) {
+		for(iii=0; iii<NUMBER_OF_UE_MAX; iii++)
+			conflict[i][iii]=0;
+	}
+}
+
+	
+/****************************
+ * Priority calculation
+ ****************************/
+int hash_priority(int index) 
+{
+  int pre_priority;
+  pre_priority = index % 100;
+  return pre_priority;
+}
+
+/********************************************************************
+ * This function calculates the priority of each UE for each channel
+ ********************************************************************/
+void priority_UEs(int k,
+		  int CC_id,
+                  uint16_t dkmean)
+{
+  //fprintf(stdout, "[UCS][PRIORITY_UE] dkmean = %d\n", dkmean);
+  int rb, ii = 0;
+  int t_TTI=rand();
+  int maxprio = 0;
+  
+  for (ii=0; ii<dkmean; ii++) {
+    for (rb=0; rb<N_RBG_MAX; rb++) {  
+      if ((hash_priority((k^ii^t_TTI^rb)^k^ii)) > maxprio) {
+        maxprio = hash_priority((k^ii^t_TTI^rb)^k^ii);
+      }
+    }
+  }
+  priority[k][rb] = maxprio;
+  fprintf(stdout, "[UCS]{priority_UEs} priority[%d][%d]=%d\n", k, CC_id, priority[k][rb]);
+
+}
+
+
+/*************************************************************************
+ * This function builds the map/table of conflict nodes for each channel
+ **************************************************************************/
+void conflict_UEs(module_id_t  Mod_idP,
+		int conflict[][NUMBER_OF_UE_MAX])
+{
+  int i=0;
+  int ii=0;
+
+  UE_list_t *UE_list = &eNB_mac_inst[Mod_idP].UE_list;
+
+  for(i=UE_list->head; i>=0; i=UE_list->next[i]) {
+    for (ii=UE_list->head; ii>=0; ii=UE_list->next[ii])
+      // If DL CQI of UE_ii is greater than DL CQI/K_i of UE_i => UEs are interfering with each other
+      if(maxcqi(Mod_idP,ii) >= maxcqi(Mod_idP,i) && i != ii)
+      {
+        conflict[i][ii]=1;
+      }
+    }
+}
+
+
 
 /*************************** PKTR *********************************
  * - pktR algorithm and associated functions
  * - 3 threads run in parallel
  * - refer to vars.h for structures and global variables
  ******************************************************************/
+
+/********************
+ * Share k map
+ *******************/
+void insert_k_entry(int UE_id, int K, module_id_t Mod_id)
+{
+  FILE *fp;
+  int i = 0; //@TODO declare as global var for the multiple UEs use case
+  // list node contents from first to last
+  //map_entry_t *r;
+  UE_list_t *UE_list = &eNB_mac_inst[Mod_id].UE_list;
+  
+  fp = fopen("/opt/pktr/context-cell", "w");
+  if( fp == NULL ) {
+    perror("Error while opening file");
+    exit(1);
+  }
+  //for(i=UE_list->head; i>=0; i=UE_list->next[i]) {
+  //fwrite (&smentry, sizeof(map_entry_t), 1, fp);
+    //r = signal_map + i;
+    fprintf(fp, "%d %d %d\n", UE_id, K, Mod_id);
+    fprintf(stdout, "%d %d %d\n", UE_id, K, Mod_id);
+	
+    //if(UE_id == UE_list->head)
+      //r->next = NULL;
+    //else
+      //r->next = r+1;
+  //}
+   
+  fclose(fp);
+}
+
+
+/********************
+ * Share signal map
+ *******************/
+void insert_map_entry(module_id_t Mod_id, map_entry_t smentry)
+{
+  FILE *fp;
+  int i = 0; //@TODO declare as global var for the multiple UEs use case
+  // list node contents from first to last
+  //map_entry_t *r;
+  UE_list_t *UE_list = &eNB_mac_inst[Mod_id].UE_list;
+  
+  fp = fopen("/opt/pktr/context-cell", "w");
+  if( fp == NULL ) {
+    perror("Error while opening file");
+    exit(1);
+  }
+  //for(i=UE_list->head; i>=0; i=UE_list->next[i]) {
+  //fwrite (&smentry, sizeof(map_entry_t), 1, fp);
+    //r = signal_map + i;
+    fprintf(fp, "%d %d %d %d\n", smentry.rnti, smentry.pathloss, smentry.mode, smentry.eNB_id);
+    fprintf(stdout, "%d %d %d %d\n", smentry.rnti, smentry.pathloss, smentry.mode, smentry.eNB_id);
+	
+    //if(UE_id == UE_list->head)
+      //r->next = NULL;
+    //else
+      //r->next = r+1;
+  //}
+   
+  fclose(fp);
+}
+
+
+/********************
+ * Update signal map
+ *******************/
+void read_map_entries(void)
+{
+  FILE *fp;
+  char line[20];
+  int rnti, enb, args, i=0, j;
+  link_type_t ltype;
+  uint32_t pl;
+  
+  fp = fopen("/opt/pktr/context-cell", "r");
+  if( fp == NULL ) {
+    perror("Error while opening file");
+    exit(1);
+  }
+  
+  // Read signal map from file context-rx
+  while(fscanf(fp, "%d %d %d %d", &rnti, &pl, &ltype, &enb) == 4) {
+          fprintf(stdout, "RNTI = %d : pathloss = %d link type = %d associated eNB = %d\n", signal_map[i].rnti, signal_map[i].pathloss, signal_map[i].mode = ltype, signal_map[i].eNB_id);
+	  signal_map[i].rnti = rnti;
+	  signal_map[i].pathloss = pl;
+	  signal_map[i].mode = ltype;
+	  signal_map[i].eNB_id = enb;
+	  i++;   
+  }
+
+  fclose(fp);
+}
+
 
 
 int g_call_pdr = 1;
@@ -606,24 +788,25 @@ void * get_value_K_pktR(void *params)
          if(ER[rssi[i].index] == 0){
            ER[rssi[i].index] = 1;
            sum++;
-           //i++;
+           i++;
          }
        }
 
       } else {
+        ind_g = 2;
         fprintf(stdout, "[COMPUTE K] Shrink exclusion region\n");
-	      fprintf(stdout, "[COMPUTE K] converge = %d\n", converge[args->UE_id]);
-	      fprintf(stdout, "[COMPUTE K] delta = %d\n", delta);
-	      fprintf(stdout, "[COMPUTE K] E[NI] = %f\n", fabs(E_NI));
-	      fprintf(stdout, "[COMPUTE K] I_R = %f\n", I_R);
-	      fprintf(stdout, "[COMPUTE K] NI_0 = %f and ceil(fabs(I_R)) = %f\n", NI_0, (double)ceil(fabs(I_R)));
+	fprintf(stdout, "[COMPUTE K] converge = %d\n", converge[args->UE_id]);
+	fprintf(stdout, "[COMPUTE K] delta = %d\n", delta);
+	fprintf(stdout, "[COMPUTE K] E[NI] = %f\n", fabs(E_NI));
+	fprintf(stdout, "[COMPUTE K] I_R = %f\n", I_R);
+	fprintf(stdout, "[COMPUTE K] NI_0 = %f and ceil(fabs(I_R)) = %f\n", NI_0, (double)ceil(fabs(I_R)));
         // Shrink exclusion region by increasing K
         // Remove a new node from exclusion region in non-decreasing order of P(C_i, R)
         if (sum <= ceil(fabs(I_R)) && sum != 0 && g_tmp >= ceil(fabs(I_R))){
           if(ER[rssi_dec[i].index] == 1){
             ER[rssi_dec[i].index] = 0;
             sum++;
-            //i++;
+            i++;
           }
         }
       }
@@ -631,7 +814,32 @@ void * get_value_K_pktR(void *params)
       fprintf(stdout, "i of C_i = %d\n", i);
       // Update K
       // @TODO To refactor with a switch/case
-      if (ind_g == 1) {
+
+      if(g_call_nb_getK == 0) {
+        value_K[args->UE_id] = 10;
+      } else {
+        switch (ind_g)
+        {
+          case 1: //Expand
+            value_K_now = ceil( PHY_vars_UE_g[args->UE_id][args->CC_id]->PHY_measurements.path_loss / PHY_vars_UE_g[rssi[i].index][args->CC_id]->PHY_measurements.path_loss );
+            //if (value_K_now < value_K[args->UE_id]) {
+              value_K[args->UE_id] = value_K_now;
+            //}
+            break;
+
+          case 2: //Shrink
+            value_K_now = ceil( PHY_vars_UE_g[args->UE_id][args->CC_id]->PHY_measurements.path_loss / PHY_vars_UE_g[rssi_dec[i].index][args->CC_id]->PHY_measurements.path_loss );
+            //if (value_K_now < value_K[args->UE_id]) {
+              value_K[args->UE_id] = value_K_now;
+            //}
+            break;
+
+          default:
+            break;
+        }
+      }
+      //value_K[args->UE_id] = value_K_now;
+   /*   if (ind_g == 1) {
         if(g_call_nb_getK != 0 && PHY_vars_UE_g[rssi[i].index][args->CC_id]->PHY_measurements.path_loss != 0) {
           value_K_now = ceil( PHY_vars_UE_g[args->UE_id][args->CC_id]->PHY_measurements.path_loss / PHY_vars_UE_g[rssi[i].index][args->CC_id]->PHY_measurements.path_loss );
           //fprintf(stdout, "VALUEKNOW == %f\n", value_K_now);
@@ -652,7 +860,7 @@ void * get_value_K_pktR(void *params)
         } else {
           value_K[args->UE_id] = 10;
         }
-      }
+      }*/
       
       fprintf(stdout, "[COMPUTE_K] value_K[%d] = %f\n", args->UE_id, value_K[args->UE_id]);
       
@@ -685,6 +893,21 @@ void * get_value_K_pktR(void *params)
   }
 
   g_call_nb_getK++;
+
+  /*******************
+   *  Share K values *
+   *******************/
+  // X2: create k_entry_t
+  for (C=UE_list->head; C>=0; C=UE_list->next[C]) {
+    if (ER[C] == 1 && C != args->UE_id) {
+      insert_k_entry(C, value_K[C], args->Mod_id);
+    }
+  }
+
+  // Find UE that belongs to current eNB
+  ///rnti_ue = UE_RNTI(args->Mod_id, args->UE_id);
+  //int8_t UE_id = find_ue(rnti,PHY_vars_eNB_g[Mod_id][CC_id]);
+
   pthread_mutex_unlock(&mutex_tpc);
 
 }
@@ -1003,6 +1226,7 @@ void dlsch_scheduler_pre_processor (module_id_t   Mod_id,
   uint16_t                nb_rbs_required[MAX_NUM_CCs][NUMBER_OF_UE_MAX];
   uint16_t                nb_rbs_required_remaining[MAX_NUM_CCs][NUMBER_OF_UE_MAX];
   uint16_t                nb_rbs_required_remaining_1[MAX_NUM_CCs][NUMBER_OF_UE_MAX];
+  uint16_t                available_rbs[MAX_NUM_CCs]; // ONAMA
   uint16_t                average_rbs_per_user[MAX_NUM_CCs] = {0};
   rnti_t             rnti;
   int                min_rb_unit[MAX_NUM_CCs];
@@ -1014,6 +1238,7 @@ void dlsch_scheduler_pre_processor (module_id_t   Mod_id,
   int transmission_mode = 0;
   UE_sched_ctrl *ue_sched_ctl;
   //  int rrc_status           = RRC_IDLE;
+
 
 #ifdef TM5
   int harq_pid1=0,harq_pid2=0;
@@ -1036,6 +1261,9 @@ void dlsch_scheduler_pre_processor (module_id_t   Mod_id,
 
     min_rb_unit[CC_id]=get_min_rb_unit(Mod_id,CC_id);
 
+    // ONAMA init
+    init_onama(UE_status, priority, conflict);
+
     for (i=UE_list->head; i>=0; i=UE_list->next[i]) {
       UE_id = i;
       // Initialize scheduling information for all active UEs
@@ -1056,6 +1284,8 @@ void dlsch_scheduler_pre_processor (module_id_t   Mod_id,
     }
   }
 
+  // Get the conflict relationship
+  conflict_UEs(Mod_id, conflict);
 
   // Store the DLSCH buffer for each logical channel
   store_dlsch_buffer (Mod_id,frameP,subframeP);
@@ -1071,10 +1301,12 @@ void dlsch_scheduler_pre_processor (module_id_t   Mod_id,
   sort_UEs (Mod_id,frameP,subframeP);
 
   ///// PKTR is called here! /////
-  for (UE_id = UE_list->head; UE_id >= 0; UE_id = UE_list->next[UE_id]) {
-    reliability(Mod_id, UE_id);
-    for (n = 0; n < UE_list->numactiveCCs[UE_id]; n++) {
-      sched_controller_pktR(UE_id, Mod_id, n, frameP, subframeP);
+  if (PKTR) {
+    for (UE_id = UE_list->head; UE_id >= 0; UE_id = UE_list->next[UE_id]) {
+      reliability(Mod_id, UE_id);
+      for (n = 0; n < UE_list->numactiveCCs[UE_id]; n++) {
+        sched_controller_pktR(UE_id, Mod_id, n, frameP, subframeP);
+      }
     }
   }
   /////////////////////////////////
@@ -1154,6 +1386,9 @@ void dlsch_scheduler_pre_processor (module_id_t   Mod_id,
       }
     }
   }
+
+
+  
 
   //Allocation to UEs is done in 2 rounds,
   // 1st stage: average number of RBs allocated to each UE
@@ -1511,6 +1746,127 @@ void dlsch_scheduler_pre_processor_allocate (module_id_t   Mod_id,
   UE_list_t *UE_list=&eNB_mac_inst[Mod_id].UE_list;
   UE_sched_ctrl *ue_sched_ctl = &UE_list->UE_sched_ctrl[UE_id];
 
+  //ONAMA
+  uint16_t di = 0;
+  uint16_t dimean = 0;
+  uint8_t done = 1;
+  int rb, rb2, status_cli, jj, k;
+
+  if (UCS) {
+  /******************** UCS Step 1: Prealloc **************************/
+  // state.i.rb = UNDECIDED
+  fprintf(stdout, "[UCS] average_rbs_per_user[%d] = %d\n", CC_id, average_rbs_per_user[CC_id]);
+  for (UE_id = UE_list->head; UE_id >= 0; UE_id = UE_list->next[UE_id]) {
+    // Compute reliability for each UE
+    reliability(Mod_id, UE_id);
+    for (rb=0; rb<N_RBG_MAX; rb++) {
+      for (n = 0; n < UE_list->numactiveCCs[UE_id]; n++) {
+        // Perform K adaptation
+        //@TODO Call pktr scheduler here
+        UE_status[UE_id][rb] = State_UNDECIDED;
+        //fprintf(stdout, "ONAMA: UE_status[%d][rb:%d]==%d\n", UE_id, rb, UE_status[UE_id][rb]);
+      }
+    }
+  } 
+  
+  //k.rb = min{d_k, mean} for each k E M_i U i
+  for (UE_id = UE_list->head; UE_id >= 0; UE_id = UE_list->next[UE_id]) {
+    for (rb=0; rb<N_RBG_MAX; rb++) {
+      for (ii = UE_list->head; ii >= 0; ii = UE_list->next[ii]) {
+        conflict[UE_id][ii] = 1; //test single UE
+        if (conflict[UE_id][ii]==1) {
+          for (i = 0; i < UE_num_active_CC(UE_list, UE_id); i++) {
+            CC_id = UE_list->ordered_CCids[i][UE_id];
+            ue_sched_ctl = &UE_list->UE_sched_ctrl[UE_id];
+            //available_rbs[CC_id] = ue_sched_ctl->max_rbs_allowed_slice[CC_id][slice_idx];
+            available_rbs[CC_id] = ue_sched_ctl->pre_nb_available_rbs[CC_id];
+            if (total_ue_count > 0)
+              average_rbs_per_user[CC_id] = (uint16_t)floor(available_rbs[CC_id]/total_ue_count);
+             // average_rbs_per_user[CC_id] = (uint16_t)floor(available_rbs[CC_id]/ue_count_newtx[CC_id]);
+            else
+              average_rbs_per_user[CC_id] = available_rbs[CC_id];
+           UE_list->UE_sched_ctrl[ii].pre_nb_available_rbs[CC_id]  = cmin(nb_rbs_required[CC_id][ii], average_rbs_per_user[CC_id]);
+           fprintf(stdout, "ONAMA: nb_rbs_required[%d][%d] = %d average_rbs_per_user[%d]=%d\n", CC_id, ii, nb_rbs_required[CC_id][ii], CC_id, average_rbs_per_user[CC_id]);
+           fprintf(stdout, "ONAMA: nb_rbs_required_remaining_1[%d][%d] = %d\n", CC_id, ii, UE_list->UE_sched_ctrl[i].pre_nb_available_rbs[CC_id]);
+            
+            //MAX priority
+            priority[ii][rb] = MAX_UCS_PRIORITY;
+            // Status becomes ACTIVE
+            UE_status[ii][rb] = State_ACTIVE;
+
+            if( nb_rbs_required[CC_id][ii] <= average_rbs_per_user[CC_id] ) {
+              for (rb2 = rb+1; rb2<N_RBG_MAX; ++rb2) {
+                if(rb2 != rb)
+                  UE_status[ii][rb2] = State_INACTIVE;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /**************************************************************/
+
+
+  /************** UCS Step 2: Priority Calculation **************/
+  for (UE_id = UE_list->head; UE_id >= 0; UE_id = UE_list->next[UE_id]) {
+    for (ii = UE_list->head; ii >= 0; ii = UE_list->next[ii]) {
+      if (conflict[UE_id][ii]==1) {
+        for (i = 0; i < UE_num_active_CC(UE_list, UE_id); i++) {
+          CC_id = UE_list->ordered_CCids[i][UE_id];
+          priority_UEs(ii, CC_id, UE_list->UE_sched_ctrl[ii].pre_nb_available_rbs[CC_id]);
+        }
+      }
+    }
+  }
+  /**************************************************************/
+
+
+
+  /************** UCS Step 3: State Selection  ******************/
+  while(done == 1) {
+    //printf("ONAMA: STEP3\n");
+    done = 0;
+    for (UE_id = UE_list->head; UE_id >= 0; UE_id = UE_list->next[UE_id]) {
+      for (jj=UE_list->head; jj>=0; jj=UE_list->next[jj]) {
+        for (rb=0; rb<N_RBG_MAX; rb++) {
+          //First condition: di - mean > 0
+          dimean = (nb_rbs_required[CC_id][UE_id] - average_rbs_per_user[CC_id]);
+          if( (dimean>0) && (conflict[UE_id][jj]==1) && (UE_status[jj][rb]!=State_INACTIVE) && (priority[UE_id][rb]>priority[jj][rb]) ) {
+            //state.i.rb = ACTIVE
+            UE_status[UE_id][rb] = State_ACTIVE;
+            //di=di-mean-1
+            nb_rbs_required[CC_id][UE_id] = (nb_rbs_required[CC_id][UE_id] - average_rbs_per_user[CC_id] - 1);
+            //if di == 0
+            if( nb_rbs_required[CC_id][UE_id] == 0 ) {
+              //state.i.rb2 = INACTIVE for each rb2 where state.i.rb2 == UNDECIDED
+              for (k=rb+1; k<N_RBG_MAX; k++ ) {
+                if( UE_status[UE_id][k] == State_UNDECIDED )
+                  UE_status[UE_id][k]=State_INACTIVE;
+              }
+            } // end di == 0
+	  } //end dimean cond
+
+          //Second condition
+          if( (conflict[UE_id][jj]==1) && (UE_status[jj][rb]==State_ACTIVE) && (priority[UE_id][rb]<priority[jj][rb]) ) {
+            UE_status[UE_id][rb]=State_INACTIVE; 
+          }
+          //Third condition
+          if ( UE_status[jj][rb]==State_UNDECIDED ) {
+            done = 1;
+          }
+
+        } // end for rb
+      } // end for neighbours of UE_id    
+    } // end for UE_id
+  } // end of while
+  /**********************************************************/
+  } // END IF(UCS)
+
+
+
+
+
   for(i=0; i<N_RBG; i++) {
 
     if((rballoc_sub[CC_id][i] == 0)           &&
@@ -1540,6 +1896,7 @@ void dlsch_scheduler_pre_processor_allocate (module_id_t   Mod_id,
 	    }
 	    nb_rbs_required_remaining[CC_id][UE_id] = nb_rbs_required_remaining[CC_id][UE_id] - min_rb_unit;
 	    ue_sched_ctl->pre_nb_available_rbs[CC_id] = ue_sched_ctl->pre_nb_available_rbs[CC_id] + min_rb_unit;
+      fprintf(stdout, "[allocate] ue_sched_ctl->pre_nb_available_rbs[%d] = %d\n", CC_id, ue_sched_ctl->pre_nb_available_rbs[CC_id]);
 	  }
 	}
       } // dl_pow_off[CC_id][UE_id] ! = 0
