@@ -1,9 +1,9 @@
 #!/bin/sh
-sudo cp ~/pktr/targets/SIMU/USER/oaisim.c ~/$OPENAIR_DIR/targets/SIMU/USER/oaisim.c
-sudo cp ~/pktr/targets/SIMU/USER/oaisim_functions.c ~/$OPENAIR_DIR/targets/SIMU/USER/oaisim_functions.c
-sudo cp ~/pktr/targets/SIMU/USER/channel_sim.c ~/$OPENAIR_DIR/targets/SIMU/USER/channel_sim.c
-sudo cp ~/pktr/openair1/PHY/impl_defs_top.h ~/$OPENAIR_DIR/openair1/PHY/impl_defs_top.h 
-sudo cp ~/pktr/openair2/LAYER2/MAC/defs.h ~/$OPENAIR_DIR/openair2/LAYER2/MAC/defs.h
-sudo cp ~/pktr/openair2/LAYER2/MAC/pre_processor.c ~/$OPENAIR_DIR/openair2/LAYER2/MAC/pre_processor.c
-sudo cp ~/pktr/openair2/LAYER2/PDCP_v10.1.0/pdcp.c ~/$OPENAIR_DIR/pktr/openair2/LAYER2/PDCP_v10.1.0/pdcp.c
-sudo cp ~/pktr/targets/SIMU/EXAMPLES/OSD/WEBXML/template_60.xml ~/$OPENAIR_DIR/targets/SIMU/EXAMPLES/OSD/WEBXML/template_60.xml
+sudo cp ~/pktr/targets/SIMU/USER/oaisim.c $OPENAIR_DIR/targets/SIMU/USER/oaisim.c
+sudo cp ~/pktr/targets/SIMU/USER/oaisim_functions.c $OPENAIR_DIR/targets/SIMU/USER/oaisim_functions.c
+sudo cp ~/pktr/targets/SIMU/USER/channel_sim.c $OPENAIR_DIR/targets/SIMU/USER/channel_sim.c
+sudo cp ~/pktr/openair1/PHY/impl_defs_top.h $OPENAIR_DIR/openair1/PHY/impl_defs_top.h 
+sudo cp ~/pktr/openair2/LAYER2/MAC/defs.h $OPENAIR_DIR/openair2/LAYER2/MAC/defs.h
+sudo cp ~/pktr/openair2/LAYER2/MAC/pre_processor.c $OPENAIR_DIR/openair2/LAYER2/MAC/pre_processor.c
+sudo cp ~/pktr/openair2/LAYER2/PDCP_v10.1.0/pdcp.c $OPENAIR_DIR/openair2/LAYER2/PDCP_v10.1.0/pdcp.c
+sudo cp ~/pktr/targets/SIMU/EXAMPLES/OSD/WEBXML/template_60.xml $OPENAIR_DIR/targets/SIMU/EXAMPLES/OSD/WEBXML/template_60.xml
