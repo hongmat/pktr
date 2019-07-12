@@ -12,6 +12,11 @@ pktR objective is to guarantee per-packet reliability in the presence of co-chan
 It leverages the PRK (physical-ratio-K) interference model: [PRKS paper]{www.ece.iastate.edu/~hongwei/group/publications/PRKS-TWC.pdf}  
 This version of the code has been implemented under OpenAirInterface5G v0.5.2 - oaisim - tag: large_scale_simulations.
 
+## Run automated overwrite on edited files 
+1. source oaienv
+2. chmod +x files-overwrite
+3. ./files-overwrite
+
 ## Getting Started
 1. Clone the repo:
 ```git clone https://github.com/hongmat/pktr.git```
@@ -19,14 +24,17 @@ This version of the code has been implemented under OpenAirInterface5G v0.5.2 - 
 ```cd cmake_targets```
 ```./build_oai --oaisim -t ETHERNET --noS1```
 3. Run oaisim with a template file:
-```sudo -E ./oaisim_nos1 -O ~/openairinterface5g/targets/PROJECTS/GENERIC-LTE-EPC/CONF/enb.band7.tm1.generic.oaisim.local_no_mme.conf -K ~/Desktop/stats.log -H -a -c template_34.xml -F -A AWGN -T bcbr -R 25 2>&1 | tee tmplog.log```
+```sudo -E ./oaisim_nos1 -O ~/pktr/targets/PROJECTS/GENERIC-LTE-EPC/CONF/enb.band7.tm1.generic.oaisim.local_no_mme.conf -H -a -c template_34.xml -F -R 25 2>&1 | tee tmplog.log```
 
 ### Overview of pktR code structure
 
-*** Files modified ***  
-oaisim.c  
-channel_sim.c  
+*** List of files modified in targets/SIMU/USER:  
+- oaisim.c  
+- oaisim_functions.c
+- channel_sim.c  
 
+*** List of files modified in openair1/PHY/:
+- impl_defs_top.h
 
 *** List of files modified in openair2/LAYER2/MAC:
 - defs.h: structure definitions and constants such as SINR and reliability thresholds
