@@ -301,8 +301,8 @@ typedef enum {
 #define NUMBER_OF_UE_MAX 120
 #define NUMBER_OF_CONNECTED_eNB_MAX 1 // to save some memory
 #else
-#define NUMBER_OF_eNB_MAX 7
-#define NUMBER_OF_UE_MAX 16
+#define NUMBER_OF_eNB_MAX 9
+#define NUMBER_OF_UE_MAX 90
 #define NUMBER_OF_CONNECTED_eNB_MAX 3
 #endif
 #endif
