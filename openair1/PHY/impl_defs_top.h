@@ -302,7 +302,7 @@ typedef enum {
 #define NUMBER_OF_CONNECTED_eNB_MAX 1 // to save some memory
 #else
 #define NUMBER_OF_eNB_MAX 9
-#define NUMBER_OF_UE_MAX 90
+#define NUMBER_OF_UE_MAX 80
 #define NUMBER_OF_CONNECTED_eNB_MAX 3
 #endif
 #endif
@@ -398,13 +398,11 @@ typedef struct {
   unsigned char  rank[NUMBER_OF_CONNECTED_eNB_MAX];
   /// Number of RX Antennas
   unsigned char  nb_antennas_rx;
-
-  //pktR - GRK model
-  double path_loss; 
-
   /// DLSCH error counter
   // short          dlsch_errors;
 
+  //pktR
+  int path_loss;
 } PHY_MEASUREMENTS;
 
 typedef struct {
