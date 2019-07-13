@@ -1281,13 +1281,32 @@ void update_omg_ocm()
 void update_ocm()
 {
   module_id_t UE_id, eNB_id;
-  int CC_id;
+  int CC_id, ii = 0;
+  //pktR
+  FILE *fp;
+  int g_uetxp[100] = {10};
 
   for (eNB_id = 0; eNB_id < NB_eNB_INST; eNB_id++)
     enb_data[eNB_id]->tx_power_dBm = PHY_vars_eNB_g[eNB_id][0]->lte_frame_parms.pdsch_config_common.referenceSignalPower;
 
-  for (UE_id = 0; UE_id < NB_UE_INST; UE_id++)
-    ue_data[UE_id]->tx_power_dBm = PHY_vars_UE_g[UE_id][0]->tx_power_dBm;
+
+  //pktR
+  fp = fopen("/opt/pktr/txpower-tx", "r");
+  if (fp == NULL) {
+    perror("Error opening file");
+    exit(1);
+  }
+  while(fscanf(fp, "%d", &g_uetxp[ii]) != EOF) {
+    ii++;
+  }
+  fclose(fp);
+
+
+  for (UE_id = 0; UE_id < NB_UE_INST; UE_id++) {
+    //ue_data[UE_id]->tx_power_dBm = PHY_vars_UE_g[UE_id][0]->tx_power_dBm;
+    ue_data[UE_id]->tx_power_dBm = PHY_vars_UE_g[UE_id][0]->tx_power_dBm = g_uetxp[UE_id];
+    fprintf(stdout, "[OAISIMFUNC] UE{%d} TxP = %d\n", UE_id, ue_data[UE_id]->tx_power_dBm);
+  }
 
 
   /* check if the openair channel model is activated used for PHY abstraction : path loss*/
@@ -1306,17 +1325,21 @@ void update_ocm()
     */
     for (CC_id=0; CC_id<MAX_NUM_CCs; CC_id++) {
       for (eNB_id = 0; eNB_id < NB_eNB_INST; eNB_id++) {
-
-  	printf("eNB[%d] position here x=%.2f  y=%.2f\n", eNB_id, enb_data[eNB_id]->x, enb_data[eNB_id]->y);
-
         for (UE_id = 0; UE_id < NB_UE_INST; UE_id++) {
           calc_path_loss (enb_data[eNB_id], ue_data[UE_id], eNB2UE[eNB_id][UE_id][CC_id], oai_emulation.environment_system_config,ShaF);
           //calc_path_loss (enb_data[eNB_id], ue_data[UE_id], eNB2UE[eNB_id][UE_id], oai_emulation.environment_system_config,0);
           UE2eNB[UE_id][eNB_id][CC_id]->path_loss_dB = eNB2UE[eNB_id][UE_id][CC_id]->path_loss_dB;
           //    if (frame % 50 == 0)
-          fprintf(stdout,"Path loss (CCid %d) between eNB %d at (%f,%f) and UE %d at (%f,%f) is %f, angle %f\n",
+         /* LOG_I(OCM,"Path loss (CCid %d) between eNB %d at (%f,%f) and UE %d at (%f,%f) is %f, angle %f\n",
+                CC_id,eNB_id,enb_data[eNB_id]->x,enb_data[eNB_id]->y,UE_id,ue_data[UE_id]->x,ue_data[UE_id]->y,
+                eNB2UE[eNB_id][UE_id][CC_id]->path_loss_dB, eNB2UE[eNB_id][UE_id][CC_id]->aoa); */
+             fprintf(stdout,"Path loss (CCid %d) between eNB %d at (%f,%f) and UE %d at (%f,%f) is %f, angle %f\n",
                 CC_id,eNB_id,enb_data[eNB_id]->x,enb_data[eNB_id]->y,UE_id,ue_data[UE_id]->x,ue_data[UE_id]->y,
                 eNB2UE[eNB_id][UE_id][CC_id]->path_loss_dB, eNB2UE[eNB_id][UE_id][CC_id]->aoa);
+
+          //pktR - in-situ measurement of pathloss
+          PHY_vars_UE_g[UE_id][CC_id]->PHY_measurements.path_loss = eNB2UE[eNB_id][UE_id][CC_id]->path_loss_dB;
+
           //double dx, dy, distance;
           //dx = enb_data[eNB_id]->x - ue_data[UE_id]->x;
           //dy = enb_data[eNB_id]->y - ue_data[UE_id]->y;
@@ -1325,13 +1348,10 @@ void update_ocm()
                   eNB_id, enb_data[eNB_id]->x,enb_data[eNB_id]->y,
                   UE_id, ue_data[UE_id]->x,ue_data[UE_id]->y,
                   distance);*/
-		printf("UE[%d] position here x=%.2f  y=%.2f\n", UE_id, ue_data[UE_id]->x, ue_data[UE_id]->y);
-          //pktR - in-situ measurement of pathloss
-          PHY_vars_UE_g[UE_id][CC_id]->PHY_measurements.path_loss = eNB2UE[eNB_id][UE_id][CC_id]->path_loss_dB;
         }
-      
       }
     }
+    //fclose()
   }
 
   else {
@@ -1351,9 +1371,6 @@ void update_ocm()
           LOG_I(OCM,"Path loss from eNB %d to UE %d (CCid %d)=> %f dB (eNB TX %d, SNR %f)\n",eNB_id,UE_id,CC_id,
                 eNB2UE[eNB_id][UE_id][CC_id]->path_loss_dB,
                 PHY_vars_eNB_g[eNB_id][CC_id]->lte_frame_parms.pdsch_config_common.referenceSignalPower,snr_dB);
-
-          PHY_vars_UE_g[UE_id][CC_id]->PHY_measurements.path_loss = eNB2UE[eNB_id][UE_id][CC_id]->path_loss_dB;
-
           //      printf("[SIM] Path loss from UE %d to eNB %d => %f dB\n",UE_id,eNB_id,UE2eNB[UE_id][eNB_id]->path_loss_dB);
         }
       }
