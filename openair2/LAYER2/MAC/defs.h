@@ -169,10 +169,7 @@ typedef struct k_entry{
 k_entry_t k_map[MAX_MOBILES_PER_ENB];
 
 
-#define PKTR 1
 #define UCS 0
-
-#define MAX_UCS_PRIORITY 100
 //Reliability threshold
 #define TARGET_RE 95
 // Initial K value
@@ -1168,6 +1165,5 @@ typedef struct {
 #include "proto.h"
 /*@}*/
 #endif /*__LAYER2_MAC_DEFS_H__ */
-
 
 
