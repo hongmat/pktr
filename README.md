@@ -1,7 +1,7 @@
 ********************
      #README
 ********************  
-Author: msfrigau@iastate.edu  
+Author: msfrigau@iastate.edu  chenye@iastate.edu
 Institute: Iowa State University  
 Lab: Dependable Networking and Computing  
 
@@ -40,6 +40,7 @@ This version of the code has been implemented under OpenAirInterface5G v0.5.2 - 
 *** List of files modified in openair2/LAYER2/MAC:
 - defs.h: structure definitions and constants such as SINR and reliability thresholds
 - pre_processor.c: pktR functions
+- proto.h : functions declared for pre_processor.c
  
 *** List of files modified in openair2/LAYER2/PDPC:
 - pdcp.c: track sequence numbers at PDPC layer to compute link reliability
