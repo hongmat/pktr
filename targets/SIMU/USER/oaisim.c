@@ -441,7 +441,9 @@ l2l1_task_state_t l2l1_state = L2L1_WAITTING;
 void *
 l2l1_task (void *args_p)
 {
-
+  FILE *fp;
+  int ii = 0;
+  int g_uetxp[50] = {0};
   int CC_id;
 
   // Framing variables
@@ -870,9 +872,25 @@ l2l1_task (void *args_p)
                       normal_txrx, no_relay,
                       NULL);
                   }
+                  //pktr
+                  //
+           
+                  /*fp = fopen("/opt/pktr/txpower-tx", "r");
+                  if (fp == NULL) {
+                    perror("Error opening file");
+                    exit(1);
+                  }
+                  while(fscanf(fp, "%d", &g_uetxp[ii]) != EOF) {
+                    ii++;
+                  }
+                  fclose(fp);
+                  // Test
+                  fprintf(stdout, "[TXPOW] UE %d has txpower %d\n", UE_inst, g_uetxp[UE_inst]);*/
 
-                  ue_data[UE_inst]->tx_power_dBm =
-                    PHY_vars_UE_g[UE_inst][0]->tx_power_dBm;
+                  //ue_data[UE_inst]->tx_power_dBm = g_uetxp[UE_inst];
+                  ue_data[UE_inst]->tx_power_dBm = PHY_vars_UE_g[UE_inst][0]->tx_power_dBm;
+
+
                 }
               } else {
                 if (abstraction_flag == 1) {
