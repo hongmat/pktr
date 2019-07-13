@@ -1455,7 +1455,10 @@ void dlsch_scheduler_pre_processor (module_id_t   Mod_id,
                                                   nb_rbs_required,
                                                   nb_rbs_required_remaining,
                                                   rballoc_sub,
-                                                  MIMO_mode_indicator);
+                                                  MIMO_mode_indicator,
+                                                  average_rbs_per_user,
+                                                  available_rbs,
+                                                  total_ue_count);
 
 #ifdef TM5
 
@@ -1739,10 +1742,14 @@ void dlsch_scheduler_pre_processor_allocate (module_id_t   Mod_id,
     uint16_t      nb_rbs_required[MAX_NUM_CCs][NUMBER_OF_UE_MAX],
     uint16_t      nb_rbs_required_remaining[MAX_NUM_CCs][NUMBER_OF_UE_MAX],
     unsigned char rballoc_sub[MAX_NUM_CCs][N_RBG_MAX],
-    unsigned char MIMO_mode_indicator[MAX_NUM_CCs][N_RBG_MAX])
+    unsigned char MIMO_mode_indicator[MAX_NUM_CCs][N_RBG_MAX],
+    uint16_t      average_rbs_per_user[MAX_NUM_CCs],
+    uint16_t      available_rbs[MAX_NUM_CCs],
+    unsigned char total_ue_count)
 {
 
   int i;
+  uint8_t n, ii;
   UE_list_t *UE_list=&eNB_mac_inst[Mod_id].UE_list;
   UE_sched_ctrl *ue_sched_ctl = &UE_list->UE_sched_ctrl[UE_id];
 
@@ -2248,4 +2255,3 @@ void sort_ue_ul (module_id_t module_idP,int frameP, sub_frame_t subframeP)
     }
   }
 }
-
