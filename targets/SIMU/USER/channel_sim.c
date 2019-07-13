@@ -504,7 +504,7 @@ void do_UL_sig(double **r_re0,double **r_im0,double **r_re,double **r_im,double 
                                   PHY_vars_UE_g[UE_id][CC_id]->tx_total_RE);  // This make the previous argument the total power
           //ue_data[UE_id]->tx_power_dBm);
           //#ifdef DEBUG_SIM
-          fprintf(stdout,"[SIM][UL] UE %d tx_pwr %f dBm (target %d dBm, num_RE %d) for slot %d (subframe %d, slot_offset %d, slot_offset_meas %d)\n",
+          LOG_D(OCM,"[SIM][UL] UE %d tx_pwr %f dBm (target %d dBm, num_RE %d) for slot %d (subframe %d, slot_offset %d, slot_offset_meas %d)\n",
                 UE_id,
                 10*log10(tx_pwr),
                 PHY_vars_UE_g[UE_id][CC_id]->tx_power_dBm,
