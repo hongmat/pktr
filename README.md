@@ -1,7 +1,8 @@
 ********************
      #README
 ********************  
-Author: msfrigau@iastate.edu  chenye@iastate.edu
+Authors: msfrigau@iastate.edu  
+chenye@iastate.edu  
 Institute: Iowa State University  
 Lab: Dependable Networking and Computing  
 
