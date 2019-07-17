@@ -1,7 +1,7 @@
 ********************
      #README
 ********************  
-Authors: 
+Authors:   
 msfrigau@iastate.edu  
 chenye@iastate.edu  
 Institute: Iowa State University  
