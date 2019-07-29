@@ -1150,6 +1150,8 @@ typedef struct {
   time_stats_t ue_scheduler; // total
   /// UE ULSCH tx  processing time inlcuding RLC interface (rlc_data_req) and mac header generation 
   time_stats_t tx_ulsch_sdu;  
+  //tx ind
+  uint8_t ue_tx_ind;
   /// UE DLSCH rx  processing time inlcuding RLC interface (mac_rrc_data_ind or mac_rlc_status_ind+mac_rlc_data_ind) and mac header parser
   time_stats_t rx_dlsch_sdu ; 
   /// UE query for MCH subframe processing time 

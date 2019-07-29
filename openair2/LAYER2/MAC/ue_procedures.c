@@ -407,6 +407,10 @@ ue_send_sdu(module_id_t module_idP,
             eNB_index,
             rx_lengths[i]);
 
+
+//@TODO
+  
+
 #if defined(ENABLE_MAC_PAYLOAD_DEBUG)
       int j;
 
@@ -470,6 +474,8 @@ ue_send_sdu(module_id_t module_idP,
   
   VCD_SIGNAL_DUMPER_DUMP_FUNCTION_BY_NAME(VCD_SIGNAL_DUMPER_FUNCTIONS_UE_SEND_SDU, VCD_FUNCTION_OUT);
   stop_meas(&UE_mac_inst[module_idP].rx_dlsch_sdu);
+
+  UE_mac_inst[module_idP].ue_tx_ind = 0;
 }
 
 void ue_decode_si(module_id_t module_idP,int CC_id,frame_t frameP, uint8_t eNB_index, void *pdu,uint16_t len)
@@ -939,6 +945,8 @@ unsigned char generate_ulsch_header(uint8_t *mac_header,
   SCH_SUBHEADER_FIXED *mac_header_ptr = (SCH_SUBHEADER_FIXED *)mac_header;
   unsigned char first_element=0,last_size=0,i;
   unsigned char mac_header_control_elements[16],*ce_ptr;
+
+
 
   LOG_D(MAC,"[UE] Generate ULSCH : num_sdus %d\n",num_sdus);
 #ifdef DEBUG_HEADER_PARSING
@@ -1466,6 +1474,9 @@ void ue_get_sdu(module_id_t module_idP,int CC_id,frame_t frameP,sub_frame_t subf
 
   // Generate header
   // if (num_sdus>0) {
+  
+  //pktR
+  UE_mac_inst[module_idP].ue_tx_ind = 1;
 
   payload_offset = generate_ulsch_header(ulsch_buffer,  // mac header
                                          num_sdus,      // num sdus

@@ -499,7 +499,7 @@ void insert_k_entry(int UE_id, int K, module_id_t Mod_id)
   //map_entry_t *r;
   UE_list_t *UE_list = &eNB_mac_inst[Mod_id].UE_list;
   
-  fp = fopen("/opt/pktr/context-cell", "w");
+  fp = fopen("/opt/pktr/context-cell-k", "w");
   if( fp == NULL ) {
     perror("Error while opening file");
     exit(1);
@@ -678,7 +678,7 @@ void * get_value_K_pktR(void *params)
 
   //Initialization
   ind_g = 0;
-  
+
   //char Sinr = UE_mac_inst[Mod_idP].Def_meas[0].Wideband_sinr;
   /*f = fopen("/opt/pktr/meas-rx", "r");
   if( f == NULL ) {
@@ -1286,7 +1286,6 @@ void dlsch_scheduler_pre_processor (module_id_t   Mod_id,
 
   // Get the conflict relationship
   conflict_UEs(Mod_id, conflict);
-
   // Store the DLSCH buffer for each logical channel
   store_dlsch_buffer (Mod_id,frameP,subframeP);
 
@@ -1312,10 +1311,14 @@ void dlsch_scheduler_pre_processor (module_id_t   Mod_id,
   /////////////////////////////////
 
   total_ue_count =0;
+  int conc_tx=0;
 
   // loop over all active UEs
   for (i=UE_list->head; i>=0; i=UE_list->next[i]) {
     rnti = UE_RNTI(Mod_id,i);
+
+     if (UE_mac_inst[i].ue_tx_ind == 1)
+       conc_tx++;   
 
     if(rnti == NOT_A_RNTI)
       continue;
@@ -1368,6 +1371,9 @@ void dlsch_scheduler_pre_processor (module_id_t   Mod_id,
       }
     }
   }
+
+  fprintf(stdout, "[CONCTX] Nb of concurrent UEs = %d\n", conc_tx);
+
 
   // note: nb_rbs_required is assigned according to total_buffer_dl
   // extend nb_rbs_required to capture per LCID RB required
