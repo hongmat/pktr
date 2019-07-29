@@ -707,11 +707,14 @@ void * get_value_K_pktR(void *params)
   //fprintf(stdout, "[COMPUTE_K] delta_NI = %d\n", delta);
   // Sum of C
   //for (C=UE_list->head; C>=0; C=UE_list->next[C]){
-  
+  int conctx_total = 0;
+
   fprintf(stdout, "GTMP = %d\n", g_tmp);
   for (C=0; C < g_tmp; C++) {
     if (ER[C] == 1 && C != args->UE_id){
         sum++;
+   // if (UE_mac_inst[C].ue_tx_ind == 1 && ER[C] == 0)
+     //     conctx_total++;
     }
     //rssi[C].power = UE_list->eNB_UE_stats[args->CC_id][C].normalized_rx_power;
     rssi[C].power = PHY_vars_UE_g[C][args->CC_id]->PHY_measurements.rx_power_avg_dB[0];
@@ -720,7 +723,7 @@ void * get_value_K_pktR(void *params)
     rssi_dec[C].power = PHY_vars_UE_g[C][args->CC_id]->PHY_measurements.rx_power_avg_dB[0];
     rssi_dec[C].index = C;
   }
-
+  //fprintf(stdout, "TOTAL NUMBER OF CONCURRENT TX = %d\n", conctx_total);
   fprintf(stdout, "SUM = %f\n", sum);
 
   // Sort RSSI in increasing order
@@ -1317,8 +1320,8 @@ void dlsch_scheduler_pre_processor (module_id_t   Mod_id,
   for (i=UE_list->head; i>=0; i=UE_list->next[i]) {
     rnti = UE_RNTI(Mod_id,i);
 
-     if (UE_mac_inst[i].ue_tx_ind == 1)
-       conc_tx++;   
+    if (UE_mac_inst[i].ue_tx_ind == 1 && ER[i] == 0)
+      conc_tx++;
 
     if(rnti == NOT_A_RNTI)
       continue;
