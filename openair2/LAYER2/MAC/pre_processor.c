@@ -605,13 +605,13 @@ uint16_t reliability(module_id_t Mod_idP, int UE_id)
   rnti_t rnti_ue;
 
   rnti_ue = UE_RNTI(Mod_idP, UE_id);
-  fprintf(stdout, "[reliability] UE_RNTI = %x, UE_id = %d\n", rnti_ue, UE_id);
+  //fprintf(stdout, "[reliability] UE_RNTI = %x, UE_id = %d\n", rnti_ue, UE_id);
 
   // To estimate PDR: retrieve seq_num stored in PDCP hdr	
 	
   for (i=0; i<UE_list->numactiveCCs[UE_id]; i++) { 
     CC_id=UE_list->ordered_CCids[i][UE_id];
-    for(ii=0; ii < 1000; ii++) {
+    for(ii=0; ii < 100; ii++) {
       if(ii != 0 && mac->eNB_stats[CC_id].seqnum_long[ii][rnti_ue] != 0)
         count_sn++;
       if(ii!=0 && mac->eNB_stats[CC_id].seqnum_long[ii][rnti_ue] == 0 && mac->eNB_stats[CC_id].seqnum_long[ii-1][rnti_ue] != 0) {
@@ -628,8 +628,8 @@ uint16_t reliability(module_id_t Mod_idP, int UE_id)
   
   //pdr = (uint16_t)floor(((last_rx_sn + 1)*100)/count_sn);
   //pdr = (uint16_t)floor( (100 * (last_rx_sn+1)) / count_sn );
-  fprintf(stdout, "Link reliability (PDR) of [UE %d] == %d\n", UE_id, pdr);
-  fprintf(stdout, "[reliability] count_sn = %d, last_rx_sn = %d\n", count_sn, last_rx_sn);
+  //fprintf(stdout, "Link reliability (PDR) of [UE %d] == %d\n", UE_id, pdr);
+  //fprintf(stdout, "[reliability] count_sn = %d, last_rx_sn = %d\n", count_sn, last_rx_sn);
   /*fp = fopen("/opt/pktr/reliability.dat","a+");
   if(fp == NULL){
     perror("Error opening file");   
@@ -657,9 +657,10 @@ int ind_g = 0;
  * Calls: reliability() that computes the PDR of a link based on traffic from previous n slots
  **********************************************************************************************/
 
-void * get_value_K_pktR(void *params)
+//void * get_value_K_pktR(void *params)
+void get_value_K_pktR(int UE_id, module_id_t Mod_id, uint8_t CC_id)
 {
-  struct arg_struct_getk *args = (struct arg_struct_getk *)params;
+  //struct arg_struct_getk *args = (struct arg_struct_getk *)params;
   FILE *f;
   int i, j, C, neighb, min_rssi_id, tmp_ind;
   int32_t tmp, sinr_ue;
@@ -667,7 +668,7 @@ void * get_value_K_pktR(void *params)
   double G_SR = 0, K_SR = 1, G_CR = 0;
   double c = (15/16);
   double a_result, param_erf, value_K_now, sum = 0;
-  UE_list_t *UE_list = &eNB_mac_inst[args->Mod_id].UE_list;
+  UE_list_t *UE_list = &eNB_mac_inst[Mod_id].UE_list;
   typedef struct rssi_sort {
     int32_t power;
     int index;
@@ -690,7 +691,7 @@ void * get_value_K_pktR(void *params)
   fclose(f);*/
 
 
-  int sinr_g = PHY_vars_UE_g[args->UE_id][args->CC_id]->PHY_measurements.wideband_cqi_avg[args->UE_id];
+  int sinr_g = PHY_vars_UE_g[UE_id][CC_id]->PHY_measurements.wideband_cqi_avg[UE_id];
   //int sinr_t = PHY_vars_eNB_g[args->UE_id][args->CC_id]->PHY_measurements_eNB->wideband_cqi_dB[args->UE_id][0];
 
   //fprintf(stdout, "[COMPUTE K] sinr_g = %d, sinr_t = %d\n", sinr_g, sinr_t);
@@ -711,16 +712,16 @@ void * get_value_K_pktR(void *params)
 
   fprintf(stdout, "GTMP = %d\n", g_tmp);
   for (C=0; C < g_tmp; C++) {
-    if (ER[C] == 1 && C != args->UE_id){
+    if (ER[C] == 1 && C != UE_id){
         sum++;
    // if (UE_mac_inst[C].ue_tx_ind == 1 && ER[C] == 0)
      //     conctx_total++;
     }
     //rssi[C].power = UE_list->eNB_UE_stats[args->CC_id][C].normalized_rx_power;
-    rssi[C].power = PHY_vars_UE_g[C][args->CC_id]->PHY_measurements.rx_power_avg_dB[0];
+    rssi[C].power = PHY_vars_UE_g[C][CC_id]->PHY_measurements.rx_power_avg_dB[0];
     rssi[C].index = C;
     //rssi_dec[C].power = UE_list->eNB_UE_stats[args->CC_id][C].normalized_rx_power;
-    rssi_dec[C].power = PHY_vars_UE_g[C][args->CC_id]->PHY_measurements.rx_power_avg_dB[0];
+    rssi_dec[C].power = PHY_vars_UE_g[C][CC_id]->PHY_measurements.rx_power_avg_dB[0];
     rssi_dec[C].index = C;
   }
   //fprintf(stdout, "TOTAL NUMBER OF CONCURRENT TX = %d\n", conctx_total);
@@ -762,7 +763,7 @@ void * get_value_K_pktR(void *params)
   //fprintf(stdout, "[COMPUTE K] NI_0 == %f\n", NI_0);
 
   if(fabs(E_NI) == ceil(NI_0)) {
-    converge[args->UE_id] = 1;
+    converge[UE_id] = 1;
   }
   
   if (fabs(E_NI) != ceil(NI_0)) {
@@ -770,11 +771,11 @@ void * get_value_K_pktR(void *params)
      // Compute NI_0
      NI_0 = (double)(mean_rx - (standardDeviation * sqr_target) - TARGET_SINR);
      // Compute a(t)
-     a_result = (double)((TARGET_RE - reliability(args->Mod_id, args->UE_id)) / (f1 - sinr_g));
+     a_result = (double)((TARGET_RE - reliability(Mod_id, UE_id)) / (f1 - sinr_g));
      //fprintf(stdout, "[COMPUTE K] a(t) == %f\n", a_result);
      //fprintf(stdout, "[COMPUTE_K] f1 = %f\n", f1);
      // Compute Delta(I_R)
-     I_R = ((((1+c) * reliability(args->Mod_id, args->UE_id)) - (c * reliability(args->Mod_id, args->UE_id)) - TARGET_RE) / (1 - c) * a_result);
+     I_R = ((((1+c) * reliability(Mod_id, UE_id)) - (c * reliability(Mod_id, UE_id)) - TARGET_RE) / (1 - c) * a_result);
      //fprintf(stdout, "[COMPUTE K] I_R == %f\n", I_R);     
 
      if( delta < 0){
@@ -783,7 +784,7 @@ void * get_value_K_pktR(void *params)
        fprintf(stdout, "[COMPUTE K] Expand exclusion region\n");
        fprintf(stdout, "[COMPUTE K] E[NI] = %f\n", fabs(E_NI));
        fprintf(stdout, "[COMPUTE K] delta = %d\n", delta);
-       fprintf(stdout, "[COMPUTE K] converged = %d\n", converge[args->UE_id]);
+       fprintf(stdout, "[COMPUTE K] converged = %d\n", converge[UE_id]);
        fprintf(stdout, "[COMPUTE K] NI_0 = %f and ceil(fabs(I_R)) = %f\n", NI_0, ceil(fabs(I_R)));
        // Expand exclusion region by increasing K 
        // Add a new node to exclusion region in non-increasing order of P(C_i, R)
@@ -798,7 +799,7 @@ void * get_value_K_pktR(void *params)
       } else {
         ind_g = 2;
         fprintf(stdout, "[COMPUTE K] Shrink exclusion region\n");
-	fprintf(stdout, "[COMPUTE K] converge = %d\n", converge[args->UE_id]);
+	fprintf(stdout, "[COMPUTE K] converge = %d\n", converge[UE_id]);
 	fprintf(stdout, "[COMPUTE K] delta = %d\n", delta);
 	fprintf(stdout, "[COMPUTE K] E[NI] = %f\n", fabs(E_NI));
 	fprintf(stdout, "[COMPUTE K] I_R = %f\n", I_R);
@@ -819,21 +820,21 @@ void * get_value_K_pktR(void *params)
       // @TODO To refactor with a switch/case
 
       if(g_call_nb_getK == 0) {
-        value_K[args->UE_id] = 10;
+        value_K[UE_id] = 10;
       } else {
         switch (ind_g)
         {
           case 1: //Expand
-            value_K_now = ceil( PHY_vars_UE_g[args->UE_id][args->CC_id]->PHY_measurements.path_loss / PHY_vars_UE_g[rssi[i].index][args->CC_id]->PHY_measurements.path_loss );
+            value_K_now = ceil( PHY_vars_UE_g[UE_id][CC_id]->PHY_measurements.path_loss / PHY_vars_UE_g[rssi[i].index][CC_id]->PHY_measurements.path_loss );
             //if (value_K_now < value_K[args->UE_id]) {
-              value_K[args->UE_id] = value_K_now;
+              value_K[UE_id] = value_K_now;
             //}
             break;
 
           case 2: //Shrink
-            value_K_now = ceil( PHY_vars_UE_g[args->UE_id][args->CC_id]->PHY_measurements.path_loss / PHY_vars_UE_g[rssi_dec[i].index][args->CC_id]->PHY_measurements.path_loss );
+            value_K_now = ceil( PHY_vars_UE_g[UE_id][CC_id]->PHY_measurements.path_loss / PHY_vars_UE_g[rssi_dec[i].index][CC_id]->PHY_measurements.path_loss );
             //if (value_K_now < value_K[args->UE_id]) {
-              value_K[args->UE_id] = value_K_now;
+              value_K[UE_id] = value_K_now;
             //}
             break;
 
@@ -865,26 +866,26 @@ void * get_value_K_pktR(void *params)
         }
       }*/
       
-      fprintf(stdout, "[COMPUTE_K] value_K[%d] = %f\n", args->UE_id, value_K[args->UE_id]);
+      fprintf(stdout, "[COMPUTE_K] value_K[%d] = %f\n", UE_id, value_K[UE_id]);
       
   } else {
     //fprintf(stdout, "IT JUST CONVERGED !!!!!\n");
-    converge[args->UE_id] = 1;
+    converge[UE_id] = 1;
   }
 
   /************************
    *  Interference model
    ************************/
 
-  fprintf(stdout, "[GRK] PATHLOSS eNB to UE %d = %f\n", args->UE_id, PHY_vars_UE_g[args->UE_id][args->CC_id]->PHY_measurements.path_loss);
+  fprintf(stdout, "[GRK] PATHLOSS eNB to UE %d = %f\n", UE_id, PHY_vars_UE_g[UE_id][CC_id]->PHY_measurements.path_loss);
 
-  G_SR = PHY_vars_UE_g[args->UE_id][args->CC_id]->PHY_measurements.path_loss;
+  G_SR = PHY_vars_UE_g[UE_id][CC_id]->PHY_measurements.path_loss;
   fprintf(stdout, "GSR == %f\n", G_SR);
-  K_SR = value_K[args->UE_id];
+  K_SR = value_K[UE_id];
   fprintf(stdout, "KSR = %f\n", K_SR);
   for (C=UE_list->head; C>=0; C=UE_list->next[C]){
-    if (C != args->UE_id) {
-      G_CR = PHY_vars_UE_g[C][args->CC_id]->PHY_measurements.path_loss;
+    if (C != UE_id) {
+      G_CR = PHY_vars_UE_g[C][CC_id]->PHY_measurements.path_loss;
       fprintf(stdout, "[interference] G_CR = %f, GSR/KSR = %f\n", G_CR, (G_SR/K_SR));
       if (G_CR >= (G_SR/K_SR)) {
         ER[C] = 1;
@@ -902,8 +903,8 @@ void * get_value_K_pktR(void *params)
    *******************/
   // X2: create k_entry_t
   for (C=UE_list->head; C>=0; C=UE_list->next[C]) {
-    if (ER[C] == 1 && C != args->UE_id) {
-      insert_k_entry(C, value_K[C], args->Mod_id);
+    if (ER[C] == 1 && C != UE_id) {
+      //insert_k_entry(C, value_K[C], args->Mod_id);
     }
   }
 
@@ -1045,6 +1046,13 @@ void *get_meas_pktR (void *params)
   // Assumptiom: NI = RSSI
   //@TODO current_NI = MeasureNIRxSide();
 
+
+  if(PHY_vars_eNB_g[args->Mod_id][0]->sub_rx_ind == 1)
+    fprintf(stdout, "[RXSUBFRAME] START RX SUBFRAME\n");
+  else
+    fprintf(stdout, "[RXSUBFRAME] NO SUBFRAME BEING RX\n");
+
+
   // First round to get samples
   if (count_calls == 1) {
     ////current_NI_0 = UE_list->eNB_UE_stats[args->CC_id][args->UE_id].normalized_rx_power;
@@ -1063,6 +1071,14 @@ void *get_meas_pktR (void *params)
     fprintf(stdout, "[pktR] RSSI_1 = %d\n", current_NI_1);
     fprintf(stdout, "[pktR] RSSI_0 = %d\n", current_NI_0);
 
+    //decoding
+    //if(phy_vars_eNB_g->sub_rx_decoded_ind == 1)
+      //fprintf(stdout, "[DECODE] RX SUBFRAME DECODED\n");
+   /* if(PHY_vars_eNB_g[args->Mod_id][0]->sub_rx_ind == 1)
+      fprintf(stdout, "[RXSUBFRAME] START RX SUBFRAME\n");
+    else
+      fprintf(stdout, "[RXSUBFRAME] NO SUBFRAME BEING RX\n");
+*/
     // Mean rx power
     mean_rx = ((current_NI_0 + current_NI_1)/2);
 
@@ -1170,11 +1186,11 @@ void sched_controller_pktR(int UE_id, module_id_t Mod_id, uint8_t CC_id, frame_t
   l_args->frameP = frameP;
   l_args->subframeP = subframeP;
   
-  struct arg_struct_getk *l_args_k = malloc(sizeof(struct arg_struct_getk));
+  //struct arg_struct_getk *l_args_k = malloc(sizeof(struct arg_struct_getk));
   //Fill in arg struct
-  l_args_k->UE_id = UE_id;
-  l_args_k->Mod_id = Mod_id;
-  l_args_k->CC_id = CC_id;
+  //l_args_k->UE_id = UE_id;
+  //l_args_k->Mod_id = Mod_id;
+  //l_args_k->CC_id = CC_id;
 
   struct arg_struct_tpc *l_args_t = malloc(sizeof(struct arg_struct_tpc));
   //Fill in arg struct
@@ -1182,29 +1198,28 @@ void sched_controller_pktR(int UE_id, module_id_t Mod_id, uint8_t CC_id, frame_t
   l_args->CC_id = CC_id;
   l_args_t->Mod_id = Mod_id;
 
-  //fprintf(stdout, "Creating thread for get_meas_pktr()\n");
   if(pthread_create(&thread_meas, NULL, get_meas_pktR, (void *)l_args) != 0) {
     perror("Error creating pthread");
     exit(1);
   }
 
-  //fprintf(stdout, "Creating thread for get_min_txp()\n");
   if(pthread_create(&thread_tpc, NULL, process_tpc_pktR, (void *)l_args_t) != 0) {
     perror("Error creating pthread");
     exit(1);
   }
 
-  if(pthread_create(&thread_getk, NULL, get_value_K_pktR, (void *)l_args_k) != 0) {
-    perror("Error creating pthread");
-    exit(1);
-  }
+  get_value_K_pktR(UE_id, Mod_id, CC_id);
+  //if(pthread_create(&thread_getk, NULL, get_value_K_pktR, (void *)l_args_k) != 0) {
+    //perror("Error creating pthread");
+    //exit(1);
+  //}
 
   pthread_join(thread_meas, NULL);
   pthread_join(thread_tpc, NULL);
-  pthread_join(thread_getk, NULL);
+  //pthread_join(thread_getk, NULL);
   free(l_args);
-  free(l_args_k);
   free(l_args_t);
+  //free(l_args_k);
 
   g_call_sched_ctrl++;
 
