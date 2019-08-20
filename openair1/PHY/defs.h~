@@ -235,6 +235,10 @@ typedef struct PHY_VARS_eNB_s {
   LTE_eNB_UE_stats     eNB_UE_stats[NUMBER_OF_UE_MAX];
   LTE_eNB_UE_stats    *eNB_UE_stats_ptr[NUMBER_OF_UE_MAX];
 
+  ///indicator for rx subframe
+  uint8_t          sub_rx_ind;
+  uint8_t          sub_rx_decoded_ind;
+
   /// cell-specific reference symbols
   uint32_t         lte_gold_table[20][2][14];
 
@@ -404,9 +408,6 @@ typedef struct PHY_VARS_eNB_s {
   SLIST_HEAD(ral_thresholds_gen_poll_enb_s, ral_threshold_phy_t) ral_thresholds_gen_polled[RAL_LINK_PARAM_GEN_MAX];
   SLIST_HEAD(ral_thresholds_lte_poll_enb_s, ral_threshold_phy_t) ral_thresholds_lte_polled[RAL_LINK_PARAM_LTE_MAX];
 #endif
-
-  ///// GRK SignalMap: Indicator to inform which eNB_index the local eNB should share its local signal map to
-  uint8_t signalmap_candidate[NUMBER_OF_eNB_MAX];
 
 } PHY_VARS_eNB;
 
@@ -686,7 +687,6 @@ typedef struct {
   SLIST_HEAD(ral_thresholds_gen_poll_s, ral_threshold_phy_t) ral_thresholds_gen_polled[RAL_LINK_PARAM_GEN_MAX];
   SLIST_HEAD(ral_thresholds_lte_poll_s, ral_threshold_phy_t) ral_thresholds_lte_polled[RAL_LINK_PARAM_LTE_MAX];
 #endif
-
 } PHY_VARS_UE;
 
 /// Top-level PHY Data Structure for RN
@@ -714,4 +714,9 @@ typedef struct {
 
 
 #endif //  __PHY_DEFS__H__
+
+
+
+
+
 

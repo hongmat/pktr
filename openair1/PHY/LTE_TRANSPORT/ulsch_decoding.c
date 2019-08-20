@@ -1126,6 +1126,10 @@ unsigned int  ulsch_decoding(PHY_VARS_eNB *phy_vars_eNB,
 
   }
 
+  
+  // message has been decoded: do something
+  //phy_vars_eNB->sub_rx_decoded_ind = 1;
+  
   VCD_SIGNAL_DUMPER_DUMP_FUNCTION_BY_NAME(VCD_SIGNAL_DUMPER_FUNCTIONS_PHY_ENB_ULSCH_DECODING0+harq_pid,0);
 
   return(ret);

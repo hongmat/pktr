@@ -292,7 +292,7 @@ typedef enum {
 
 #define MAX_FRAME_NUMBER 0x400
 #if defined(CBMIMO1) || defined(EXMIMO) || defined(OAI_USRP)
-#define NUMBER_OF_eNB_MAX 1
+#define NUMBER_OF_eNB_MAX 10
 #define NUMBER_OF_UE_MAX 16
 #define NUMBER_OF_CONNECTED_eNB_MAX 3
 #else
@@ -302,13 +302,29 @@ typedef enum {
 #define NUMBER_OF_CONNECTED_eNB_MAX 1 // to save some memory
 #else
 #define NUMBER_OF_eNB_MAX 9
-#define NUMBER_OF_UE_MAX 90
-#define NUMBER_OF_CONNECTED_eNB_MAX 3
+#define NUMBER_OF_UE_MAX 30
+#define NUMBER_OF_CONNECTED_eNB_MAX 1 
 #endif
 #endif
 
 #define NUMBER_OF_RN_MAX 3
 typedef enum {no_relay=1,unicast_relay_type1,unicast_relay_type2, multicast_relay} relaying_type_t;
+
+
+////GRK Signal Map
+typedef struct {
+  /// Node index
+  uint8_t C_id;
+  /// GRK Gain
+  double G_CR[NUMBER_OF_UE_MAX];
+} Gain_map;
+
+typedef struct{
+  /// Node index
+  uint8_t C_id;
+  /// GRK K value
+  double value_K[NUMBER_OF_UE_MAX];
+} K_map;
 
 typedef struct {
   //unsigned int   rx_power[NUMBER_OF_CONNECTED_eNB_MAX][NB_ANTENNAS_RX];     //! estimated received signal power (linear)
@@ -400,7 +416,8 @@ typedef struct {
   unsigned char  nb_antennas_rx;
 
   //pktR - GRK model
-  double path_loss; 
+  double path_loss[NUMBER_OF_eNB_MAX]; 
+  uint8_t associated_eNB_index; //to recognize local eNB
 
   /// DLSCH error counter
   // short          dlsch_errors;
@@ -458,6 +475,7 @@ typedef struct {
   /// Total Subband CQI and RB
   int            subband_cqi_tot_dB[NUMBER_OF_UE_MAX][100];
 
+  
 } PHY_MEASUREMENTS_eNB;
 
 #define MCS_COUNT 28

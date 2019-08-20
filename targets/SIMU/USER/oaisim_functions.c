@@ -1338,7 +1338,7 @@ void update_ocm()
                 eNB2UE[eNB_id][UE_id][CC_id]->path_loss_dB, eNB2UE[eNB_id][UE_id][CC_id]->aoa);
 
           //pktR - in-situ measurement of pathloss
-          PHY_vars_UE_g[UE_id][CC_id]->PHY_measurements.path_loss = eNB2UE[eNB_id][UE_id][CC_id]->path_loss_dB;
+          PHY_vars_UE_g[UE_id][CC_id]->PHY_measurements.path_loss[eNB_id] = eNB2UE[eNB_id][UE_id][CC_id]->path_loss_dB;
 
           //double dx, dy, distance;
           //dx = enb_data[eNB_id]->x - ue_data[UE_id]->x;

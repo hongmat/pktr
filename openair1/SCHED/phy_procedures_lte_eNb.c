@@ -3334,8 +3334,12 @@ void phy_procedures_eNB_lte(unsigned char subframe,PHY_VARS_eNB **phy_vars_eNB,u
   int           result;
 #endif
 
-
   int CC_id=0;
+
+
+  //pktr
+  //PHY_vars_eNB_g[Mod_id][CC_id]->sub_rx_ind = 0;
+
 
   /*
     if (phy_vars_eNB->proc[sched_subframe].frame_tx >= 1000)
@@ -3516,6 +3520,7 @@ void phy_procedures_eNB_lte(unsigned char subframe,PHY_VARS_eNB **phy_vars_eNB,u
 
     if ((subframe_select(&phy_vars_eNB[CC_id]->lte_frame_parms,phy_vars_eNB[CC_id]->proc[subframe].subframe_rx)==SF_S)) {
       phy_procedures_eNB_S_RX(subframe,phy_vars_eNB[CC_id],abstraction_flag,r_type);
+      //PHY_vars_eNB_g[Mod_id][CC_id]->sub_rx_ind = 1;
     }
 
     phy_vars_eNB[CC_id]->proc[subframe].frame_tx++;

@@ -497,9 +497,6 @@ void conflict_UEs(module_id_t  Mod_idP,
  * - refer to vars.h for structures and global variables
  ******************************************************************/
 
-
-
-/********************** X2 CLIENT ********************/
 void * clientThread(void *arg)
 {
   int clientSocket;
@@ -538,10 +535,8 @@ void * clientThread(void *arg)
   //Print the received message
   printf("Data received: %s\n",buffer);
 
-  close(clientSocket);
-  //pthread_exit(NULL);
-
 }
+
 
 
 void X2_TCP_client_eNB(module_id_t eNB_id)
@@ -551,41 +546,39 @@ void X2_TCP_client_eNB(module_id_t eNB_id)
 
   if( pthread_create(&tid[i], NULL, clientThread, NULL) != 0 )
     printf("Failed to create thread\n");
-  
-  pthread_join(tid[i++],NULL);
+
+  i++;
 
 }
-/********************* X2 SERVER **************************/
+
 char x2_message[2000];
 char buffer[1024];
 pthread_mutex_t lock_cli = PTHREAD_MUTEX_INITIALIZER;
 
 void * socketThread(void *arg)
 {
-  struct arg_struct_g *args = (struct arg_struct_g *)arg;
-  //int newfd = *((int *)arg);
-  fcntl(args->connfd, F_SETFL, O_NONBLOCK);
-  recv(args->connfd, x2_message, 2000, 0);
+
+  int newfd = *((int *)arg);
+  fcntl(newfd, F_SETFL, O_NONBLOCK);
+  recv(newfd, x2_message, 2000, 0);
 
   // Send message to the client socket 
   pthread_mutex_lock(&lock_cli);
   char *message = malloc(sizeof(x2_message)+20);
-  strcpy(message,"X2 payload");
+  strcpy(message,"Hello Client : ");
   strcat(message, x2_message);
   //strcat(message,"\n");
   strcpy(buffer, message);
   free(message);
   pthread_mutex_unlock(&lock_cli);
   //sleep(1);
-  //
-  // Convert double into string with sscanf
-  send(args->connfd, buffer, 2, 0);
+  send(newfd, buffer, 13, 0);
   printf("Exit socketThread \n");
-  close(args->connfd);
-  pthread_exit(NULL);
+  //close(newfd);
+  //pthread_exit(NULL);
 }
 
-void X2_TCP_server_eNB(module_id_t eNB_id, double gain)
+void X2_TCP_server_eNB(module_id_t eNB_id)
 {
   int sockfd, last_fd, len;
   socklen_t addr_size;
@@ -594,8 +587,6 @@ void X2_TCP_server_eNB(module_id_t eNB_id, double gain)
   char buffer[1024];
   char message[1000];
   pthread_t tid[MAX_NUMBER_eNB];
-
-  g_args_t->gain = gain;
 
   fcntl(sockfd, F_SETFL, O_NONBLOCK);
 
@@ -638,8 +629,6 @@ void X2_TCP_server_eNB(module_id_t eNB_id, double gain)
     len = sizeof(cli);
     // new fd for each incoming connection
     int connfd = accept(sockfd, (SA*)&cli, &len);
-    g_args_t->connfd = connfd;
-
     if (connfd == -1) {
       //perror("server acccept failed...\n");
         if (errno == EWOULDBLOCK) {
@@ -651,7 +640,7 @@ void X2_TCP_server_eNB(module_id_t eNB_id, double gain)
         }
     }
     else {
-      if( pthread_create(&tid[i], NULL, socketThread, (void *)g_args_t) != 0 )
+      if( pthread_create(&tid[i], NULL, socketThread, &connfd) != 0 )
         perror("Failed to create pthread...");
       
       while (i < MAX_NUMBER_eNB) {
@@ -669,7 +658,7 @@ void X2_TCP_server_eNB(module_id_t eNB_id, double gain)
       //close(connfd);
     }
   //}
-  return EXIT_SUCCESS;
+  //return EXIT_SUCCESS;
 }
 
 
@@ -1102,10 +1091,8 @@ void get_value_K_pktR(int UE_id, module_id_t Mod_id, uint8_t CC_id)
       //insert_k_entry(C, value_K[C], args->Mod_id);
     }
 	}
-  if (gain_map_eNB[UE_id].C_id != 0) {
-    X2_TCP_server_eNB(Mod_id, gain_map_eNB[UE_id].G_CR[sm_index]);
-    X2_TCP_client_eNB(Mod_id);
-  }
+  if (gain_map_eNB[UE_id].C_id != 0)
+    X2_TCP_server_eNB(Mod_id);
 
 	fprintf(stdout, "Target Receipient: ");
 	for (i=0; i<NB_eNB_INST; i++) {
@@ -1396,6 +1383,7 @@ void sched_controller_pktR(int UE_id, module_id_t Mod_id, uint8_t CC_id, frame_t
   //int i=0;
 
   struct arg_struct_meas *l_args = malloc(sizeof(struct arg_struct_meas));
+  //Fill in arg struct
   l_args->UE_id = UE_id;
   l_args->Mod_id = Mod_id;
   l_args->CC_id = CC_id;
@@ -1409,9 +1397,15 @@ void sched_controller_pktR(int UE_id, module_id_t Mod_id, uint8_t CC_id, frame_t
   //l_args_k->CC_id = CC_id;
 
   struct arg_struct_tpc *l_args_t = malloc(sizeof(struct arg_struct_tpc));
+  //Fill in arg struct
   l_args_t->UE_id = UE_id;
   l_args->CC_id = CC_id;
   l_args_t->Mod_id = Mod_id;
+
+
+  /**** Start server ****/
+  
+  //X2_TCP_server(Mod_id);
 
 
   if(pthread_create(&thread_meas, NULL, get_meas_pktR, (void *)l_args) != 0) {
@@ -1489,6 +1483,13 @@ void dlsch_scheduler_pre_processor (module_id_t   Mod_id,
   LTE_eNB_UE_stats  *eNB_UE_stats2 = NULL;
   UE_sched_ctrl *ue_sched_ctl1,*ue_sched_ctl2;
 #endif
+
+
+  // Start server here
+  //if (Mod_id == 0)
+    //X2_TCP_server_eNB(Mod_id);
+  //else
+    //X2_TCP_client_eNB(Mod_id);
 
 
   for (CC_id=0; CC_id<MAX_NUM_CCs; CC_id++) {

@@ -66,9 +66,11 @@
 #endif
 
 #include "oaisim.h"
+//#include "oaisim_config.h"
 
 #define RF
-#define DEBUG_SIM
+#define DEBUG_SIM 1
+//#define PHY_ABSTRACTION_UL 1
 
 int number_rb_ul;
 int first_rbUL ;
@@ -134,19 +136,27 @@ void do_DL_sig(double **r_re0,double **r_im0,
           // UE with UE_id is connected to eNb with eNB_id
           att_eNB_id=eNB_id;
           LOG_D(OCM,"A: UE attached to eNB (UE%d->eNB%d)\n",UE_id,eNB_id);
-        }
+         // fprintf(stdout,"A: [SignalMap] UE attached to eNB (UE%d->eNB%d)\n",UE_id,att_eNB_id);
+          PHY_vars_UE_g[UE_id][CC_id]->PHY_measurements.associated_eNB_index = att_eNB_id;
+          fprintf(stdout,"A: [SignalMap] UE attached to eNB (UE%d->eNB%d)\n",UE_id,PHY_vars_UE_g[UE_id][CC_id]->PHY_measurements.associated_eNB_index);
+	 }
       }
 
       // if UE is not attached yet, find assume its the eNB with the smallest pathloss
       if (att_eNB_id<0) {
         for (eNB_id=0; eNB_id<NB_eNB_INST; eNB_id++) {
+         if (find_ue(PHY_vars_UE_g[UE_id][CC_id]->lte_ue_pdcch_vars[0]->crnti,PHY_vars_eNB_g[eNB_id][CC_id])<0){
           if (min_path_loss<eNB2UE[eNB_id][UE_id][CC_id]->path_loss_dB) {
             min_path_loss = eNB2UE[eNB_id][UE_id][CC_id]->path_loss_dB;
             att_eNB_id=eNB_id;
-            LOG_D(OCM,"B: UE attached to eNB (UE%d->eNB%d)\n",UE_id,eNB_id);
-          }
-        }
-      }
+	   }
+	  }
+	 }
+            LOG_D(OCM,"B: UE attached to eNB (UE%d->eNB%d)\n",UE_id,att_eNB_id);
+          //  fprintf(stdout,"B: [SignalMap] UE attached to eNB (UE%d->eNB%d)\n",UE_id,att_eNB_id);
+	    PHY_vars_UE_g[UE_id][CC_id]->PHY_measurements.associated_eNB_index = att_eNB_id;
+            fprintf(stdout,"B: [SignalMap] UE attached to eNB (UE%d->eNB%d)\n",UE_id,PHY_vars_UE_g[UE_id][CC_id]->PHY_measurements.associated_eNB_index);
+ 	}
 
       if (att_eNB_id<0) {
         LOG_E(OCM,"Cannot find eNB for UE %d, return\n",UE_id);
@@ -160,6 +170,11 @@ void do_DL_sig(double **r_re0,double **r_im0,
             CC_id,att_eNB_id,UE_id,
             frame_parms->pdsch_config_common.referenceSignalPower,
             eNB2UE[att_eNB_id][UE_id][CC_id]->path_loss_dB);
+     /* fprintf(stdout,"Channel (CCid %d) eNB %d => UE %d : tx_power %d dBm, path_loss %f dB\n",
+            CC_id,att_eNB_id,UE_id,
+            frame_parms->pdsch_config_common.referenceSignalPower,
+            eNB2UE[att_eNB_id][UE_id][CC_id]->path_loss_dB);
+	*/
 #endif
 
       //dlsch_abstraction(PHY_vars_UE_g[UE_id]->sinr_dB, rb_alloc, 8);
@@ -213,7 +228,7 @@ void do_DL_sig(double **r_re0,double **r_im0,
     } // hold channel
   }
 
-  else { //abstraction_flag
+  else { //abstraction_flag=0
     /*
        Call do_OFDM_mod from phy_procedures_eNB_TX function
     */
@@ -264,6 +279,7 @@ void do_DL_sig(double **r_re0,double **r_im0,
       rx_pwr = signal_energy_fp2(eNB2UE[eNB_id][UE_id][CC_id]->ch[0],
                                  eNB2UE[eNB_id][UE_id][CC_id]->channel_length)*eNB2UE[eNB_id][UE_id][CC_id]->channel_length;
       LOG_D(OCM,"[SIM][DL] Channel eNB %d => UE %d (CCid %d): Channel gain %f dB (%f)\n",eNB_id,UE_id,CC_id,10*log10(rx_pwr),rx_pwr);
+     // fprintf(stdout,"[SIM][DL] Channel eNB %d => UE %d (CCid %d): Channel gain %f dB (%f)\n",eNB_id,UE_id,CC_id,10*log10(rx_pwr),rx_pwr);
 #endif
 
 
@@ -430,7 +446,8 @@ void do_UL_sig(double **r_re0,double **r_im0,double **r_re,double **r_im,double 
           // REceived power at the eNB
           rx_pwr = signal_energy_fp2(UE2eNB[UE_id][eNB_id][CC_id]->ch[0],
                                      UE2eNB[UE_id][eNB_id][CC_id]->channel_length)*UE2eNB[UE_id][att_eNB_id][CC_id]->channel_length; // calculate the rx power at the eNB
-        }
+       fprintf(stdout, "Uplink RX Power at eNB[%d] from UE[%d] = %.2f\n", att_eNB_id, UE_id, rx_pwr);
+	 }
 
         //  write_output("SINRch.m","SINRch",PHY_vars_eNB_g[att_eNB_id]->sinr_dB_eNB,frame_parms->N_RB_UL*12+1,1,1);
         if(subframe>1 && subframe <5) {

@@ -91,7 +91,7 @@ extern int oai_exit;
 uint8_t ulsch_input_buffer[2700] __attribute__ ((aligned(16)));
 uint8_t access_mode;
 
-#ifdef DLSCH_THREAD
+#ifdef DLSCH_THREAD 
 extern int dlsch_instance_cnt[8];
 extern int dlsch_subframe[8];
 extern pthread_mutex_t dlsch_mutex[8];
@@ -1840,6 +1840,13 @@ void lte_ue_pbch_procedures(uint8_t eNB_id,PHY_VARS_UE *phy_vars_ue,uint8_t abst
       phy_vars_ue->frame_rx = (phy_vars_ue->frame_rx & 0xFFFFFC00) | (frame_tx & 0x000003FF);
       phy_vars_ue->frame_tx = phy_vars_ue->frame_rx;
       frame_rx = phy_vars_ue->frame_rx;
+	
+	//clear signal map candidate
+     if (PHY_vars_UE_g[phy_vars_ue->Mod_id][0]->PHY_measurements.associated_eNB_index != eNB_id){
+     PHY_vars_eNB_g[eNB_id][0]->signalmap_candidate[PHY_vars_UE_g[phy_vars_ue->Mod_id][0]->PHY_measurements.associated_eNB_index] = 0;//mutual exchange: eNB-->
+     PHY_vars_eNB_g[PHY_vars_UE_g[phy_vars_ue->Mod_id][0]->PHY_measurements.associated_eNB_index][0]->signalmap_candidate[eNB_id] = 0;
+	}
+
     } else if (((frame_tx & 0x03FF) != (phy_vars_ue->frame_rx & 0x03FF))) {
       //(pbch_tx_ant != phy_vars_ue->lte_frame_parms.nb_antennas_tx)) {
       LOG_D(PHY,"[UE %d] frame %d, slot %d: Re-adjusting frame counter (PBCH ant_tx=%d, frame_rx=%d, frame%1024=%d, phase %d).\n",
@@ -1854,7 +1861,14 @@ void lte_ue_pbch_procedures(uint8_t eNB_id,PHY_VARS_UE *phy_vars_ue,uint8_t abst
       phy_vars_ue->frame_rx = (phy_vars_ue->frame_rx & 0xFFFFFC00) | (frame_tx & 0x000003FF);
       phy_vars_ue->frame_tx = phy_vars_ue->frame_rx;
       frame_rx = phy_vars_ue->frame_rx;
-      /*
+	
+	//clear signal map candidate 
+     if (PHY_vars_UE_g[phy_vars_ue->Mod_id][0]->PHY_measurements.associated_eNB_index != eNB_id){
+     PHY_vars_eNB_g[eNB_id][0]->signalmap_candidate[PHY_vars_UE_g[phy_vars_ue->Mod_id][0]->PHY_measurements.associated_eNB_index] = 0;
+     PHY_vars_eNB_g[PHY_vars_UE_g[phy_vars_ue->Mod_id][0]->PHY_measurements.associated_eNB_index][0]->signalmap_candidate[eNB_id] = 0;
+     }
+	
+       /*
       LOG_D(PHY,"[UE  %d] frame %d, slot %d: PBCH PDU does not match, ignoring it (PBCH ant_tx=%d, frame_tx=%d).\n",
           phy_vars_ue->Mod_id,
           phy_vars_ue->frame,
@@ -1902,6 +1916,14 @@ void lte_ue_pbch_procedures(uint8_t eNB_id,PHY_VARS_UE *phy_vars_ue,uint8_t abst
           phy_vars_ue->Mod_id,frame_rx, slot_rx);
     phy_vars_ue->lte_ue_pbch_vars[eNB_id]->pdu_errors_conseq++;
     phy_vars_ue->lte_ue_pbch_vars[eNB_id]->pdu_errors++;
+
+    //pktr signal map, CRC error is detected during decoding, UE is potential interferer to this cell
+     if (PHY_vars_UE_g[phy_vars_ue->Mod_id][0]->PHY_measurements.associated_eNB_index != eNB_id){
+     PHY_vars_eNB_g[eNB_id][0]->signalmap_candidate[PHY_vars_UE_g[phy_vars_ue->Mod_id][0]->PHY_measurements.associated_eNB_index] = 1;//mutual exchange: eNB-->
+     PHY_vars_eNB_g[PHY_vars_UE_g[phy_vars_ue->Mod_id][0]->PHY_measurements.associated_eNB_index][0]->signalmap_candidate[eNB_id] = 1;//mutual exchange  <---eNB
+     fprintf(stdout,"[SignalMap] CRC error, UE[%d] cannot acquire MIB. eNB[%d]<------Exchange SignalMap------>eNB[%d]\n", phy_vars_ue->Mod_id, eNB_id, PHY_vars_UE_g[phy_vars_ue->Mod_id][0]->PHY_measurements.associated_eNB_index);
+     }
+
     if (phy_vars_ue->mac_enabled == 1) {
       mac_xface->out_of_sync_ind(phy_vars_ue->Mod_id,frame_rx,eNB_id);
     }
@@ -1985,7 +2007,7 @@ int lte_ue_pdcch_procedures(uint8_t eNB_id,PHY_VARS_UE *phy_vars_ue,uint8_t abst
   else {
     for (i=0; i<NB_eNB_INST; i++) {
       for (CC_id=0; CC_id<MAX_NUM_CCs; CC_id++)
-        if (PHY_vars_eNB_g[i][CC_id]->lte_frame_parms.Nid_cell == phy_vars_ue->lte_frame_parms.Nid_cell)
+	if (PHY_vars_eNB_g[i][CC_id]->lte_frame_parms.Nid_cell == phy_vars_ue->lte_frame_parms.Nid_cell)
           break;
 
       if (CC_id < MAX_NUM_CCs)
@@ -3865,3 +3887,4 @@ void phy_procedures_UE_lte(PHY_VARS_UE *phy_vars_ue,uint8_t eNB_id,uint8_t abstr
   VCD_SIGNAL_DUMPER_DUMP_FUNCTION_BY_NAME(VCD_SIGNAL_DUMPER_FUNCTIONS_PHY_PROCEDURES_UE_LTE,0);
   stop_meas(&phy_vars_ue->phy_proc);
 }
+
