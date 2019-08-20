@@ -1,2 +1,0 @@
-/usr/bin/ar cr libHASHTABLE.a  CMakeFiles/HASHTABLE.dir/home/matthias/openairinterface5g/common/utils/collection/hashtable/hashtable.c.o CMakeFiles/HASHTABLE.dir/home/matthias/openairinterface5g/common/utils/collection/hashtable/obj_hashtable.c.o
-/usr/bin/ranlib libHASHTABLE.a

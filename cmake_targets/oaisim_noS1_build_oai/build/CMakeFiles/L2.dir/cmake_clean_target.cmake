@@ -1,3 +1,0 @@
-FILE(REMOVE_RECURSE
-  "libL2.a"
-)
