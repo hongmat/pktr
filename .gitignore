@@ -1,0 +1,5 @@
+cmake_targets/oaisim_noS1_build_oai/build/
+targets/bin/
+*.o
+*.swp
+
