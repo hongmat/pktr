@@ -1103,8 +1103,8 @@ void get_value_K_pktR(int UE_id, module_id_t Mod_id, uint8_t CC_id)
     }
 	}
   if (gain_map_eNB[UE_id].C_id != 0) {
-    X2_TCP_server_eNB(Mod_id, gain_map_eNB[UE_id].G_CR[sm_index]);
-    X2_TCP_client_eNB(Mod_id);
+    //X2_TCP_server_eNB(Mod_id, gain_map_eNB[UE_id].G_CR[sm_index]);
+    //X2_TCP_client_eNB(Mod_id);
   }
 
 	fprintf(stdout, "Target Receipient: ");
